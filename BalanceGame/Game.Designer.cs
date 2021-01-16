@@ -36,6 +36,9 @@ namespace BalanceGame
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.return_menu = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel_menu.SuspendLayout();
             this.panel_game.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -43,23 +46,31 @@ namespace BalanceGame
             // 
             // button_start
             // 
-            this.button_start.Location = new System.Drawing.Point(350, 112);
+            this.button_start.AllowDrop = true;
+            this.button_start.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button_start.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_start.Location = new System.Drawing.Point(852, 225);
+            this.button_start.Margin = new System.Windows.Forms.Padding(0);
             this.button_start.Name = "button_start";
-            this.button_start.Size = new System.Drawing.Size(482, 155);
+            this.button_start.Size = new System.Drawing.Size(314, 123);
             this.button_start.TabIndex = 0;
-            this.button_start.Text = BUTTON_START_TEXT;
+            this.button_start.Text = "Start Game";
             this.button_start.UseVisualStyleBackColor = true;
             this.button_start.Click += new System.EventHandler(this.button_start_click);
             // 
             // panel_menu
             // 
-            this.panel_menu.Controls.Add(this.panel_game);
+            this.panel_menu.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel_menu.Controls.Add(this.button2);
+            this.panel_menu.Controls.Add(this.button1);
             this.panel_menu.Controls.Add(this.button_start);
+            this.panel_menu.Controls.Add(this.label1);
             this.panel_menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_menu.Location = new System.Drawing.Point(0, 0);
             this.panel_menu.Name = "panel_menu";
             this.panel_menu.Size = new System.Drawing.Size(1920, 1061);
             this.panel_menu.TabIndex = 1;
+            this.panel_menu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_menu_Paint);
             // 
             // panel_game
             // 
@@ -80,7 +91,7 @@ namespace BalanceGame
             this.pictureBox1.Image = global::BalanceGame.Properties.Resources.bilancia_prova1;
             this.pictureBox1.ImageLocation = "";
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(130, 352);
+            this.pictureBox1.Location = new System.Drawing.Point(519, 334);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(840, 169);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,11 +121,41 @@ namespace BalanceGame
             this.textBox1.Text = "Questo è il gioco";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(816, 509);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(384, 62);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Exit";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(816, 403);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(384, 66);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Options";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(695, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(664, 107);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Balance Game";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1061);
+            this.Controls.Add(this.panel_game);
             this.Controls.Add(this.panel_menu);
             this.MaximizeBox = false;
             this.Name = "Game";
@@ -122,6 +163,7 @@ namespace BalanceGame
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Game_Load);
             this.panel_menu.ResumeLayout(false);
+            this.panel_menu.PerformLayout();
             this.panel_game.ResumeLayout(false);
             this.panel_game.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -137,6 +179,9 @@ namespace BalanceGame
         private TextBox textBox1;
         private Button return_menu;
         private PictureBox pictureBox1;
+        private Label label1;
+        private Button button2;
+        private Button button1;
     }
 }
 

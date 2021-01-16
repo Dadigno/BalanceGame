@@ -8,6 +8,7 @@ namespace BalanceGame
 {
     public partial class Game
     {
-        static String BUTTON_START_TEXT = "Start";
+        //Default settings
+        static string BUTTON_START_TEXT = "Start";
     }
 }
