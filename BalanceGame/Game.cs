@@ -29,35 +29,45 @@ namespace BalanceGame
 
         private void Game_Load(object sender, EventArgs e)
         {
-
             if (CheckConfigFileIsPresent())
             {
                 try
                 {
                     Configuration_file = ConfigurationManager.AppSettings;
-                    foreach (string s in Configuration_file.AllKeys)
-                        Console.WriteLine("Loading " + s + ": " + Configuration_file.Get(s));
-                    Console.ReadLine();
+                    //foreach (string s in Configuration_file.AllKeys)
+                    //    Console.WriteLine("Loading " + s + ": " + Configuration_file.Get(s));
+                    if (Configuration_file.Get("Lang") != "EN")
+                    {
+                        Language_load(Configuration_file.Get("Lang"));
+                    }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("{0} Exception caught.", ex.Message);
                 }
-            } 
+            }
             else
             {
                 Console.WriteLine("No config file found, default configuration loaded");
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Language_load(string language) /* TODO */
         {
+            Console.WriteLine("Only EN language is supported");
+            /*if (language == "IT")
+            {
+                
+                title_label.Text = Configuration_file.Get("Title_label");
+                button_exit.Text = Configuration_file.Get("Button_exit_text");
+                button_start.Text = Configuration_file.Get("Title_label");
+                return_menu.Text = Configuration_file.Get("return_menu");
+                button_options.Text = Configuration_file.Get("button_options");
+            }
+            else
+            {
 
-        }
-
-        private void panel_menu_Paint(object sender, PaintEventArgs e)
-        {
-
+            }*/
         }
     }
 }

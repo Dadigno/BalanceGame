@@ -16,6 +16,7 @@ namespace BalanceGame
         private void button_menu_click(object sender, EventArgs e)
         {
             panel_game.Hide();
+            panel_menu.Show();
         }
     }
 }
