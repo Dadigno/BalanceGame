@@ -94,5 +94,20 @@
   <ItemGroup>
     <None Include="Media\button_prova.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balance_body.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_generic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balance_plate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weight_inc.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

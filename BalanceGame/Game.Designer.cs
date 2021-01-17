@@ -30,11 +30,12 @@ namespace BalanceGame
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Panel panel_menu;
+            //System.Windows.Forms.Panel panel_menu;
             this.button_exit = new System.Windows.Forms.Button();
             this.button_start = new System.Windows.Forms.Button();
             this.button_options = new System.Windows.Forms.Button();
             this.panel_main = new System.Windows.Forms.Panel();
+            this.panel_menu = new System.Windows.Forms.Panel();
             this.title_label = new System.Windows.Forms.Label();
             this.panel_options = new System.Windows.Forms.Panel();
             this.reset_settings_button = new System.Windows.Forms.Button();
@@ -49,35 +50,38 @@ namespace BalanceGame
             this.language_label = new System.Windows.Forms.Label();
             this.language_combobox = new System.Windows.Forms.ComboBox();
             this.panel_game = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.weight_inc = new System.Windows.Forms.PictureBox();
+            this.balance_rightplate = new System.Windows.Forms.PictureBox();
+            this.balance_leftplate = new System.Windows.Forms.PictureBox();
+            this.undo = new System.Windows.Forms.Button();
+            this.clear = new System.Windows.Forms.Button();
+            this.new_weight = new System.Windows.Forms.Button();
+            this.balance_body = new System.Windows.Forms.PictureBox();
             this.return_menu = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel_menu = new System.Windows.Forms.Panel();
+            //panel_menu = new System.Windows.Forms.Panel();
             this.panel_main.SuspendLayout();
-            this.panel_options.SuspendLayout();
             this.panel_menu.SuspendLayout();
+            //panel_menu.SuspendLayout();
+            this.panel_options.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weight_to)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weight_from)).BeginInit();
             this.panel_game.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weight_inc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.balance_rightplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.balance_leftplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.balance_body)).BeginInit();
             this.SuspendLayout();
-            //  
-            // panel_menu
-            // 
-            this.panel_menu.Controls.Add(this.button_exit);
-            this.panel_menu.Controls.Add(this.button_start);
-            this.panel_menu.Controls.Add(this.button_options);
-            this.panel_menu.Location = new System.Drawing.Point(684, 119);
-            this.panel_menu.Name = "panel_menu";
-            this.panel_menu.Size = new System.Drawing.Size(660, 762);
-            this.panel_menu.TabIndex = 11;
             // 
             // button_exit
             // 
-            this.button_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_exit.Location = new System.Drawing.Point(160, 434);
+            this.button_exit.BackgroundImage = global::BalanceGame.Properties.Resources.button_generic;
+            this.button_exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_exit.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_exit.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button_exit.Location = new System.Drawing.Point(157, 428);
             this.button_exit.Name = "button_exit";
-            this.button_exit.Size = new System.Drawing.Size(384, 62);
+            this.button_exit.Size = new System.Drawing.Size(384, 77);
             this.button_exit.TabIndex = 3;
             this.button_exit.Text = "Exit";
             this.button_exit.UseVisualStyleBackColor = true;
@@ -87,7 +91,11 @@ namespace BalanceGame
             // 
             this.button_start.AllowDrop = true;
             this.button_start.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_start.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_start.BackgroundImage = global::BalanceGame.Properties.Resources.button_generic;
+            this.button_start.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_start.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_start.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_start.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button_start.Location = new System.Drawing.Point(191, 130);
             this.button_start.Margin = new System.Windows.Forms.Padding(0);
             this.button_start.Name = "button_start";
@@ -99,10 +107,14 @@ namespace BalanceGame
             // 
             // button_options
             // 
-            this.button_options.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_options.Location = new System.Drawing.Point(160, 314);
+            this.button_options.BackgroundImage = global::BalanceGame.Properties.Resources.button_generic;
+            this.button_options.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_options.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_options.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_options.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button_options.Location = new System.Drawing.Point(157, 308);
             this.button_options.Name = "button_options";
-            this.button_options.Size = new System.Drawing.Size(384, 66);
+            this.button_options.Size = new System.Drawing.Size(384, 77);
             this.button_options.TabIndex = 2;
             this.button_options.Text = "Options";
             this.button_options.UseVisualStyleBackColor = true;
@@ -112,7 +124,7 @@ namespace BalanceGame
             // 
             this.panel_main.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel_main.Controls.Add(this.title_label);
-            this.panel_main.Controls.Add(this.panel_menu);
+            this.panel_main.Controls.Add(panel_menu);
             this.panel_main.Controls.Add(this.panel_options);
             this.panel_main.Controls.Add(this.panel_game);
             this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -124,14 +136,24 @@ namespace BalanceGame
             // title_label
             // 
             this.title_label.AutoSize = true;
-            this.title_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title_label.Font = new System.Drawing.Font("Arial", 69.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title_label.Location = new System.Drawing.Point(695, 9);
             this.title_label.Name = "title_label";
-            this.title_label.Size = new System.Drawing.Size(664, 107);
+            this.title_label.Size = new System.Drawing.Size(688, 108);
             this.title_label.TabIndex = 1;
             this.title_label.Text = "Balance Game";
             // 
-            // options_panel
+            // panel_menu
+            // 
+            panel_menu.Controls.Add(this.button_exit);
+            panel_menu.Controls.Add(this.button_start);
+            panel_menu.Controls.Add(this.button_options);
+            panel_menu.Location = new System.Drawing.Point(713, 119);
+            panel_menu.Name = "panel_menu";
+            panel_menu.Size = new System.Drawing.Size(631, 686);
+            panel_menu.TabIndex = 11;
+            // 
+            // panel_options
             // 
             this.panel_options.Controls.Add(this.reset_settings_button);
             this.panel_options.Controls.Add(this.color_combobox);
@@ -144,15 +166,19 @@ namespace BalanceGame
             this.panel_options.Controls.Add(this.weight_range_label);
             this.panel_options.Controls.Add(this.language_label);
             this.panel_options.Controls.Add(this.language_combobox);
-            this.panel_options.Location = new System.Drawing.Point(684, 119);
-            this.panel_options.Name = "options_panel";
-            this.panel_options.Size = new System.Drawing.Size(660, 762);
+            this.panel_options.Location = new System.Drawing.Point(713, 119);
+            this.panel_options.Name = "panel_options";
+            this.panel_options.Size = new System.Drawing.Size(631, 686);
             this.panel_options.TabIndex = 4;
             this.panel_options.Visible = false;
             // 
             // reset_settings_button
             // 
-            this.reset_settings_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reset_settings_button.BackgroundImage = global::BalanceGame.Properties.Resources.button_generic;
+            this.reset_settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.reset_settings_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reset_settings_button.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reset_settings_button.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.reset_settings_button.Location = new System.Drawing.Point(240, 434);
             this.reset_settings_button.Name = "reset_settings_button";
             this.reset_settings_button.Size = new System.Drawing.Size(224, 86);
@@ -170,7 +196,11 @@ namespace BalanceGame
             // 
             // return_menu_button
             // 
-            this.return_menu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.return_menu_button.BackgroundImage = global::BalanceGame.Properties.Resources.button_generic;
+            this.return_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.return_menu_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.return_menu_button.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.return_menu_button.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.return_menu_button.Location = new System.Drawing.Point(29, 605);
             this.return_menu_button.Name = "return_menu_button";
             this.return_menu_button.Size = new System.Drawing.Size(75, 59);
@@ -183,30 +213,30 @@ namespace BalanceGame
             // background_color_label
             // 
             this.background_color_label.AutoSize = true;
-            this.background_color_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.background_color_label.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.background_color_label.Location = new System.Drawing.Point(14, 290);
             this.background_color_label.Name = "background_color_label";
-            this.background_color_label.Size = new System.Drawing.Size(342, 46);
+            this.background_color_label.Size = new System.Drawing.Size(364, 46);
             this.background_color_label.TabIndex = 7;
             this.background_color_label.Text = "Background Color";
             // 
             // range_to_label
             // 
             this.range_to_label.AutoSize = true;
-            this.range_to_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.range_to_label.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.range_to_label.Location = new System.Drawing.Point(478, 196);
             this.range_to_label.Name = "range_to_label";
-            this.range_to_label.Size = new System.Drawing.Size(27, 20);
+            this.range_to_label.Size = new System.Drawing.Size(28, 19);
             this.range_to_label.TabIndex = 6;
             this.range_to_label.Text = "To";
             // 
             // range_from_label
             // 
             this.range_from_label.AutoSize = true;
-            this.range_from_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.range_from_label.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.range_from_label.Location = new System.Drawing.Point(392, 196);
             this.range_from_label.Name = "range_from_label";
-            this.range_from_label.Size = new System.Drawing.Size(46, 20);
+            this.range_from_label.Size = new System.Drawing.Size(49, 19);
             this.range_from_label.TabIndex = 5;
             this.range_from_label.Text = "From";
             // 
@@ -227,20 +257,20 @@ namespace BalanceGame
             // weight_range_label
             // 
             this.weight_range_label.AutoSize = true;
-            this.weight_range_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_range_label.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_range_label.Location = new System.Drawing.Point(101, 198);
             this.weight_range_label.Name = "weight_range_label";
-            this.weight_range_label.Size = new System.Drawing.Size(256, 46);
+            this.weight_range_label.Size = new System.Drawing.Size(269, 46);
             this.weight_range_label.TabIndex = 2;
             this.weight_range_label.Text = "Weight range";
             // 
             // language_label
             // 
             this.language_label.AutoSize = true;
-            this.language_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.language_label.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.language_label.Location = new System.Drawing.Point(161, 119);
             this.language_label.Name = "language_label";
-            this.language_label.Size = new System.Drawing.Size(196, 46);
+            this.language_label.Size = new System.Drawing.Size(204, 46);
             this.language_label.TabIndex = 1;
             this.language_label.Text = "Language";
             // 
@@ -256,9 +286,14 @@ namespace BalanceGame
             // panel_game
             // 
             this.panel_game.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel_game.Controls.Add(this.pictureBox1);
+            this.panel_game.Controls.Add(this.weight_inc);
+            this.panel_game.Controls.Add(this.balance_rightplate);
+            this.panel_game.Controls.Add(this.balance_leftplate);
+            this.panel_game.Controls.Add(this.undo);
+            this.panel_game.Controls.Add(this.clear);
+            this.panel_game.Controls.Add(this.new_weight);
+            this.panel_game.Controls.Add(this.balance_body);
             this.panel_game.Controls.Add(this.return_menu);
-            this.panel_game.Controls.Add(this.textBox1);
             this.panel_game.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_game.Location = new System.Drawing.Point(0, 0);
             this.panel_game.Name = "panel_game";
@@ -266,41 +301,119 @@ namespace BalanceGame
             this.panel_game.TabIndex = 1;
             this.panel_game.Visible = false;
             // 
-            // pictureBox1
+            // weight_inc
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::BalanceGame.Properties.Resources.bilancia_prova1;
-            this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(519, 334);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(840, 169);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.weight_inc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.weight_inc.Image = global::BalanceGame.Properties.Resources.weight_inc;
+            this.weight_inc.ImageLocation = "";
+            this.weight_inc.InitialImage = null;
+            this.weight_inc.Location = new System.Drawing.Point(268, 341);
+            this.weight_inc.Name = "weight_inc";
+            this.weight_inc.Size = new System.Drawing.Size(171, 96);
+            this.weight_inc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.weight_inc.TabIndex = 9;
+            this.weight_inc.TabStop = false;
+            // 
+            // balance_rightplate
+            // 
+            this.balance_rightplate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.balance_rightplate.Image = global::BalanceGame.Properties.Resources.balance_plate;
+            this.balance_rightplate.ImageLocation = "";
+            this.balance_rightplate.InitialImage = null;
+            this.balance_rightplate.Location = new System.Drawing.Point(625, 325);
+            this.balance_rightplate.Name = "balance_rightplate";
+            this.balance_rightplate.Size = new System.Drawing.Size(307, 130);
+            this.balance_rightplate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.balance_rightplate.TabIndex = 8;
+            this.balance_rightplate.TabStop = false;
+            // 
+            // balance_leftplate
+            // 
+            this.balance_leftplate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.balance_leftplate.Image = global::BalanceGame.Properties.Resources.balance_plate;
+            this.balance_leftplate.ImageLocation = "";
+            this.balance_leftplate.InitialImage = null;
+            this.balance_leftplate.Location = new System.Drawing.Point(198, 325);
+            this.balance_leftplate.Name = "balance_leftplate";
+            this.balance_leftplate.Size = new System.Drawing.Size(307, 130);
+            this.balance_leftplate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.balance_leftplate.TabIndex = 7;
+            this.balance_leftplate.TabStop = false;
+            // 
+            // undo
+            // 
+            this.undo.BackgroundImage = global::BalanceGame.Properties.Resources.button_undo;
+            this.undo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.undo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.undo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.undo.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.undo.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.undo.Location = new System.Drawing.Point(989, 786);
+            this.undo.Name = "undo";
+            this.undo.Size = new System.Drawing.Size(239, 95);
+            this.undo.TabIndex = 6;
+            this.undo.UseVisualStyleBackColor = true;
+            // 
+            // clear
+            // 
+            this.clear.BackgroundImage = global::BalanceGame.Properties.Resources.button_generic;
+            this.clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.clear.Location = new System.Drawing.Point(713, 786);
+            this.clear.Name = "clear";
+            this.clear.Size = new System.Drawing.Size(239, 95);
+            this.clear.TabIndex = 5;
+            this.clear.Text = "CLEAR";
+            this.clear.UseVisualStyleBackColor = true;
+            this.clear.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // new_weight
+            // 
+            this.new_weight.BackgroundImage = global::BalanceGame.Properties.Resources.button_generic;
+            this.new_weight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.new_weight.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.new_weight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.new_weight.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.new_weight.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.new_weight.Location = new System.Drawing.Point(439, 786);
+            this.new_weight.Name = "new_weight";
+            this.new_weight.Size = new System.Drawing.Size(239, 95);
+            this.new_weight.TabIndex = 4;
+            this.new_weight.Text = "NEW WEIGHT";
+            this.new_weight.UseVisualStyleBackColor = true;
+            // 
+            // balance_body
+            // 
+            this.balance_body.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.balance_body.Image = global::BalanceGame.Properties.Resources.balance_body;
+            this.balance_body.ImageLocation = "";
+            this.balance_body.InitialImage = null;
+            this.balance_body.Location = new System.Drawing.Point(145, 455);
+            this.balance_body.Name = "balance_body";
+            this.balance_body.Size = new System.Drawing.Size(840, 169);
+            this.balance_body.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.balance_body.TabIndex = 2;
+            this.balance_body.TabStop = false;
             // 
             // return_menu
             // 
-            this.return_menu.BackgroundImage = global::BalanceGame.Properties.Resources.button_prova;
+            this.return_menu.BackgroundImage = global::BalanceGame.Properties.Resources.button_generic;
             this.return_menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.return_menu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.return_menu.FlatAppearance.BorderSize = 0;
             this.return_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.return_menu.Location = new System.Drawing.Point(45, 600);
+            this.return_menu.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.return_menu.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.return_menu.Location = new System.Drawing.Point(145, 786);
             this.return_menu.Name = "return_menu";
             this.return_menu.Size = new System.Drawing.Size(239, 95);
             this.return_menu.TabIndex = 1;
+            this.return_menu.Text = "MAIN MENU";
             this.return_menu.UseVisualStyleBackColor = true;
             this.return_menu.Click += new System.EventHandler(this.button_menu_click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(434, 211);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(471, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Questo è il gioco";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Game
             // 
@@ -312,16 +425,18 @@ namespace BalanceGame
             this.Name = "Game";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Game_Load);
-            this.panel_menu.ResumeLayout(false);
             this.panel_main.ResumeLayout(false);
             this.panel_main.PerformLayout();
+            panel_menu.ResumeLayout(false);
             this.panel_options.ResumeLayout(false);
             this.panel_options.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weight_to)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.weight_from)).EndInit();
             this.panel_game.ResumeLayout(false);
-            this.panel_game.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weight_inc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.balance_rightplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.balance_leftplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.balance_body)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -330,11 +445,10 @@ namespace BalanceGame
 
         private Button button_start;
         private Panel panel_main;
-        private Panel panel_game;
         private Panel panel_menu;
-        private TextBox textBox1;
+        private Panel panel_game;
         private Button return_menu;
-        private PictureBox pictureBox1;
+        private PictureBox balance_body;
         private Label title_label;
         private Button button_exit;
         private Button button_options;
@@ -350,6 +464,12 @@ namespace BalanceGame
         private Label language_label;
         private ComboBox language_combobox;
         private Button return_menu_button;
+        private Button clear;
+        private Button new_weight;
+        private Button undo;
+        private PictureBox weight_inc;
+        private PictureBox balance_rightplate;
+        private PictureBox balance_leftplate;
     }
 }
 
