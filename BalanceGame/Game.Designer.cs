@@ -35,7 +35,6 @@ namespace BalanceGame
             this.button_start = new System.Windows.Forms.Button();
             this.button_options = new System.Windows.Forms.Button();
             this.panel_main = new System.Windows.Forms.Panel();
-            this.title_label = new System.Windows.Forms.Label();
             this.panel_options = new System.Windows.Forms.Panel();
             this.reset_settings_button = new System.Windows.Forms.Button();
             this.color_combobox = new System.Windows.Forms.ComboBox();
@@ -49,27 +48,28 @@ namespace BalanceGame
             this.language_label = new System.Windows.Forms.Label();
             this.language_combobox = new System.Windows.Forms.ComboBox();
             this.panel_game = new System.Windows.Forms.Panel();
+            this.title_label = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.return_menu = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel_menu = new System.Windows.Forms.Panel();
+            this.panel_menu.SuspendLayout();
             this.panel_main.SuspendLayout();
             this.panel_options.SuspendLayout();
-            this.panel_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weight_to)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weight_from)).BeginInit();
             this.panel_game.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            //  
+            // 
             // panel_menu
             // 
             this.panel_menu.Controls.Add(this.button_exit);
             this.panel_menu.Controls.Add(this.button_start);
             this.panel_menu.Controls.Add(this.button_options);
-            this.panel_menu.Location = new System.Drawing.Point(684, 119);
+            this.panel_menu.Location = new System.Drawing.Point(652, 138);
             this.panel_menu.Name = "panel_menu";
-            this.panel_menu.Size = new System.Drawing.Size(660, 762);
+            this.panel_menu.Size = new System.Drawing.Size(707, 726);
             this.panel_menu.TabIndex = 11;
             // 
             // button_exit
@@ -112,8 +112,8 @@ namespace BalanceGame
             // 
             this.panel_main.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel_main.Controls.Add(this.title_label);
-            this.panel_main.Controls.Add(this.panel_menu);
             this.panel_main.Controls.Add(this.panel_options);
+            this.panel_main.Controls.Add(this.panel_menu);
             this.panel_main.Controls.Add(this.panel_game);
             this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_main.Location = new System.Drawing.Point(0, 0);
@@ -121,17 +121,7 @@ namespace BalanceGame
             this.panel_main.Size = new System.Drawing.Size(1920, 1061);
             this.panel_main.TabIndex = 1;
             // 
-            // title_label
-            // 
-            this.title_label.AutoSize = true;
-            this.title_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title_label.Location = new System.Drawing.Point(695, 9);
-            this.title_label.Name = "title_label";
-            this.title_label.Size = new System.Drawing.Size(664, 107);
-            this.title_label.TabIndex = 1;
-            this.title_label.Text = "Balance Game";
-            // 
-            // options_panel
+            // panel_options
             // 
             this.panel_options.Controls.Add(this.reset_settings_button);
             this.panel_options.Controls.Add(this.color_combobox);
@@ -144,9 +134,9 @@ namespace BalanceGame
             this.panel_options.Controls.Add(this.weight_range_label);
             this.panel_options.Controls.Add(this.language_label);
             this.panel_options.Controls.Add(this.language_combobox);
-            this.panel_options.Location = new System.Drawing.Point(684, 119);
-            this.panel_options.Name = "options_panel";
-            this.panel_options.Size = new System.Drawing.Size(660, 762);
+            this.panel_options.Location = new System.Drawing.Point(722, 141);
+            this.panel_options.Name = "panel_options";
+            this.panel_options.Size = new System.Drawing.Size(561, 726);
             this.panel_options.TabIndex = 4;
             this.panel_options.Visible = false;
             // 
@@ -266,6 +256,16 @@ namespace BalanceGame
             this.panel_game.TabIndex = 1;
             this.panel_game.Visible = false;
             // 
+            // title_label
+            // 
+            this.title_label.AutoSize = true;
+            this.title_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title_label.Location = new System.Drawing.Point(680, 45);
+            this.title_label.Name = "title_label";
+            this.title_label.Size = new System.Drawing.Size(664, 107);
+            this.title_label.TabIndex = 1;
+            this.title_label.Text = "Balance Game";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -329,9 +329,9 @@ namespace BalanceGame
         #endregion
 
         private Button button_start;
+        private Panel panel_menu;
         private Panel panel_main;
         private Panel panel_game;
-        private Panel panel_menu;
         private TextBox textBox1;
         private Button return_menu;
         private PictureBox pictureBox1;
