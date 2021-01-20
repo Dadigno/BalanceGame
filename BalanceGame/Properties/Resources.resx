@@ -121,10 +121,25 @@
   <data name="bilancia_prova" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Media\bilancia_prova.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="balance_plate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\balance_plate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_generic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_generic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="balance_body" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\balance_body.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_undo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_undo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bilancia_prova1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Media\bilancia_prova.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_prova" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Media\button_prova.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="weight_inc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weight_inc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
