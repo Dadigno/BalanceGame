@@ -9,7 +9,7 @@ namespace BalanceGame
 {
     partial class Game : Form
     {
-        private void button_start_click(object sender, EventArgs e)
+        private void button_start_Click(object sender, EventArgs e)
         {
             panel_menu.Hide();
             panel_game.Show();
@@ -35,7 +35,7 @@ namespace BalanceGame
             panel_options.Hide();
         }
 
-        private void exit_button_Click(object sender, EventArgs e)
+        private void button_exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }

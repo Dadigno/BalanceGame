@@ -20,6 +20,9 @@ namespace BalanceGame
         public Game()
         {
             InitializeComponent();
+            panel_menu.Show();
+            panel_options.Hide();
+            
         }
 
         public static bool CheckConfigFileIsPresent()
