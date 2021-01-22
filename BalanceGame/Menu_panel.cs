@@ -13,6 +13,18 @@ namespace BalanceGame
         {
             panel_menu.Hide();
             panel_game.Show();
+            panel_onplate_1.Hide();
+            panel_onplate_5.Hide();
+            panel_onplate_10.Hide();
+            panel_onplate_100.Hide();
+            panel_onplate_500.Hide();
+            panel_onplate_1000.Hide();
+            panel_plateweight_1.Hide();
+            panel_plateweight_5.Hide();
+            panel_plateweight_10.Hide();
+            panel_plateweight_100.Hide();
+            panel_plateweight_500.Hide();
+            panel_plateweight_1000.Hide();
         }
 
         private void button_options_Click(object sender, EventArgs e)

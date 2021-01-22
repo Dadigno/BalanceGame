@@ -109,5 +109,32 @@
   <ItemGroup>
     <None Include="Resources\weight_inc.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balance_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balance_indicator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weight_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weight_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weight_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weight_100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weight_500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weight_1000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_onplate.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
