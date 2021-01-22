@@ -9,6 +9,24 @@ namespace BalanceGame
 {
     partial class Game : Form
     {
+        private void InitializeMenu()
+        {
+            panel_menu.Show();
+            panel_options.Hide();
+
+            language_combobox.SelectedIndex = 0;
+            language_combobox.SelectedIndex = 0;  //Set default value: English
+
+            color_combobox.SelectedIndexChanged += new System.EventHandler(color_combobox_SelectedIndexChanged);
+        }
+
+        private void color_combobox_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            panel_game.BackColor = System.Drawing.Color.FromName((string)color_combobox.SelectedItem);
+            panel_menu.BackColor = System.Drawing.Color.FromName((string)color_combobox.SelectedItem);
+            panel_options.BackColor = System.Drawing.Color.FromName((string)color_combobox.SelectedItem);
+
+        }
         private void button_start_Click(object sender, EventArgs e)
         {
             panel_menu.Hide();
@@ -51,5 +69,7 @@ namespace BalanceGame
         {
             this.Close();
         }
+
+        
     }
 }

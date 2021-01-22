@@ -8,6 +8,6 @@ namespace BalanceGame
 {
     public static class Globals
     {
-
+        public static string[] language_list;
     }
 }

@@ -20,8 +20,8 @@ namespace BalanceGame
         public Game()
         {
             InitializeComponent();
-            panel_menu.Show();
-            panel_options.Hide();
+            InitializeMenu();
+
             
         }
 
@@ -29,6 +29,8 @@ namespace BalanceGame
         {
             return File.Exists(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
         }
+
+        
 
         private void Game_Load(object sender, EventArgs e)
         {
