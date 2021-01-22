@@ -21,8 +21,15 @@ namespace BalanceGame
         {
             InitializeComponent();
             InitializeMenu();
+        }
 
-            
+        private static void SetSetting(string key, string value)
+        {
+            Configuration configuration =
+                ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            configuration.AppSettings.Settings[key].Value = value;
+            configuration.Save(ConfigurationSaveMode.Full, true);
+            ConfigurationManager.RefreshSection("appSettings");
         }
 
         public static bool CheckConfigFileIsPresent()
@@ -30,13 +37,8 @@ namespace BalanceGame
             return File.Exists(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
         }
 
-        
-
         private void Game_Load(object sender, EventArgs e)
         {
-
-
-
             if (CheckConfigFileIsPresent())
             {
                 try
@@ -44,18 +46,28 @@ namespace BalanceGame
                     Configuration_file = ConfigurationManager.AppSettings;
                     //foreach (string s in Configuration_file.AllKeys)
                     //    Console.WriteLine("Loading " + s + ": " + Configuration_file.Get(s));
-                    if (Configuration_file.Get("Lang") != "EN")
+                    
+                    if(Configuration_file.Get("Default_conf") == "True")
                     {
-                        Language_load(Configuration_file.Get("Lang"));
+                        //Load deafult configuration
+                        set_configuration(true);
+                    }
+                    else
+                    {
+                        //Load from config file a custom configuration
+                        set_configuration();
                     }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("{0} Exception caught.", ex.Message);
+                    Console.WriteLine("Default configuration loaded");
+                    set_configuration(true);
                 }
             }
             else
             {
+                set_configuration(true);
                 Console.WriteLine("No config file found, default configuration loaded");
             }
         }

@@ -136,5 +136,8 @@
   <ItemGroup>
     <None Include="Resources\arrow_onplate.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

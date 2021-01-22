@@ -10,53 +10,39 @@ namespace BalanceGame
     partial class Game : Form
     {
 
+
         private void InitializeMenu()
         {
             panel_menu.Show();
             panel_options.Hide();
 
-            language_combobox.Text = "English";
-            language_combobox.SelectedIndex = 0;  //Set default value: English
-
-            weight_from.Minimum = 1;
-            weight_from.Maximum = 20000;
-            weight_to.Maximum = 20000;
-            weight_to.Minimum = 1;
-
-            weight_from.Value = 1;
-            weight_to.Value = 10000;
-
-            weight_from.ValueChanged += new System.EventHandler(weight_from_ValueChange);
-            weight_to.ValueChanged += new System.EventHandler(weight_to_ValueChange);
-
+            weight_from_combobox.ValueChanged += new System.EventHandler(weight_from_ValueChange);
+            weight_to_combobox.ValueChanged += new System.EventHandler(weight_to_ValueChange);
             color_combobox.SelectedIndexChanged += new System.EventHandler(color_combobox_SelectedIndexChanged);
-            color_combobox.SelectedIndex = 0;
-            panel_game.BackColor = System.Drawing.Color.FromName("MenuHighlight");
-            panel_menu.BackColor = System.Drawing.Color.FromName("MenuHighlight");
-            panel_options.BackColor = System.Drawing.Color.FromName("MenuHighlight");
-
         }
 
         private void weight_from_ValueChange(object sender, System.EventArgs e)
         {
-            if (weight_to.Value < weight_from.Value)
+            save_options_button.Enabled = true;
+            if (weight_to_combobox.Value < weight_from_combobox.Value)
             {
-                weight_to.Value = weight_from.Value;
+                weight_to_combobox.Value = weight_from_combobox.Value;
             }
         }
 
         private void weight_to_ValueChange(object sender, System.EventArgs e)
         {
-            if (weight_from.Value > weight_to.Value)
+            save_options_button.Enabled = true;
+            if (weight_from_combobox.Value > weight_to_combobox.Value)
             {
-                weight_from.Value = weight_to.Value;
+                weight_from_combobox.Value = weight_to_combobox.Value;
             }
         }
 
 
         private void color_combobox_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-           // panel_options.BackColor = System.Drawing.Color.FromName((string)color_combobox.SelectedItem);
+            save_options_button.Enabled = true;
         }
 
         private void button_start_Click(object sender, EventArgs e)
@@ -79,6 +65,7 @@ namespace BalanceGame
 
         private void button_options_Click(object sender, EventArgs e)
         {
+            save_options_button.Enabled = false;
             if (!panel_options.Visible)
             {
                 panel_menu.Hide();
@@ -93,62 +80,122 @@ namespace BalanceGame
 
         private void return_menu_button_Click(object sender, EventArgs e)
         {
-            panel_menu.Show();
-            panel_options.Hide();
+            if (save_options_button.Enabled)
+            {
+                var result = MessageBox.Show(Globals.exiting_without_saving_message, Globals.exiting_without_saving_caption,
+                                             MessageBoxButtons.OKCancel,
+                                             MessageBoxIcon.Question);
 
+                if (result == DialogResult.OK)
+                {
+                    panel_menu.Show();
+                    panel_options.Hide();
+                    set_aspect();
+                }
+            }
+            else
+            {
+                panel_menu.Show();
+                panel_options.Hide();
+
+                set_configuration();
+            }
         }
 
         private void button_exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            var result = MessageBox.Show(Globals.exit_game_message, Globals.exit_game_caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            
         }
 
         private void reset_settings_button_Click(object sender, EventArgs e)
         {
-            language_combobox.Text = Globals.language_default;
-            language_combobox.SelectedIndex = 0;  //Set default value: English
-
-            weight_from.Minimum = 1;
-            weight_from.Maximum = 20000;
-            weight_to.Maximum = 20000;
-            weight_to.Minimum = 1;
-            weight_from.Value = 1;
-            weight_to.Value = 10000;
-
+            save_options_button.Enabled = true;
+            language_combobox.SelectedIndex = 0;
             color_combobox.SelectedIndex = 0;
-            panel_game.BackColor = Globals.backColor_default;
-            panel_menu.BackColor = Globals.backColor_default;
-            panel_options.BackColor = Globals.backColor_default;
+            weight_from_combobox.Value = Globals.weight_from_default;
+            weight_to_combobox.Value = Globals.weight_to_default;
         }
 
         private void save_button_Click(object sender, EventArgs e)
         {
-            Globals.weight_from = weight_from.Value;
-            Globals.weight_to = weight_to.Value;
-            Globals.backColor = System.Drawing.Color.FromName((string)color_combobox.SelectedItem);
+            //Save value to config file
+            SetSetting("Lang", (string)language_combobox.SelectedItem);
+            SetSetting("BackColor", (string)color_combobox.SelectedItem);
+            SetSetting("Weight_from", Convert.ToString(weight_from_combobox.Value));
+            SetSetting("Weight_to", Convert.ToString(weight_to_combobox.Value));
 
-            return_menu_button_Click(sender, e);
+            save_options_button.Enabled = false;
+
+            var result = MessageBox.Show(Globals.saving_message, Globals.saving_caption,
+                                         MessageBoxButtons.OK,
+                                         MessageBoxIcon.Information);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            
         }
 
-        private void set_value(bool set_default_settings = false)
+        private void set_configuration(bool set_default_settings = false)
         {
             if (set_default_settings)
             {
-                panel_game.BackColor = Globals.backColor_default;
-                panel_menu.BackColor = Globals.backColor_default;
-                panel_options.BackColor = Globals.backColor_default;
+                //Set default configuration momentarily ( Not saved into config file )
 
+                //Set Game variables
+                Globals.language = Globals.language_default;
+                Globals.weight_from = Globals.weight_from_default;
+                Globals.weight_to = Globals.weight_to_default;
+                Globals.weight_from_to_maximum = Globals.weight_from_to_maximum_default;
+                Globals.weight_from_to_minimum = Globals.weight_from_to_minimum_default;
+                Globals.backColor = Globals.backColor_default;
+
+                set_aspect();
+                
                 //Set language default TODO
+
             }
             else
             {
-                panel_game.BackColor = Globals.backColor;
-                panel_menu.BackColor = Globals.backColor;
-                panel_options.BackColor = Globals.backColor;
+                //Load configuration from config file
+
+                //Load and set game variables
+                Globals.language = Globals.language_default;
+                Globals.weight_from = Convert.ToInt32(Configuration_file.Get("Weight_from"));
+                Globals.weight_to = Convert.ToInt32(Configuration_file.Get("Weight_to"));
+                Globals.weight_from_to_maximum = Convert.ToInt32(Configuration_file.Get("Weight_from_to_maximum"));
+                Globals.weight_from_to_minimum = Convert.ToInt32(Configuration_file.Get("Weight_from_to_minimum"));
+                Globals.backColor = System.Drawing.Color.FromName(Configuration_file.Get("BackColor"));
+
+                set_aspect();
 
                 //Set language saved in globals TODO
             }
         }
 
+        public void set_aspect()
+        {
+            panel_game.BackColor = Globals.backColor;
+            panel_menu.BackColor = Globals.backColor;
+            panel_options.BackColor = Globals.backColor;
+
+            language_combobox.SelectedItem = Globals.language;
+            color_combobox.SelectedItem = Globals.backColor.Name;
+            weight_from_combobox.Minimum = Globals.weight_from_to_minimum;
+            weight_from_combobox.Maximum = Globals.weight_from_to_maximum;
+            weight_to_combobox.Maximum = Globals.weight_from_to_maximum;
+            weight_to_combobox.Minimum = Globals.weight_from_to_minimum;
+            weight_from_combobox.Value = Globals.weight_from;
+            weight_to_combobox.Value = Globals.weight_to;
+        }
     }
 }
