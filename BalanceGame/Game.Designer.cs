@@ -32,6 +32,7 @@ namespace BalanceGame
         {
             this.panel_main = new System.Windows.Forms.Panel();
             this.panel_options = new System.Windows.Forms.Panel();
+            this.save_options_button = new System.Windows.Forms.Button();
             this.title_options = new System.Windows.Forms.Label();
             this.reset_settings_button = new System.Windows.Forms.Button();
             this.color_combobox = new System.Windows.Forms.ComboBox();
@@ -149,6 +150,7 @@ namespace BalanceGame
             // 
             // panel_options
             // 
+            this.panel_options.Controls.Add(this.save_options_button);
             this.panel_options.Controls.Add(this.title_options);
             this.panel_options.Controls.Add(this.reset_settings_button);
             this.panel_options.Controls.Add(this.color_combobox);
@@ -167,6 +169,21 @@ namespace BalanceGame
             this.panel_options.Size = new System.Drawing.Size(1920, 1061);
             this.panel_options.TabIndex = 4;
             // 
+            // save_options_button
+            // 
+            this.save_options_button.BackgroundImage = global::BalanceGame.Properties.Resources.button_generic;
+            this.save_options_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.save_options_button.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_options_button.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.save_options_button.Location = new System.Drawing.Point(1139, 475);
+            this.save_options_button.Name = "save_options_button";
+            this.save_options_button.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.save_options_button.Size = new System.Drawing.Size(165, 62);
+            this.save_options_button.TabIndex = 12;
+            this.save_options_button.Text = "Save";
+            this.save_options_button.UseVisualStyleBackColor = true;
+            this.save_options_button.Click += new System.EventHandler(this.save_button_Click);
+            // 
             // title_options
             // 
             this.title_options.AutoSize = true;
@@ -183,14 +200,15 @@ namespace BalanceGame
             this.reset_settings_button.BackgroundImage = global::BalanceGame.Properties.Resources.button_generic;
             this.reset_settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.reset_settings_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reset_settings_button.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reset_settings_button.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reset_settings_button.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.reset_settings_button.Location = new System.Drawing.Point(844, 461);
+            this.reset_settings_button.Location = new System.Drawing.Point(821, 475);
             this.reset_settings_button.Name = "reset_settings_button";
-            this.reset_settings_button.Size = new System.Drawing.Size(224, 86);
+            this.reset_settings_button.Size = new System.Drawing.Size(224, 62);
             this.reset_settings_button.TabIndex = 9;
-            this.reset_settings_button.Text = "Reset Default Settings";
+            this.reset_settings_button.Text = "Default Settings";
             this.reset_settings_button.UseVisualStyleBackColor = true;
+            this.reset_settings_button.Click += new System.EventHandler(this.reset_settings_button_Click);
             // 
             // color_combobox
             // 
@@ -215,7 +233,7 @@ namespace BalanceGame
             this.return_menu_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.return_menu_button.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.return_menu_button.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.return_menu_button.Location = new System.Drawing.Point(633, 629);
+            this.return_menu_button.Location = new System.Drawing.Point(570, 475);
             this.return_menu_button.Name = "return_menu_button";
             this.return_menu_button.Size = new System.Drawing.Size(138, 62);
             this.return_menu_button.TabIndex = 10;
@@ -256,6 +274,11 @@ namespace BalanceGame
             // weight_to
             // 
             this.weight_to.Location = new System.Drawing.Point(1086, 249);
+            this.weight_to.Maximum = new decimal(new int[] {
+            10001,
+            0,
+            0,
+            0});
             this.weight_to.Name = "weight_to";
             this.weight_to.Size = new System.Drawing.Size(62, 20);
             this.weight_to.TabIndex = 4;
@@ -271,11 +294,11 @@ namespace BalanceGame
             // 
             this.weight_range_label.AutoSize = true;
             this.weight_range_label.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weight_range_label.Location = new System.Drawing.Point(705, 225);
+            this.weight_range_label.Location = new System.Drawing.Point(618, 225);
             this.weight_range_label.Name = "weight_range_label";
-            this.weight_range_label.Size = new System.Drawing.Size(269, 46);
+            this.weight_range_label.Size = new System.Drawing.Size(352, 46);
             this.weight_range_label.TabIndex = 2;
-            this.weight_range_label.Text = "Weight range";
+            this.weight_range_label.Text = "Weights range (g)";
             // 
             // language_label
             // 
@@ -1143,6 +1166,7 @@ namespace BalanceGame
         private PictureBox weight_5;
         private Panel panel_plateweight_1;
         private PictureBox weight_1;
+        private Button save_options_button;
     }
 }
 

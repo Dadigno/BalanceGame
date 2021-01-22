@@ -34,6 +34,9 @@ namespace BalanceGame
 
         private void Game_Load(object sender, EventArgs e)
         {
+
+
+
             if (CheckConfigFileIsPresent())
             {
                 try
@@ -74,6 +77,5 @@ namespace BalanceGame
 
             }*/
         }
-
     }
 }
