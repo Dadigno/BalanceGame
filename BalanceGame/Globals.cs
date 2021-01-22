@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BalanceGame
 {
-    public partial class Game
+    public static class Globals
     {
-        
+
     }
 }
