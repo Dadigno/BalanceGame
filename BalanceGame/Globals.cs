@@ -40,15 +40,16 @@ namespace BalanceGame
 
         //Messages
 
-        public static readonly string exiting_without_saving_message = "Are you sure you want return to the menu without saving? Any changes made will not be saved.";
-        public static readonly string exiting_without_saving_caption = "Exit without saving?";
+        public static string exiting_without_saving_message = "Are you sure you want return to the menu without saving? Any changes made will not be saved.";
+        public static string exiting_without_saving_caption = "Exit without saving?";
 
-        public static readonly string exit_game_message = "Are you sure you want to close?";
-        public static readonly string exit_game_caption = "Exit game";
+        public static string exit_game_message = "Are you sure you want to close?";
+        public static string exit_game_caption = "Exit game";
 
-        public static readonly string saving_message = "The modified will be effective only after restarting the game";
-        public static readonly string saving_caption = "Information";
+        public static string saving_message = "The modified will be effective only after restarting the game";
+        public static string saving_caption = "Information";
 
+        public static readonly string info_text = "This game was created by Davide Orengo and Giorgio Demarzi. \n A.A. 20-21\n Human Computer Interaction course";
         /// <summary>
         /// Game configuration
         /// </summary>

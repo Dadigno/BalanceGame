@@ -45,6 +45,14 @@ namespace BalanceGame
             save_options_button.Enabled = true;
         }
 
+        private void info_button_Click(object sender, EventArgs e)
+        {
+            Information_form info_Form = new Information_form(this);
+            info_Form.Show();
+            this.Enabled = false;
+        }
+
+
         private void button_start_Click(object sender, EventArgs e)
         {
             panel_menu.Hide();

@@ -16,11 +16,11 @@ namespace BalanceGame
     public partial class Game : Form
     {
         NameValueCollection Configuration_file;
-
         public Game()
         {
             InitializeComponent();
             InitializeMenu();
+            
         }
 
         private static void SetSetting(string key, string value)
@@ -89,5 +89,7 @@ namespace BalanceGame
 
             }*/
         }
+
+        
     }
 }
