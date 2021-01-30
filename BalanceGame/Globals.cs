@@ -50,6 +50,14 @@ namespace BalanceGame
         public static string saving_caption = "Information";
 
         public static readonly string info_text = "This game was created by Davide Orengo and Giorgio Demarzi. \n A.A. 20-21\n Human Computer Interaction course";
+
+
+        //ITA tutorial
+        public static string tutorial_text_intro = "Con questo tutorial imparerai come giocare a Balance Game.\n\nSe lo desideri puoi chiudere questa finestra cliccando sul tasto Skip in basso a sinistra, altrimenti continua su Next";
+        public static string tutorial_text_page1 = "Page 1";
+        public static string tutorial_text_page2 = "Page 2";
+
+
         /// <summary>
         /// Game configuration
         /// </summary>
