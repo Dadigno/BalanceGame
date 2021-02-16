@@ -20,7 +20,7 @@ namespace BalanceGame
         {
             InitializeComponent();
             InitializeMenu();
-            
+
         }
 
         private static void SetSetting(string key, string value)
@@ -70,6 +70,8 @@ namespace BalanceGame
                 set_configuration(true);
                 Console.WriteLine("No config file found, default configuration loaded");
             }
+
+            init_gamevars();
         }
 
         private void Language_load(string language) /* TODO */
