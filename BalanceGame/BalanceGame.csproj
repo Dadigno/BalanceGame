@@ -157,5 +157,14 @@
   <ItemGroup>
     <None Include="Resources\save.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352090_56f76.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
