@@ -55,9 +55,6 @@ namespace BalanceGame
 
         private void button_start_Click(object sender, EventArgs e)
         {
-            Tutorial_form tutorial_form = new Tutorial_form(this);
-            tutorial_form.Show();
-            this.Enabled = false;
             panel_menu.Hide();
             panel_game.Show();
             panel_onplate_1.Hide();

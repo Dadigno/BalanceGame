@@ -109,7 +109,7 @@
             this.contact_email.Name = "contact_email";
             this.contact_email.Size = new System.Drawing.Size(260, 24);
             this.contact_email.TabIndex = 8;
-            this.contact_email.Text = "umbrellacorp@cinqueggi.gov";
+            this.contact_email.Text = "email@email.it";
             // 
             // Information_form
             // 

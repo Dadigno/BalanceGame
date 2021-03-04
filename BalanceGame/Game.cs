@@ -1,26 +1,64 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections.Specialized;
 using System.IO;
+using System.Reflection;
+using System.Linq;
 
 namespace BalanceGame
 {
     public partial class Game : Form
     {
         NameValueCollection Configuration_file;
+        Size screen;
+        MemberInfo[] myMemberInfo;
+
         public Game()
         {
+            screen = Screen.PrimaryScreen.Bounds.Size;
+
             InitializeComponent();
+
+            /*Control ctrl = this.TopLevelControl;
+            
+
+            foreach (var pb in ctrl.Controls.OfType<Label>())
+            {
+                Size t = pb.Size;
+                pb.Width = (t.Width * screen.Width) / 1920;
+                pb.Height = (t.Height * screen.Height) / 1080;
+            }
+            foreach (var pb in ctrl.Controls.OfType<TextBox>())
+            {
+                Size t = pb.Size;
+                pb.Width = (t.Width * screen.Width) / 1920;
+                pb.Height = (t.Height * screen.Height) / 1080;
+            }
+            foreach (var pb in ctrl.Controls.OfType<PictureBox>())
+            {
+                Size t = pb.Size;
+                pb.Width = (t.Width * screen.Width) / 1920;
+                pb.Height = (t.Height * screen.Height) / 1080;
+            }
+            foreach (var pb in ctrl.Controls.OfType<Button>())
+            {
+                Size t = pb.Size;
+                pb.Width = (t.Width * screen.Width) / 1920;
+                pb.Height = (t.Height * screen.Height) / 1080;
+            }
+            foreach (var pb in ctrl.Controls.OfType<Panel>())
+            {
+                Size t = pb.Size;
+                pb.Width = (t.Width * screen.Width) / 1920;
+                pb.Height = (t.Height * screen.Height) / 1080;
+            }*/
+
             InitializeMenu();
 
+            
+           
         }
 
         private static void SetSetting(string key, string value)
@@ -91,7 +129,5 @@ namespace BalanceGame
 
             }*/
         }
-
-        
     }
 }

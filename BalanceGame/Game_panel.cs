@@ -25,6 +25,13 @@ namespace BalanceGame
             move_arrow();
         }
 
+        private void tutorial_button_Click(object sender, EventArgs e)
+        {
+            Tutorial_form tutorial_form = new Tutorial_form(this);
+            tutorial_form.Show();
+            this.Enabled = false;
+        }
+
         private void return_menu_click(object sender, EventArgs e)
         {
             panel_game.Hide();
@@ -152,8 +159,6 @@ namespace BalanceGame
             
             debug_arrowX.Text = balance_indicator.Location.X.ToString();
         }
-
-
 
         private void refresh_game()
         {
