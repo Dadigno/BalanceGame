@@ -9,16 +9,24 @@ namespace BalanceGame
 {
     partial class Game : Form
     {
-
+        
 
         private void InitializeMenu()
         {
+            //Rescale all components in menu panel and options panel
+            foreach( Control ctrl in menu_controls)
+            {
+                resize_control(ctrl);
+            }
+
+
             panel_menu.Show();
             panel_options.Hide();
 
             weight_from_combobox.ValueChanged += new System.EventHandler(weight_from_ValueChange);
             weight_to_combobox.ValueChanged += new System.EventHandler(weight_to_ValueChange);
             color_combobox.SelectedIndexChanged += new System.EventHandler(color_combobox_SelectedIndexChanged);
+
         }
 
         private void weight_from_ValueChange(object sender, System.EventArgs e)

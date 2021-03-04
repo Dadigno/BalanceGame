@@ -15,8 +15,18 @@ namespace BalanceGame
         int target = 0;
 
 
-        private void init_gamevars()
+        private void InitializeGame()
         {
+            //Rescale all components in panel game
+            foreach (Control ctrl in game_controls)
+            {
+                if(ctrl.Text == "adfg" || ctrl.Text == "B")
+                {
+                    Console.WriteLine("Sono qui");
+                }
+                resize_control(ctrl);
+            }
+
             Random r = new Random();
             target = r.Next(Globals.weight_from, Globals.weight_to);
             debug_target.Text = target.ToString();
@@ -153,9 +163,10 @@ namespace BalanceGame
 
         private void move_arrow()
         {
-            int lenght = 1184;
+            int lenght = (1184 * screen.Width) / 1920;
+            int offset = (692 * screen.Width) / 1920;
             int diff = target - value_reached;
-            balance_indicator.Left -= (balance_indicator.Left - 692) + (int)(( diff * lenght * 0.5f) / target);
+            balance_indicator.Left -= (balance_indicator.Left - offset) + (int)(( diff * lenght * 0.5f) / target);
             
             debug_arrowX.Text = balance_indicator.Location.X.ToString();
         }
