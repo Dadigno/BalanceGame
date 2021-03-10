@@ -55,16 +55,22 @@ namespace BalanceGame
             this.weight_1_label = new System.Windows.Forms.Label();
             this.weight_1 = new System.Windows.Forms.PictureBox();
             this.panel_onplate_1000 = new System.Windows.Forms.Panel();
+            this.outplate_1000 = new System.Windows.Forms.Button();
             this.onplate_1000 = new System.Windows.Forms.Button();
             this.panel_onplate_500 = new System.Windows.Forms.Panel();
+            this.outplate_500 = new System.Windows.Forms.Button();
             this.onplate_500 = new System.Windows.Forms.Button();
             this.panel_onplate_100 = new System.Windows.Forms.Panel();
+            this.outplate_100 = new System.Windows.Forms.Button();
             this.onplate_100 = new System.Windows.Forms.Button();
             this.panel_onplate_10 = new System.Windows.Forms.Panel();
+            this.outplate_10 = new System.Windows.Forms.Button();
             this.onplate_10 = new System.Windows.Forms.Button();
             this.panel_onplate_5 = new System.Windows.Forms.Panel();
+            this.outplate_5 = new System.Windows.Forms.Button();
             this.onplate_5 = new System.Windows.Forms.Button();
             this.panel_onplate_1 = new System.Windows.Forms.Panel();
+            this.outplate_1 = new System.Windows.Forms.Button();
             this.onplate_1 = new System.Windows.Forms.Button();
             this.weight_1000_sprite = new System.Windows.Forms.PictureBox();
             this.weight_500_sprite = new System.Windows.Forms.PictureBox();
@@ -155,7 +161,7 @@ namespace BalanceGame
             this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_main.Location = new System.Drawing.Point(0, 0);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(1636, 976);
+            this.panel_main.Size = new System.Drawing.Size(1924, 976);
             this.panel_main.TabIndex = 1;
             // 
             // panel_game
@@ -203,7 +209,7 @@ namespace BalanceGame
             this.panel_game.ForeColor = System.Drawing.Color.Transparent;
             this.panel_game.Location = new System.Drawing.Point(0, 0);
             this.panel_game.Name = "panel_game";
-            this.panel_game.Size = new System.Drawing.Size(1636, 976);
+            this.panel_game.Size = new System.Drawing.Size(1924, 976);
             this.panel_game.TabIndex = 1;
             this.panel_game.Visible = false;
             // 
@@ -262,7 +268,7 @@ namespace BalanceGame
             this.weight_1000_label.AutoSize = true;
             this.weight_1000_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_1000_label.ForeColor = System.Drawing.Color.Black;
-            this.weight_1000_label.Location = new System.Drawing.Point(3, 0);
+            this.weight_1000_label.Location = new System.Drawing.Point(-5, 0);
             this.weight_1000_label.Name = "weight_1000_label";
             this.weight_1000_label.Size = new System.Drawing.Size(76, 25);
             this.weight_1000_label.TabIndex = 37;
@@ -455,133 +461,229 @@ namespace BalanceGame
             // panel_onplate_1000
             // 
             this.panel_onplate_1000.BackColor = System.Drawing.Color.Transparent;
+            this.panel_onplate_1000.Controls.Add(this.outplate_1000);
             this.panel_onplate_1000.Controls.Add(this.onplate_1000);
-            this.panel_onplate_1000.Location = new System.Drawing.Point(1721, 770);
+            this.panel_onplate_1000.Location = new System.Drawing.Point(1358, 774);
             this.panel_onplate_1000.Name = "panel_onplate_1000";
-            this.panel_onplate_1000.Size = new System.Drawing.Size(187, 82);
+            this.panel_onplate_1000.Size = new System.Drawing.Size(108, 90);
             this.panel_onplate_1000.TabIndex = 29;
+            // 
+            // outplate_1000
+            // 
+            this.outplate_1000.BackColor = System.Drawing.Color.Red;
+            this.outplate_1000.BackgroundImage = global::BalanceGame.Properties.Resources.arrow_outplate;
+            this.outplate_1000.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.outplate_1000.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.outplate_1000.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.outplate_1000.Location = new System.Drawing.Point(0, 43);
+            this.outplate_1000.Name = "outplate_1000";
+            this.outplate_1000.Size = new System.Drawing.Size(108, 47);
+            this.outplate_1000.TabIndex = 1;
+            this.outplate_1000.UseVisualStyleBackColor = false;
+            this.outplate_1000.Click += new System.EventHandler(this.outplate_1000_click);
             // 
             // onplate_1000
             // 
+            this.onplate_1000.BackColor = System.Drawing.Color.Green;
             this.onplate_1000.BackgroundImage = global::BalanceGame.Properties.Resources.arrow_onplate;
             this.onplate_1000.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.onplate_1000.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onplate_1000.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.onplate_1000.Location = new System.Drawing.Point(3, 3);
+            this.onplate_1000.Location = new System.Drawing.Point(0, 0);
             this.onplate_1000.Name = "onplate_1000";
-            this.onplate_1000.Size = new System.Drawing.Size(181, 76);
+            this.onplate_1000.Size = new System.Drawing.Size(108, 46);
             this.onplate_1000.TabIndex = 0;
-            this.onplate_1000.UseVisualStyleBackColor = true;
+            this.onplate_1000.UseVisualStyleBackColor = false;
             this.onplate_1000.Click += new System.EventHandler(this.onplate_1000_click);
             // 
             // panel_onplate_500
             // 
             this.panel_onplate_500.BackColor = System.Drawing.Color.Transparent;
+            this.panel_onplate_500.Controls.Add(this.outplate_500);
             this.panel_onplate_500.Controls.Add(this.onplate_500);
-            this.panel_onplate_500.Location = new System.Drawing.Point(1721, 652);
+            this.panel_onplate_500.Location = new System.Drawing.Point(1358, 653);
             this.panel_onplate_500.Name = "panel_onplate_500";
-            this.panel_onplate_500.Size = new System.Drawing.Size(187, 82);
+            this.panel_onplate_500.Size = new System.Drawing.Size(108, 90);
             this.panel_onplate_500.TabIndex = 28;
+            // 
+            // outplate_500
+            // 
+            this.outplate_500.BackColor = System.Drawing.Color.Red;
+            this.outplate_500.BackgroundImage = global::BalanceGame.Properties.Resources.arrow_outplate;
+            this.outplate_500.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.outplate_500.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.outplate_500.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.outplate_500.Location = new System.Drawing.Point(0, 46);
+            this.outplate_500.Name = "outplate_500";
+            this.outplate_500.Size = new System.Drawing.Size(108, 44);
+            this.outplate_500.TabIndex = 1;
+            this.outplate_500.UseVisualStyleBackColor = false;
+            this.outplate_500.Click += new System.EventHandler(this.outplate_500_click);
             // 
             // onplate_500
             // 
+            this.onplate_500.BackColor = System.Drawing.Color.Green;
             this.onplate_500.BackgroundImage = global::BalanceGame.Properties.Resources.arrow_onplate;
             this.onplate_500.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.onplate_500.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onplate_500.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.onplate_500.Location = new System.Drawing.Point(3, 3);
+            this.onplate_500.Location = new System.Drawing.Point(0, 0);
             this.onplate_500.Name = "onplate_500";
-            this.onplate_500.Size = new System.Drawing.Size(181, 76);
+            this.onplate_500.Size = new System.Drawing.Size(108, 48);
             this.onplate_500.TabIndex = 0;
-            this.onplate_500.UseVisualStyleBackColor = true;
+            this.onplate_500.UseVisualStyleBackColor = false;
             this.onplate_500.Click += new System.EventHandler(this.onplate_500_click);
             // 
             // panel_onplate_100
             // 
             this.panel_onplate_100.BackColor = System.Drawing.Color.Transparent;
+            this.panel_onplate_100.Controls.Add(this.outplate_100);
             this.panel_onplate_100.Controls.Add(this.onplate_100);
-            this.panel_onplate_100.Location = new System.Drawing.Point(1721, 541);
+            this.panel_onplate_100.Location = new System.Drawing.Point(1358, 541);
             this.panel_onplate_100.Name = "panel_onplate_100";
-            this.panel_onplate_100.Size = new System.Drawing.Size(187, 82);
+            this.panel_onplate_100.Size = new System.Drawing.Size(108, 88);
             this.panel_onplate_100.TabIndex = 27;
+            // 
+            // outplate_100
+            // 
+            this.outplate_100.BackColor = System.Drawing.Color.Red;
+            this.outplate_100.BackgroundImage = global::BalanceGame.Properties.Resources.arrow_outplate;
+            this.outplate_100.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.outplate_100.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.outplate_100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.outplate_100.Location = new System.Drawing.Point(0, 41);
+            this.outplate_100.Name = "outplate_100";
+            this.outplate_100.Size = new System.Drawing.Size(108, 47);
+            this.outplate_100.TabIndex = 1;
+            this.outplate_100.UseVisualStyleBackColor = false;
+            this.outplate_100.Click += new System.EventHandler(this.outplate_100_click);
             // 
             // onplate_100
             // 
+            this.onplate_100.BackColor = System.Drawing.Color.Green;
             this.onplate_100.BackgroundImage = global::BalanceGame.Properties.Resources.arrow_onplate;
             this.onplate_100.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.onplate_100.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onplate_100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.onplate_100.Location = new System.Drawing.Point(3, 3);
+            this.onplate_100.Location = new System.Drawing.Point(0, 0);
             this.onplate_100.Name = "onplate_100";
-            this.onplate_100.Size = new System.Drawing.Size(181, 76);
+            this.onplate_100.Size = new System.Drawing.Size(108, 44);
             this.onplate_100.TabIndex = 0;
-            this.onplate_100.UseVisualStyleBackColor = true;
+            this.onplate_100.UseVisualStyleBackColor = false;
             this.onplate_100.Click += new System.EventHandler(this.onplate_100_click);
             // 
             // panel_onplate_10
             // 
             this.panel_onplate_10.BackColor = System.Drawing.Color.Transparent;
+            this.panel_onplate_10.Controls.Add(this.outplate_10);
             this.panel_onplate_10.Controls.Add(this.onplate_10);
-            this.panel_onplate_10.Location = new System.Drawing.Point(1721, 425);
+            this.panel_onplate_10.Location = new System.Drawing.Point(1358, 427);
             this.panel_onplate_10.Name = "panel_onplate_10";
-            this.panel_onplate_10.Size = new System.Drawing.Size(187, 82);
+            this.panel_onplate_10.Size = new System.Drawing.Size(108, 86);
             this.panel_onplate_10.TabIndex = 26;
+            // 
+            // outplate_10
+            // 
+            this.outplate_10.BackColor = System.Drawing.Color.Red;
+            this.outplate_10.BackgroundImage = global::BalanceGame.Properties.Resources.arrow_outplate;
+            this.outplate_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.outplate_10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.outplate_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.outplate_10.Location = new System.Drawing.Point(0, 43);
+            this.outplate_10.Name = "outplate_10";
+            this.outplate_10.Size = new System.Drawing.Size(108, 43);
+            this.outplate_10.TabIndex = 1;
+            this.outplate_10.UseVisualStyleBackColor = false;
+            this.outplate_10.Click += new System.EventHandler(this.outplate_10_click);
             // 
             // onplate_10
             // 
+            this.onplate_10.BackColor = System.Drawing.Color.Green;
             this.onplate_10.BackgroundImage = global::BalanceGame.Properties.Resources.arrow_onplate;
             this.onplate_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.onplate_10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onplate_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.onplate_10.Location = new System.Drawing.Point(3, 3);
+            this.onplate_10.Location = new System.Drawing.Point(0, 0);
             this.onplate_10.Name = "onplate_10";
-            this.onplate_10.Size = new System.Drawing.Size(181, 76);
+            this.onplate_10.Size = new System.Drawing.Size(108, 45);
             this.onplate_10.TabIndex = 0;
-            this.onplate_10.UseVisualStyleBackColor = true;
+            this.onplate_10.UseVisualStyleBackColor = false;
             this.onplate_10.Click += new System.EventHandler(this.onplate_10_click);
             // 
             // panel_onplate_5
             // 
             this.panel_onplate_5.BackColor = System.Drawing.Color.Transparent;
+            this.panel_onplate_5.Controls.Add(this.outplate_5);
             this.panel_onplate_5.Controls.Add(this.onplate_5);
-            this.panel_onplate_5.Location = new System.Drawing.Point(1721, 317);
+            this.panel_onplate_5.Location = new System.Drawing.Point(1358, 305);
             this.panel_onplate_5.Name = "panel_onplate_5";
-            this.panel_onplate_5.Size = new System.Drawing.Size(187, 82);
+            this.panel_onplate_5.Size = new System.Drawing.Size(108, 94);
             this.panel_onplate_5.TabIndex = 25;
+            // 
+            // outplate_5
+            // 
+            this.outplate_5.BackColor = System.Drawing.Color.Red;
+            this.outplate_5.BackgroundImage = global::BalanceGame.Properties.Resources.arrow_outplate;
+            this.outplate_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.outplate_5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.outplate_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.outplate_5.Location = new System.Drawing.Point(0, 48);
+            this.outplate_5.Name = "outplate_5";
+            this.outplate_5.Size = new System.Drawing.Size(108, 46);
+            this.outplate_5.TabIndex = 1;
+            this.outplate_5.UseVisualStyleBackColor = false;
+            this.outplate_5.Click += new System.EventHandler(this.outplate_5_click);
             // 
             // onplate_5
             // 
+            this.onplate_5.BackColor = System.Drawing.Color.Green;
             this.onplate_5.BackgroundImage = global::BalanceGame.Properties.Resources.arrow_onplate;
             this.onplate_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.onplate_5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onplate_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.onplate_5.Location = new System.Drawing.Point(3, 3);
+            this.onplate_5.Location = new System.Drawing.Point(0, 0);
             this.onplate_5.Name = "onplate_5";
-            this.onplate_5.Size = new System.Drawing.Size(181, 76);
+            this.onplate_5.Size = new System.Drawing.Size(108, 50);
             this.onplate_5.TabIndex = 0;
-            this.onplate_5.UseVisualStyleBackColor = true;
+            this.onplate_5.UseVisualStyleBackColor = false;
             this.onplate_5.Click += new System.EventHandler(this.onplate_5_click);
             // 
             // panel_onplate_1
             // 
             this.panel_onplate_1.BackColor = System.Drawing.Color.Transparent;
+            this.panel_onplate_1.Controls.Add(this.outplate_1);
             this.panel_onplate_1.Controls.Add(this.onplate_1);
-            this.panel_onplate_1.Location = new System.Drawing.Point(1721, 199);
+            this.panel_onplate_1.Location = new System.Drawing.Point(1358, 202);
             this.panel_onplate_1.Name = "panel_onplate_1";
-            this.panel_onplate_1.Size = new System.Drawing.Size(187, 82);
+            this.panel_onplate_1.Size = new System.Drawing.Size(108, 89);
             this.panel_onplate_1.TabIndex = 24;
+            // 
+            // outplate_1
+            // 
+            this.outplate_1.BackColor = System.Drawing.Color.Red;
+            this.outplate_1.BackgroundImage = global::BalanceGame.Properties.Resources.arrow_outplate;
+            this.outplate_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.outplate_1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.outplate_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.outplate_1.Location = new System.Drawing.Point(0, 46);
+            this.outplate_1.Name = "outplate_1";
+            this.outplate_1.Size = new System.Drawing.Size(108, 43);
+            this.outplate_1.TabIndex = 1;
+            this.outplate_1.UseVisualStyleBackColor = false;
+            this.outplate_1.Click += new System.EventHandler(this.outplate_1_click);
             // 
             // onplate_1
             // 
+            this.onplate_1.BackColor = System.Drawing.Color.Green;
             this.onplate_1.BackgroundImage = global::BalanceGame.Properties.Resources.arrow_onplate;
             this.onplate_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.onplate_1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.onplate_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.onplate_1.Location = new System.Drawing.Point(3, 3);
+            this.onplate_1.Location = new System.Drawing.Point(0, 0);
             this.onplate_1.Name = "onplate_1";
-            this.onplate_1.Size = new System.Drawing.Size(181, 76);
+            this.onplate_1.Size = new System.Drawing.Size(108, 47);
             this.onplate_1.TabIndex = 0;
-            this.onplate_1.UseVisualStyleBackColor = true;
+            this.onplate_1.UseVisualStyleBackColor = false;
             this.onplate_1.Click += new System.EventHandler(this.onplate_1_click);
             // 
             // weight_1000_sprite
@@ -673,9 +775,9 @@ namespace BalanceGame
             this.weight_text.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.weight_text.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_text.ForeColor = System.Drawing.SystemColors.Window;
-            this.weight_text.Location = new System.Drawing.Point(1371, 131);
+            this.weight_text.Location = new System.Drawing.Point(1472, 131);
             this.weight_text.Name = "weight_text";
-            this.weight_text.Size = new System.Drawing.Size(537, 48);
+            this.weight_text.Size = new System.Drawing.Size(349, 48);
             this.weight_text.TabIndex = 17;
             this.weight_text.Text = "WEIGHTS (in grams)";
             // 
@@ -685,12 +787,12 @@ namespace BalanceGame
             this.weight_1000_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.weight_1000_button.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_1000_button.ForeColor = System.Drawing.SystemColors.Window;
-            this.weight_1000_button.Location = new System.Drawing.Point(1371, 753);
+            this.weight_1000_button.Location = new System.Drawing.Point(1472, 753);
             this.weight_1000_button.Name = "weight_1000_button";
-            this.weight_1000_button.Size = new System.Drawing.Size(546, 120);
+            this.weight_1000_button.Size = new System.Drawing.Size(349, 120);
             this.weight_1000_button.TabIndex = 16;
             this.weight_1000_button.Text = "1000";
-            this.weight_1000_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.weight_1000_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.weight_1000_button.UseVisualStyleBackColor = false;
             this.weight_1000_button.Click += new System.EventHandler(this.weight_1000_button_click);
             // 
@@ -701,12 +803,12 @@ namespace BalanceGame
             this.weight_500_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.weight_500_button.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_500_button.ForeColor = System.Drawing.SystemColors.Window;
-            this.weight_500_button.Location = new System.Drawing.Point(1371, 635);
+            this.weight_500_button.Location = new System.Drawing.Point(1472, 635);
             this.weight_500_button.Name = "weight_500_button";
-            this.weight_500_button.Size = new System.Drawing.Size(546, 120);
+            this.weight_500_button.Size = new System.Drawing.Size(349, 120);
             this.weight_500_button.TabIndex = 15;
             this.weight_500_button.Text = "500";
-            this.weight_500_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.weight_500_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.weight_500_button.UseVisualStyleBackColor = false;
             this.weight_500_button.Click += new System.EventHandler(this.weight_500_button_click);
             // 
@@ -716,12 +818,12 @@ namespace BalanceGame
             this.weight_100_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.weight_100_button.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_100_button.ForeColor = System.Drawing.SystemColors.Window;
-            this.weight_100_button.Location = new System.Drawing.Point(1371, 519);
+            this.weight_100_button.Location = new System.Drawing.Point(1472, 519);
             this.weight_100_button.Name = "weight_100_button";
-            this.weight_100_button.Size = new System.Drawing.Size(546, 120);
+            this.weight_100_button.Size = new System.Drawing.Size(349, 120);
             this.weight_100_button.TabIndex = 14;
             this.weight_100_button.Text = "100";
-            this.weight_100_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.weight_100_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.weight_100_button.UseVisualStyleBackColor = true;
             this.weight_100_button.Click += new System.EventHandler(this.weight_100_button_click);
             // 
@@ -731,12 +833,12 @@ namespace BalanceGame
             this.weight_10_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.weight_10_button.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_10_button.ForeColor = System.Drawing.SystemColors.Window;
-            this.weight_10_button.Location = new System.Drawing.Point(1371, 406);
+            this.weight_10_button.Location = new System.Drawing.Point(1472, 406);
             this.weight_10_button.Name = "weight_10_button";
-            this.weight_10_button.Size = new System.Drawing.Size(546, 120);
+            this.weight_10_button.Size = new System.Drawing.Size(349, 120);
             this.weight_10_button.TabIndex = 13;
             this.weight_10_button.Text = "10";
-            this.weight_10_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.weight_10_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.weight_10_button.UseVisualStyleBackColor = true;
             this.weight_10_button.Click += new System.EventHandler(this.weight_10_button_click);
             // 
@@ -746,12 +848,12 @@ namespace BalanceGame
             this.weight_5_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.weight_5_button.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_5_button.ForeColor = System.Drawing.SystemColors.Window;
-            this.weight_5_button.Location = new System.Drawing.Point(1371, 299);
+            this.weight_5_button.Location = new System.Drawing.Point(1472, 299);
             this.weight_5_button.Name = "weight_5_button";
-            this.weight_5_button.Size = new System.Drawing.Size(546, 120);
+            this.weight_5_button.Size = new System.Drawing.Size(349, 120);
             this.weight_5_button.TabIndex = 12;
             this.weight_5_button.Text = "5";
-            this.weight_5_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.weight_5_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.weight_5_button.UseVisualStyleBackColor = true;
             this.weight_5_button.Click += new System.EventHandler(this.weight_5_button_click);
             // 
@@ -761,12 +863,12 @@ namespace BalanceGame
             this.weight_1_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.weight_1_button.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_1_button.ForeColor = System.Drawing.SystemColors.Window;
-            this.weight_1_button.Location = new System.Drawing.Point(1371, 185);
+            this.weight_1_button.Location = new System.Drawing.Point(1472, 185);
             this.weight_1_button.Name = "weight_1_button";
-            this.weight_1_button.Size = new System.Drawing.Size(546, 120);
+            this.weight_1_button.Size = new System.Drawing.Size(349, 120);
             this.weight_1_button.TabIndex = 11;
             this.weight_1_button.Text = "1";
-            this.weight_1_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.weight_1_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.weight_1_button.UseVisualStyleBackColor = true;
             this.weight_1_button.Click += new System.EventHandler(this.weight_1_button_click);
             // 
@@ -871,12 +973,13 @@ namespace BalanceGame
             this.new_weight.TabIndex = 4;
             this.new_weight.Text = "NEW WEIGHT";
             this.new_weight.UseVisualStyleBackColor = true;
+            this.new_weight.Click += new System.EventHandler(this.new_weight_click);
             // 
             // balance_body
             // 
             this.balance_body.BackColor = System.Drawing.Color.Transparent;
             this.balance_body.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.balance_body.Image = global::BalanceGame.Properties.Resources.balance_body;
+            this.balance_body.Image = global::BalanceGame.Properties.Resources.balance_body02;
             this.balance_body.ImageLocation = "";
             this.balance_body.InitialImage = null;
             this.balance_body.Location = new System.Drawing.Point(57, 519);
@@ -922,7 +1025,7 @@ namespace BalanceGame
             this.panel_options.ForeColor = System.Drawing.Color.Black;
             this.panel_options.Location = new System.Drawing.Point(0, 0);
             this.panel_options.Name = "panel_options";
-            this.panel_options.Size = new System.Drawing.Size(1636, 976);
+            this.panel_options.Size = new System.Drawing.Size(1924, 976);
             this.panel_options.TabIndex = 4;
             // 
             // save_options_button
@@ -1090,7 +1193,7 @@ namespace BalanceGame
             this.panel_menu.ForeColor = System.Drawing.Color.Black;
             this.panel_menu.Location = new System.Drawing.Point(0, 0);
             this.panel_menu.Name = "panel_menu";
-            this.panel_menu.Size = new System.Drawing.Size(1636, 976);
+            this.panel_menu.Size = new System.Drawing.Size(1924, 976);
             this.panel_menu.TabIndex = 10;
             // 
             // info_label
@@ -1171,7 +1274,7 @@ namespace BalanceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1636, 976);
+            this.ClientSize = new System.Drawing.Size(1924, 976);
             this.Controls.Add(this.panel_main);
             this.MaximizeBox = false;
             this.Name = "Game";
@@ -1307,6 +1410,12 @@ namespace BalanceGame
         private Label debug_target;
         private Label debug_arrowX;
         private Button tutorial_button;
+        private Button outplate_5;
+        private Button outplate_1;
+        private Button outplate_1000;
+        private Button outplate_500;
+        private Button outplate_100;
+        private Button outplate_10;
     }
 }
 

@@ -35,6 +35,14 @@ namespace BalanceGame
             move_arrow();
         }
 
+        private void new_weight_click(object sender, EventArgs e)
+        {
+            Random r = new Random();
+            target = r.Next(Globals.weight_from, Globals.weight_to);
+            move_arrow();
+            debug_target.Text = target.ToString();
+        }
+
         private void tutorial_button_Click(object sender, EventArgs e)
         {
             Tutorial_form tutorial_form = new Tutorial_form(this);
@@ -138,6 +146,36 @@ namespace BalanceGame
             add_weight(1000);
         }
 
+        private void outplate_1_click(object sender, EventArgs e)
+        {
+            remove_weight(1);
+        }
+
+        private void outplate_5_click(object sender, EventArgs e)
+        {
+            remove_weight(5);
+        }
+
+        private void outplate_10_click(object sender, EventArgs e)
+        {
+            remove_weight(10);
+        }
+
+        private void outplate_100_click(object sender, EventArgs e)
+        {
+            remove_weight(100);
+        }
+
+        private void outplate_500_click(object sender, EventArgs e)
+        {
+            remove_weight(500);
+        }
+
+        private void outplate_1000_click(object sender, EventArgs e)
+        {
+            remove_weight(1000);
+        }
+
         private void clear_click(object sender, EventArgs e)
         {
             weights_selected.Clear();
@@ -148,6 +186,12 @@ namespace BalanceGame
         private void add_weight(int weight)
         {
             weights_selected.Add(weight);
+            refresh_game();
+        }
+
+        private void remove_weight(int weight)
+        {
+            weights_selected.Remove(weight);
             refresh_game();
         }
 
@@ -166,9 +210,11 @@ namespace BalanceGame
             int lenght = (1184 * screen.Width) / 1920;
             int offset = (692 * screen.Width) / 1920;
             int diff = target - value_reached;
-            balance_indicator.Left -= (balance_indicator.Left - offset) + (int)(( diff * lenght * 0.5f) / target);
-            
+
+            balance_indicator.Left -= (balance_indicator.Left - offset) + (int)((diff * lenght* 0.5f) / target);
+
             debug_arrowX.Text = balance_indicator.Location.X.ToString();
+
         }
 
         private void refresh_game()

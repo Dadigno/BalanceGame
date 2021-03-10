@@ -135,5 +135,7 @@ namespace BalanceGame
             ctrl.Font = new Font(font.FontFamily, newSize, font.Style, font.Unit, font.GdiCharSet);
 
         }
+
+       
     }
 }

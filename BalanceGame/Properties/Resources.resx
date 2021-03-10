@@ -121,29 +121,41 @@
   <data name="balance_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\balance_arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_undo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button_undo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="weight_1000" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\weight_1000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="balance_indicator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\balance_indicator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bilancia_prova1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Media\bilancia_prova.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="weight_inc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weight_inc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="balance_body" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\balance_body.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="weight_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\weight_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="balance_plate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\balance_plate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="weight_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weight_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="weight_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\weight_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="balance_indicator" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\balance_indicator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="weight_1000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weight_1000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_undo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_undo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_onplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_onplate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="balance_body02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\balance_body02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="weight_500" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\weight_500.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,11 +163,8 @@
   <data name="weight_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\weight_100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="weight_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\weight_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_onplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_onplate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="weight_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weight_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bilancia_prova" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Media\bilancia_prova.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,10 +175,7 @@
   <data name="button_generic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_generic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="weight_inc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\weight_inc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow_outplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_outplate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
