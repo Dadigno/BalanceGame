@@ -39,7 +39,7 @@ namespace BalanceGame
                 weight_text, balance_indicator, weight_inc, balance_rightplate, balance_leftplate, undo, clear, new_weight, balance_body, return_menu,
                 tutorial_button, 
                 debug_arrowX, debug_reached, debug_target,
-
+                panel_plate_left, panel_plate_right,
             };
            
             InitializeMenu();
@@ -136,6 +136,6 @@ namespace BalanceGame
 
         }
 
-       
+        
     }
 }

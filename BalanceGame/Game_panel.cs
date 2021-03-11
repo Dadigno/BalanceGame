@@ -13,17 +13,18 @@ namespace BalanceGame
         List<int> weights_selected = new List<int>();
         int value_reached = 0;
         int target = 0;
-
+        int arrow_offset;
+        int arrow_max_pos;
 
         private void InitializeGame()
         {
             //Rescale all components in panel game
             foreach (Control ctrl in game_controls)
             {
-                if(ctrl.Text == "adfg" || ctrl.Text == "B")
+                /*if(ctrl.Text == "adfg" || ctrl.Text == "B")
                 {
                     Console.WriteLine("Sono qui");
-                }
+                }*/
                 resize_control(ctrl);
             }
 
@@ -32,7 +33,11 @@ namespace BalanceGame
             debug_target.Text = target.ToString();
 
             //Refresh Arrow
+            arrow_offset = (balance_indicator.Left * screen.Width) / 1920 - ( balance_indicator.Width) ;
+            arrow_max_pos = arrow_offset + balance_body.Width / 2;
+
             move_arrow();
+            move_plate();
         }
 
         private void new_weight_click(object sender, EventArgs e)
@@ -207,14 +212,33 @@ namespace BalanceGame
 
         private void move_arrow()
         {
-            int lenght = (1184 * screen.Width) / 1920;
-            int offset = (692 * screen.Width) / 1920;
+            
+            int lenght = (balance_body.Size.Width * screen.Width) / 1920;
             int diff = target - value_reached;
 
-            balance_indicator.Left -= (balance_indicator.Left - offset) + (int)((diff * lenght* 0.5f) / target);
+            balance_indicator.Left -= (balance_indicator.Left - arrow_offset) + (int)((diff * lenght * 0.5f) / target);
+
+            if (balance_indicator.Left > arrow_max_pos)
+            {
+                balance_indicator.Left = arrow_max_pos;
+            }
 
             debug_arrowX.Text = balance_indicator.Location.X.ToString();
 
+        }
+
+        private void move_plate()
+        {
+            if( value_reached > target)
+            {
+                panel_plate_left.Location = new Point(panel_plate_left.Location.X, panel_plate_left.Location.Y + 100);
+                panel_plate_right.Location = new Point(panel_plate_right.Location.X, panel_plate_right.Location.Y - 100);
+            }
+            else if (value_reached < target)
+            {
+                panel_plate_left.Location = new Point(panel_plate_left.Location.X, panel_plate_left.Location.Y - 100);
+                panel_plate_right.Location = new Point(panel_plate_right.Location.X, panel_plate_right.Location.Y + 100);
+            }
         }
 
         private void refresh_game()
@@ -327,6 +351,8 @@ namespace BalanceGame
             }
 
             move_arrow();
+            move_plate();
+
         }
     }
 }
