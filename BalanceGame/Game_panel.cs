@@ -15,6 +15,8 @@ namespace BalanceGame
         int target = 0;
         int arrow_offset;
         int arrow_max_pos;
+        int plate_zero_pos;
+        int plate_offset;
 
         private void InitializeGame()
         {
@@ -33,9 +35,10 @@ namespace BalanceGame
             debug_target.Text = target.ToString();
 
             //Refresh Arrow
-            arrow_offset = (balance_indicator.Left * screen.Width) / 1920 - ( balance_indicator.Width) ;
+            arrow_offset = balance_indicator.Left - balance_indicator.Width;
             arrow_max_pos = arrow_offset + balance_body.Width / 2;
-
+            plate_zero_pos = panel_plate_left.Location.Y; // = panel_plate_reight.Location.Y;
+            plate_offset = (100 * screen.Height) / 1080;
             move_arrow();
             move_plate();
         }
@@ -213,10 +216,9 @@ namespace BalanceGame
         private void move_arrow()
         {
             
-            int lenght = (balance_body.Size.Width * screen.Width) / 1920;
             int diff = target - value_reached;
 
-            balance_indicator.Left -= (balance_indicator.Left - arrow_offset) + (int)((diff * lenght * 0.5f) / target);
+            balance_indicator.Left -= (balance_indicator.Left - arrow_offset) + (int)((diff * balance_body.Size.Width * 0.5f) / target);
 
             if (balance_indicator.Left > arrow_max_pos)
             {
@@ -231,13 +233,18 @@ namespace BalanceGame
         {
             if( value_reached > target)
             {
-                panel_plate_left.Location = new Point(panel_plate_left.Location.X, panel_plate_left.Location.Y + 100);
-                panel_plate_right.Location = new Point(panel_plate_right.Location.X, panel_plate_right.Location.Y - 100);
+                panel_plate_left.Location = new Point(panel_plate_left.Location.X, plate_zero_pos - plate_offset);
+                panel_plate_right.Location = new Point(panel_plate_right.Location.X, plate_zero_pos + plate_offset);
             }
             else if (value_reached < target)
             {
-                panel_plate_left.Location = new Point(panel_plate_left.Location.X, panel_plate_left.Location.Y - 100);
-                panel_plate_right.Location = new Point(panel_plate_right.Location.X, panel_plate_right.Location.Y + 100);
+                panel_plate_left.Location = new Point(panel_plate_left.Location.X, plate_zero_pos + plate_offset);
+                panel_plate_right.Location = new Point(panel_plate_right.Location.X, plate_zero_pos - plate_offset);
+            }
+            else
+            {
+                panel_plate_left.Location = new Point(panel_plate_left.Location.X, plate_zero_pos);
+                panel_plate_right.Location = new Point(panel_plate_right.Location.X, plate_zero_pos);
             }
         }
 

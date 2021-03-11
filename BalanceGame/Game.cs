@@ -14,7 +14,6 @@ namespace BalanceGame
     {
         NameValueCollection Configuration_file;
         Size screen;
-        MemberInfo[] myMemberInfo;
 
         //Controls
         List<Control> menu_controls;
@@ -30,12 +29,12 @@ namespace BalanceGame
                                                   save_options_button, title_options, reset_settings_button, color_combobox, return_menu_button, background_color_label, range_to_label, range_from_label, weight_to_combobox, weight_from_combobox, weight_range_label, language_label, language_combobox
             };
             game_controls = new List<Control>() {
-                onplate_1000, weight_1000, weight_1000_sprite, weight_1000_button, weight_1000_label, panel_onplate_1000, panel_plateweight_1000,
-                onplate_500, weight_500, weight_500_sprite, weight_500_button, weight_500_label, panel_onplate_500, panel_plateweight_500,
-                onplate_100, weight_100, weight_100_sprite, weight_100_button, weight_100_label, panel_onplate_100, panel_plateweight_100,
-                onplate_10, weight_10, weight_10_sprite, weight_10_button, weight_10_label, panel_onplate_10, panel_plateweight_10,
-                onplate_5, weight_5, weight_5_sprite, weight_5_button, weight_5_label, panel_onplate_5, panel_plateweight_5,
-                onplate_1, weight_1, weight_1_sprite, weight_1_button, weight_1_label, panel_onplate_1, panel_plateweight_1,
+                outplate_1000, onplate_1000, weight_1000, weight_1000_sprite, weight_1000_button, weight_1000_label, panel_onplate_1000, panel_plateweight_1000,
+                outplate_500, onplate_500, weight_500, weight_500_sprite, weight_500_button, weight_500_label, panel_onplate_500, panel_plateweight_500,
+                outplate_100, onplate_100, weight_100, weight_100_sprite, weight_100_button, weight_100_label, panel_onplate_100, panel_plateweight_100,
+                outplate_10, onplate_10, weight_10, weight_10_sprite, weight_10_button, weight_10_label, panel_onplate_10, panel_plateweight_10,
+                outplate_5, onplate_5, weight_5, weight_5_sprite, weight_5_button, weight_5_label, panel_onplate_5, panel_plateweight_5,
+                outplate_1, onplate_1, weight_1, weight_1_sprite, weight_1_button, weight_1_label, panel_onplate_1, panel_plateweight_1,
                 weight_text, balance_indicator, weight_inc, balance_rightplate, balance_leftplate, undo, clear, new_weight, balance_body, return_menu,
                 tutorial_button, 
                 debug_arrowX, debug_reached, debug_target,
@@ -44,8 +43,6 @@ namespace BalanceGame
            
             InitializeMenu();
 
-            
-           
         }
 
         private static void SetSetting(string key, string value)
@@ -88,6 +85,13 @@ namespace BalanceGame
                     Console.WriteLine("{0} Exception caught.", ex.Message);
                     Console.WriteLine("Default configuration loaded");
                     set_configuration(true);
+                }
+
+                if(Configuration_file.Get("Debug_mode") == "False")
+                {
+                    debug_arrowX.Visible = false;
+                    debug_reached.Visible = false;
+                    debug_target.Visible = false;
                 }
             }
             else
@@ -136,6 +140,5 @@ namespace BalanceGame
 
         }
 
-        
     }
 }
