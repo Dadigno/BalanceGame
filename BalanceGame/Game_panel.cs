@@ -35,10 +35,10 @@ namespace BalanceGame
             debug_target.Text = target.ToString();
 
             //Refresh Arrow
-            arrow_offset = balance_indicator.Left - balance_indicator.Width;
+            arrow_offset = balance_indicator.Left;
             arrow_max_pos = arrow_offset + balance_body.Width / 2;
             plate_zero_pos = panel_plate_left.Location.Y; // = panel_plate_reight.Location.Y;
-            plate_offset = (100 * screen.Height) / 1080;
+            plate_offset = (25 * screen.Height) / 1080;
             move_arrow();
             move_plate();
         }

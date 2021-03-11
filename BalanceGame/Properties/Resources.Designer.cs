@@ -103,26 +103,6 @@ namespace BalanceGame.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap balance_body02 {
-            get {
-                object obj = ResourceManager.GetObject("balance_body02", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap balance_body04 {
-            get {
-                object obj = ResourceManager.GetObject("balance_body04", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap balance_indicator {
             get {
                 object obj = ResourceManager.GetObject("balance_indicator", resourceCulture);
@@ -136,26 +116,6 @@ namespace BalanceGame.Properties {
         internal static System.Drawing.Bitmap balance_plate {
             get {
                 object obj = ResourceManager.GetObject("balance_plate", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bilancia_prova {
-            get {
-                object obj = ResourceManager.GetObject("bilancia_prova", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bilancia_prova1 {
-            get {
-                object obj = ResourceManager.GetObject("bilancia_prova1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,16 +216,6 @@ namespace BalanceGame.Properties {
         internal static System.Drawing.Bitmap weight_500 {
             get {
                 object obj = ResourceManager.GetObject("weight_500", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap weight_inc {
-            get {
-                object obj = ResourceManager.GetObject("weight_inc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
