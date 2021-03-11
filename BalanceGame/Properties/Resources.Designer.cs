@@ -113,6 +113,36 @@ namespace BalanceGame.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap balance_body03_ {
+            get {
+                object obj = ResourceManager.GetObject("balance_body03.", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap balance_body04 {
+            get {
+                object obj = ResourceManager.GetObject("balance_body04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap balance_body041 {
+            get {
+                object obj = ResourceManager.GetObject("balance_body041", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap balance_indicator {
             get {
                 object obj = ResourceManager.GetObject("balance_indicator", resourceCulture);

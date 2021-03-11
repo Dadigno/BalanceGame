@@ -915,7 +915,7 @@ namespace BalanceGame
             // 
             this.balance_body.BackColor = System.Drawing.Color.Transparent;
             this.balance_body.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.balance_body.Image = global::BalanceGame.Properties.Resources.balance_body02;
+            this.balance_body.Image = global::BalanceGame.Properties.Resources.balance_body041;
             this.balance_body.ImageLocation = "";
             this.balance_body.InitialImage = null;
             this.balance_body.Location = new System.Drawing.Point(12, 519);
