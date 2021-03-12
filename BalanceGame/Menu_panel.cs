@@ -9,8 +9,6 @@ namespace BalanceGame
 {
     partial class Game : Form
     {
-        
-
         private void InitializeMenu()
         {
             //Rescale all components in menu panel and options panel
@@ -26,6 +24,7 @@ namespace BalanceGame
             weight_from_combobox.ValueChanged += new System.EventHandler(weight_from_ValueChange);
             weight_to_combobox.ValueChanged += new System.EventHandler(weight_to_ValueChange);
             color_combobox.SelectedIndexChanged += new System.EventHandler(color_combobox_SelectedIndexChanged);
+            language_combobox.SelectedIndexChanged += new System.EventHandler(language_combobox_SelectedIndexChanged);
 
         }
 
@@ -47,8 +46,12 @@ namespace BalanceGame
             }
         }
 
-
         private void color_combobox_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            save_options_button.Enabled = true;
+        }
+
+        private void language_combobox_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             save_options_button.Enabled = true;
         }
@@ -65,6 +68,10 @@ namespace BalanceGame
         {
             panel_menu.Hide();
             panel_game.Show();
+
+            clear_click(this, new EventArgs());
+            new_weight_click(this, new EventArgs());
+
             panel_onplate_1.Hide();
             panel_onplate_5.Hide();
             panel_onplate_10.Hide();
@@ -159,59 +166,6 @@ namespace BalanceGame
                 this.Close();
             }
             
-        }
-
-        private void set_configuration(bool set_default_settings = false)
-        {
-            if (set_default_settings)
-            {
-                //Set default configuration momentarily ( Not saved into config file )
-
-                //Set Game variables
-                Globals.language = Globals.language_default;
-                Globals.weight_from = Globals.weight_from_default;
-                Globals.weight_to = Globals.weight_to_default;
-                Globals.weight_from_to_maximum = Globals.weight_from_to_maximum_default;
-                Globals.weight_from_to_minimum = Globals.weight_from_to_minimum_default;
-                Globals.backColor = Globals.backColor_default;
-
-                set_aspect();
-                
-                //Set language default TODO
-
-            }
-            else
-            {
-                //Load configuration from config file
-
-                //Load and set game variables
-                Globals.language = Globals.language_default;
-                Globals.weight_from = Convert.ToInt32(Configuration_file.Get("Weight_from"));
-                Globals.weight_to = Convert.ToInt32(Configuration_file.Get("Weight_to"));
-                Globals.weight_from_to_maximum = Convert.ToInt32(Configuration_file.Get("Weight_from_to_maximum"));
-                Globals.weight_from_to_minimum = Convert.ToInt32(Configuration_file.Get("Weight_from_to_minimum"));
-                Globals.backColor = System.Drawing.Color.FromName(Configuration_file.Get("BackColor"));
-
-                set_aspect();
-
-                //Set language saved in globals TODO
-            }
-        }
-
-        public void set_aspect()
-        {
-            panel_game.BackColor = Globals.backColor;
-            panel_menu.BackColor = Globals.backColor;
-            panel_options.BackColor = Globals.backColor;
-
-            language_combobox.SelectedItem = Globals.language;
-            color_combobox.SelectedItem = Globals.backColor.Name;
-            weight_from_combobox.Minimum = Globals.weight_from_to_minimum;
-            weight_from_combobox.Maximum = Globals.weight_from_to_maximum;
-            weight_to_combobox.Maximum = Globals.weight_from_to_maximum;
-            weight_to_combobox.Minimum = Globals.weight_from_to_minimum;
-            weight_from_combobox.Value = Globals.weight_from;
-            weight_to_combobox.Value = Globals.weight_to;
         }
     }
 }

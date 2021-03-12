@@ -34,7 +34,7 @@ namespace BalanceGame
             target = r.Next(Globals.weight_from, Globals.weight_to);
             debug_target.Text = target.ToString();
 
-            //Refresh Arrow
+            //Initialice indicator
             arrow_offset = balance_indicator.Left;
             arrow_max_pos = arrow_offset + balance_body.Width / 2;
             plate_zero_pos = panel_plate_left.Location.Y; // = panel_plate_reight.Location.Y;
@@ -45,10 +45,13 @@ namespace BalanceGame
 
         private void new_weight_click(object sender, EventArgs e)
         {
+            clear_click(this, new EventArgs());
+
             Random r = new Random();
             target = r.Next(Globals.weight_from, Globals.weight_to);
             move_arrow();
             debug_target.Text = target.ToString();
+
         }
 
         private void tutorial_button_Click(object sender, EventArgs e)
@@ -360,6 +363,26 @@ namespace BalanceGame
             move_arrow();
             move_plate();
 
+
+            if (value_reached == target)
+            {
+                var result = MessageBox.Show(String.Format(Globals.finish_game_message, value_reached), Globals.finish_game_caption,
+                                             MessageBoxButtons.YesNo,
+                                             MessageBoxIcon.None);
+
+                if (result == DialogResult.Yes)
+                {
+                    clear_click(this, new EventArgs());
+                    new_weight_click(this, new EventArgs());
+                }
+                else
+                {
+                    clear_click(this, new EventArgs());
+                    new_weight_click(this, new EventArgs());
+                    return_menu_click(this, new EventArgs());
+                }
+
+            }
         }
     }
 }

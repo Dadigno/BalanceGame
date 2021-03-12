@@ -2,7 +2,6 @@
 using System.Configuration;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Collections.Specialized;
 using System.IO;
 using System.Reflection;
 using System.Linq;
@@ -12,7 +11,6 @@ namespace BalanceGame
 {
     public partial class Game : Form
     {
-        NameValueCollection Configuration_file;
         Size screen;
 
         //Controls
@@ -65,11 +63,9 @@ namespace BalanceGame
             {
                 try
                 {
-                    Configuration_file = ConfigurationManager.AppSettings;
-                    //foreach (string s in Configuration_file.AllKeys)
-                    //    Console.WriteLine("Loading " + s + ": " + Configuration_file.Get(s));
+                    Globals.Configuration_file = ConfigurationManager.AppSettings;
                     
-                    if(Configuration_file.Get("Default_conf") == "True")
+                    if(Globals.Configuration_file.Get("Default_conf") == "True")
                     {
                         //Load deafult configuration
                         set_configuration(true);
@@ -86,13 +82,6 @@ namespace BalanceGame
                     Console.WriteLine("Default configuration loaded");
                     set_configuration(true);
                 }
-
-                if(Configuration_file.Get("Debug_mode") == "False")
-                {
-                    debug_arrowX.Visible = false;
-                    debug_reached.Visible = false;
-                    debug_target.Visible = false;
-                }
             }
             else
             {
@@ -100,25 +89,109 @@ namespace BalanceGame
                 Console.WriteLine("No config file found, default configuration loaded");
             }
 
+            set_language();
             InitializeGame();
         }
 
-        private void Language_load(string language) /* TODO */
+        private void set_configuration(bool set_default_settings = false)
         {
-            Console.WriteLine("Only EN language is supported");
-            /*if (language == "IT")
+            if (set_default_settings)
             {
-                
-                title_label.Text = Configuration_file.Get("Title_label");
-                button_exit.Text = Configuration_file.Get("Button_exit_text");
-                button_start.Text = Configuration_file.Get("Title_label");
-                return_menu.Text = Configuration_file.Get("return_menu");
-                button_options.Text = Configuration_file.Get("button_options");
+                //Set default configuration momentarily ( Not saved into config file )
+
+                //Set Game variables
+                Globals.language = Globals.language_default;
+                Globals.weight_from = Globals.weight_from_default;
+                Globals.weight_to = Globals.weight_to_default;
+                Globals.weight_from_to_maximum = Globals.weight_from_to_maximum_default;
+                Globals.weight_from_to_minimum = Globals.weight_from_to_minimum_default;
+                Globals.backColor = Globals.backColor_default;
+
+                set_aspect();
+
+                //Set language default TODO
+
             }
             else
             {
+                if (Globals.Configuration_file.Get("Debug_mode") == "False")
+                {
+                    debug_arrowX.Visible = false;
+                    debug_reached.Visible = false;
+                    debug_target.Visible = false;
+                }
 
-            }*/
+                //Load and set game variables
+                Globals.language = Globals.Configuration_file.Get("Lang");
+                Globals.weight_from = Convert.ToInt32(Globals.Configuration_file.Get("Weight_from"));
+                Globals.weight_to = Convert.ToInt32(Globals.Configuration_file.Get("Weight_to"));
+                Globals.weight_from_to_maximum = Convert.ToInt32(Globals.Configuration_file.Get("Weight_from_to_maximum"));
+                Globals.weight_from_to_minimum = Convert.ToInt32(Globals.Configuration_file.Get("Weight_from_to_minimum"));
+                Globals.backColor = System.Drawing.Color.FromName(Globals.Configuration_file.Get("BackColor"));
+
+                set_aspect();
+
+                //Set language saved in globals TODO
+            }
+        }
+
+        private void set_language() /* TODO */
+        {
+            if (Globals.language == "English")
+            {
+                //Panel menu
+                title_label.Text = Globals.label_title_default;
+                button_exit.Text = Globals.button_text_exit_default;
+                button_start.Text = Globals.button_text_start_default;
+                button_options.Text = Globals.button_text_options_default;
+
+                //Panel options
+                title_options.Text = Globals.label_title_options_default;
+                language_label.Text = Globals.label_language_default;
+                weight_range_label.Text = Globals.label_weightrange_default;
+                range_from_label.Text = Globals.label_rangefrom_default;
+                range_to_label.Text = Globals.label_rangeto_default;
+                background_color_label.Text = Globals.label_background_color_default;
+                reset_settings_button.Text = Globals.button_text_resetsettings_default;
+
+                //Panel information
+                info_label.Text = Globals.label_information_default;
+
+                //Panel game
+                return_menu.Text = Globals.button_text_returnmenu_default;
+                new_weight.Text = Globals.button_text_newweight_default;
+                clear.Text = Globals.button_text_clear_default;
+                tutorial_button.Text = Globals.button_text_tutorial_default;
+                weight_text.Text = Globals.textbox_weight_default;
+                
+            }
+            else
+            {//Load italian language
+                //Panel menu
+                title_label.Text = Globals.Configuration_file.Get("label_title");
+                button_exit.Text = Globals.Configuration_file.Get("button_text_exit");
+                button_start.Text = Globals.Configuration_file.Get("button_text_start");
+                button_options.Text = Globals.Configuration_file.Get("button_text_options");
+
+                //Panel options
+                title_options.Text = Globals.Configuration_file.Get("label_title_options");
+                language_label.Text = Globals.Configuration_file.Get("label_language");
+                weight_range_label.Text = Globals.Configuration_file.Get("label_weightrange");
+                range_from_label.Text = Globals.Configuration_file.Get("label_rangefrom");
+                range_to_label.Text = Globals.Configuration_file.Get("label_rangeto");
+                background_color_label.Text = Globals.Configuration_file.Get("label_background_color");
+                reset_settings_button.Text = Globals.Configuration_file.Get("button_text_resetsettings");
+
+                //Panel information
+                info_label.Text = Globals.Configuration_file.Get("label_information");
+
+                //Panel game
+                return_menu.Text = Globals.Configuration_file.Get("button_text_returnmenu");
+                new_weight.Text = Globals.Configuration_file.Get("button_text_newweight");
+                clear.Text = Globals.Configuration_file.Get("button_text_clear");
+                tutorial_button.Text = Globals.Configuration_file.Get("button_text_tutorial");
+                weight_text.Text = Globals.Configuration_file.Get("textbox_weight");
+            }
         }
 
         private void resize_control(Control ctrl)
@@ -138,6 +211,22 @@ namespace BalanceGame
             float newSize = (s * screen.Height) / 1080;
             ctrl.Font = new Font(font.FontFamily, newSize, font.Style, font.Unit, font.GdiCharSet);
 
+        }
+
+        public void set_aspect()
+        {
+            panel_game.BackColor = Globals.backColor;
+            panel_menu.BackColor = Globals.backColor;
+            panel_options.BackColor = Globals.backColor;
+
+            language_combobox.SelectedItem = Globals.language;
+            color_combobox.SelectedItem = Globals.backColor.Name;
+            weight_from_combobox.Minimum = Globals.weight_from_to_minimum;
+            weight_from_combobox.Maximum = Globals.weight_from_to_maximum;
+            weight_to_combobox.Maximum = Globals.weight_from_to_maximum;
+            weight_to_combobox.Minimum = Globals.weight_from_to_minimum;
+            weight_from_combobox.Value = Globals.weight_from;
+            weight_to_combobox.Value = Globals.weight_to;
         }
 
     }

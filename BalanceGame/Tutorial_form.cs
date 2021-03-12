@@ -26,7 +26,7 @@ namespace BalanceGame
             prev_tutorial_button.Enabled = false;
             next_tutorial_button.Enabled = true;
             page = 1;
-            tutorial_textbox.Text = Globals.tutorial_text_intro;
+            tutorial_textbox.Text = Globals.tutorial_text_intro_default;
             page_counter_label.Text = page + "\\" + MAX_PAGE;
         }
 
@@ -71,7 +71,7 @@ namespace BalanceGame
             switch (page)
             {
                 case 1:
-                    tutorial_textbox.Text = Globals.tutorial_text_intro;
+                    tutorial_textbox.Text = Globals.tutorial_text_intro_default;
                     break;
                 case 2:
                     tutorial_textbox.Text = Globals.tutorial_text_page1;
