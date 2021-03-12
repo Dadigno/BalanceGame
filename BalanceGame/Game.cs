@@ -228,6 +228,5 @@ namespace BalanceGame
             weight_from_combobox.Value = Globals.weight_from;
             weight_to_combobox.Value = Globals.weight_to;
         }
-
     }
 }

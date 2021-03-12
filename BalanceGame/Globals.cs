@@ -75,10 +75,11 @@ namespace BalanceGame
         public static string finish_game_caption = "Game Over";
 
         //ITA tutorial
-        public static string tutorial_text_intro_default = "Con questo tutorial imparerai come giocare a Balance Game.\n\nSe lo desideri puoi chiudere questa finestra cliccando sul tasto Skip in basso a sinistra, altrimenti continua su Next";
-        public static string tutorial_text_page1 = "Page 1";
-        public static string tutorial_text_page2 = "Page 2";
-
+        public static string tutorial_text_intro_default = "Welcome to the Balance Game!\n\nYour goal is to measure the weight in grams of the unknown object.\n\n\n\n\n\n\nIf you wish you can close this tutorial by clicking on the Skip button at the bottom, otherwise continue to Next.";
+        public static string tutorial_text_page1 = "You have to put on the right plate the weights presented on the menu.\n\nTo put a weight on the plate, you\nhave to click on the desired weight\nand then on the green button that\nwill appear next to the chosen\nweight.\n\nTo remove a weight on the plate\nyou have to click on the desired\nweight and then on the similar red\nbutton.";
+        public static string tutorial_text_page2 = "Putting the weights on the plate, the indicator on the balance body moves. The goal is to make it reach the center.\n\nIn this way the balance is achieved and you know exactly the weight of the unknown object!";
+        public static string tutorial_text_page3 = "Below the balance body there are four buttons.\nFrom left to right:\n\nMain menu: Lets you return to the main menu.\nNew weight: changes the weight value of the unknown object.\nClear: removes all the weights from the right plate.\nUndo: removes the last weight you put on the right plate.";
+        public static string tutorial_text_page4 = "The tutorial is over!\n\nYou can close this tutorial by clicking on the Skip button at the bottom\n\nHave fun!";
 
         /// <summary>
         /// Game configuration

@@ -14,7 +14,7 @@ namespace BalanceGame
     {
         Game main_form;
         int page;
-        int MAX_PAGE = 3;
+        int MAX_PAGE = 5;
 
         public Tutorial_form(Game main_form)
         {
@@ -28,6 +28,11 @@ namespace BalanceGame
             page = 1;
             tutorial_textbox.Text = Globals.tutorial_text_intro_default;
             page_counter_label.Text = page + "\\" + MAX_PAGE;
+            panel_tutorial001.Show();
+            panel_tutorial002.Hide();
+            panel_tutorial003.Hide();
+            panel_tutorial004.Hide();
+
         }
 
         private void Form1_FormClosing(Object sender, FormClosingEventArgs e)
@@ -71,13 +76,59 @@ namespace BalanceGame
             switch (page)
             {
                 case 1:
+                    panel_tutorial001.Hide();
+                    panel_tutorial002.Hide();
+                    panel_tutorial003.Hide();
+                    panel_tutorial004.Hide();
                     tutorial_textbox.Text = Globals.tutorial_text_intro_default;
+                    panel_tutorial001.Show();
+                    panel_tutorial002.Hide();
+                    panel_tutorial003.Hide();
+                    panel_tutorial004.Hide();
                     break;
                 case 2:
+                    panel_tutorial001.Hide();
+                    panel_tutorial002.Hide();
+                    panel_tutorial003.Hide();
+                    panel_tutorial004.Hide();
                     tutorial_textbox.Text = Globals.tutorial_text_page1;
+                    panel_tutorial001.Hide();
+                    panel_tutorial002.Show();
+                    panel_tutorial003.Hide();
+                    panel_tutorial004.Hide();
                     break;
                 case 3:
+                    panel_tutorial001.Hide();
+                    panel_tutorial002.Hide();
+                    panel_tutorial003.Hide();
+                    panel_tutorial004.Hide();
                     tutorial_textbox.Text = Globals.tutorial_text_page2;
+                    panel_tutorial001.Hide();
+                    panel_tutorial002.Hide();
+                    panel_tutorial003.Show();
+                    panel_tutorial004.Hide();
+                    break;
+                case 4:
+                    panel_tutorial001.Hide();
+                    panel_tutorial002.Hide();
+                    panel_tutorial003.Hide();
+                    panel_tutorial004.Hide();
+                    tutorial_textbox.Text = Globals.tutorial_text_page3;
+                    panel_tutorial001.Hide();
+                    panel_tutorial002.Hide();
+                    panel_tutorial003.Hide();
+                    panel_tutorial004.Show();
+                    break;
+                case 5:
+                    panel_tutorial001.Hide();
+                    panel_tutorial002.Hide();
+                    panel_tutorial003.Hide();
+                    panel_tutorial004.Hide();
+                    tutorial_textbox.Text = Globals.tutorial_text_page4;
+                    panel_tutorial001.Hide();
+                    panel_tutorial002.Hide();
+                    panel_tutorial003.Hide();
+                    panel_tutorial004.Hide();
                     break;
             }
         }
