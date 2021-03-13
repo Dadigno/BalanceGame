@@ -32,6 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -159,15 +165,6 @@
     <None Include="Resources\save.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\win.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\win.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\352090_56f76.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\balance_body02.png" />
   </ItemGroup>
   <ItemGroup>
@@ -202,6 +199,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\icon.ico" />
+    <None Include="Resources\icon.png" />
+    <None Include="Resources\icona.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
