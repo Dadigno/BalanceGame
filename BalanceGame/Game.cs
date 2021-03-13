@@ -26,6 +26,7 @@ namespace BalanceGame
             menu_controls = new List<Control>() { panel_menu, button_exit, button_options, button_start, info_button, title_label, info_label,
                                                   save_options_button, title_options, reset_settings_button, color_combobox, return_menu_button, background_color_label, range_to_label, range_from_label, weight_to_combobox, weight_from_combobox, weight_range_label, language_label, language_combobox
             };
+
             game_controls = new List<Control>() {
                 outplate_1000, onplate_1000, weight_1000, weight_1000_sprite, weight_1000_button, weight_1000_label, panel_onplate_1000, panel_plateweight_1000,
                 outplate_500, onplate_500, weight_500, weight_500_sprite, weight_500_button, weight_500_label, panel_onplate_500, panel_plateweight_500,
@@ -35,7 +36,7 @@ namespace BalanceGame
                 outplate_1, onplate_1, weight_1, weight_1_sprite, weight_1_button, weight_1_label, panel_onplate_1, panel_plateweight_1,
                 weight_text, balance_indicator, weight_inc, balance_rightplate, balance_leftplate, undo, clear, new_weight, balance_body, return_menu,
                 tutorial_button, 
-                debug_arrowX, debug_reached, debug_target,
+                debug_arrowX, debug_reached, debug_target, debug_label0, debug_label1, debug_label2, debug_label3,
                 panel_plate_left, panel_plate_right,
             };
            
@@ -114,11 +115,16 @@ namespace BalanceGame
             }
             else
             {
-                if (Globals.Configuration_file.Get("Debug_mode") == "False")
+                if (Globals.Configuration_file.Get("Debug_mode") == "True")
                 {
-                    debug_arrowX.Visible = false;
-                    debug_reached.Visible = false;
-                    debug_target.Visible = false;
+                    debug_arrowX.Visible = true;
+                    debug_reached.Visible = true;
+                    debug_target.Visible = true;
+                    debug_arrowX.Visible = true;
+                    debug_label0.Visible = true;
+                    debug_label1.Visible = true;
+                    debug_label2.Visible = true;
+                    debug_label3.Visible = true;
                 }
 
                 //Load and set game variables

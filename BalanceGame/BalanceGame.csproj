@@ -203,8 +203,6 @@
   <ItemGroup>
     <Content Include="icon.ico" />
     <None Include="Resources\icon.ico" />
-    <None Include="Resources\icon.png" />
-    <None Include="Resources\icona.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
