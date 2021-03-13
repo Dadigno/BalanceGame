@@ -25,7 +25,7 @@ namespace BalanceGame
 
         //Panel menu 
         public static readonly string label_title_default = "Balance game";
-        public static readonly string button_text_start_default = "Start Game";
+        public static readonly string button_text_start_default = "Start";
         public static readonly string button_text_options_default = "Options"; 
         public static readonly string button_text_exit_default = "Exit";
         public static readonly string label_information_default = "Info";
@@ -56,11 +56,7 @@ namespace BalanceGame
         public static readonly string contacts_label_default = "Contacts";
         public static readonly string label_email = "email@email.it";
 
-
-      
-      
         //Messages
-
         public static string exiting_without_saving_message = "Are you sure you want return to the menu without saving? Any changes made will not be saved.";
         public static string exiting_without_saving_caption = "Exit without saving?";
 
@@ -68,10 +64,9 @@ namespace BalanceGame
         public static string exit_game_caption = "Exit game";
 
         public static string saving_message = "The modified will be effective only after restarting the game";
-        public static string saving_caption = "Information";
+        public static string saving_caption = "Pay attention";
 
-        
-        public static string finish_game_message = "Great! The weight is {0}g!  \nClick YES to restart e new game or click NO if you want return to the menù";
+        public static string finish_game_message = "Great! The weight is {0}g!  \nClick YES to restart e new game or click NO if you want return to the menù.";
         public static string finish_game_caption = "Game Over";
 
         //ITA tutorial
@@ -79,7 +74,7 @@ namespace BalanceGame
         public static string tutorial_text_page1 = "You have to put on the right plate the weights presented on the menu.\n\nTo put a weight on the plate, you\nhave to click on the desired weight\nand then on the green button that\nwill appear next to the chosen\nweight.\n\nTo remove a weight on the plate\nyou have to click on the desired\nweight and then on the similar red\nbutton.";
         public static string tutorial_text_page2 = "Putting the weights on the plate, the indicator on the balance body moves. The goal is to make it reach the center.\n\nIn this way the balance is achieved and you know exactly the weight of the unknown object!";
         public static string tutorial_text_page3 = "Below the balance body there are four buttons.\nFrom left to right:\n\nMain menu: Lets you return to the main menu.\nNew weight: changes the weight value of the unknown object.\nClear: removes all the weights from the right plate.\nUndo: removes the last weight you put on the right plate.";
-        public static string tutorial_text_page4 = "The tutorial is over!\n\nYou can close this tutorial by clicking on the Skip button at the bottom\n\nHave fun!";
+        public static string tutorial_text_page4 = "The tutorial is over!\n\nNow you can close this window\n\nHave fun!";
 
         /// <summary>
         /// Game configuration

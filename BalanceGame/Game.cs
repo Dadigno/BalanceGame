@@ -137,35 +137,7 @@ namespace BalanceGame
 
         private void set_language() /* TODO */
         {
-            if (Globals.language == "English")
-            {
-                //Panel menu
-                title_label.Text = Globals.label_title_default;
-                button_exit.Text = Globals.button_text_exit_default;
-                button_start.Text = Globals.button_text_start_default;
-                button_options.Text = Globals.button_text_options_default;
-
-                //Panel options
-                title_options.Text = Globals.label_title_options_default;
-                language_label.Text = Globals.label_language_default;
-                weight_range_label.Text = Globals.label_weightrange_default;
-                range_from_label.Text = Globals.label_rangefrom_default;
-                range_to_label.Text = Globals.label_rangeto_default;
-                background_color_label.Text = Globals.label_background_color_default;
-                reset_settings_button.Text = Globals.button_text_resetsettings_default;
-
-                //Panel information
-                info_label.Text = Globals.label_information_default;
-
-                //Panel game
-                return_menu.Text = Globals.button_text_returnmenu_default;
-                new_weight.Text = Globals.button_text_newweight_default;
-                clear.Text = Globals.button_text_clear_default;
-                tutorial_button.Text = Globals.button_text_tutorial_default;
-                weight_text.Text = Globals.textbox_weight_default;
-                
-            }
-            else
+            if (Globals.language == "Italiano")
             {//Load italian language
                 //Panel menu
                 title_label.Text = Globals.Configuration_file.Get("label_title");
@@ -191,6 +163,44 @@ namespace BalanceGame
                 clear.Text = Globals.Configuration_file.Get("button_text_clear");
                 tutorial_button.Text = Globals.Configuration_file.Get("button_text_tutorial");
                 weight_text.Text = Globals.Configuration_file.Get("textbox_weight");
+
+                //Messages
+                Globals.exiting_without_saving_message = Globals.Configuration_file.Get("exitinh_without_saving_message");
+                Globals.exiting_without_saving_caption = Globals.Configuration_file.Get("exiting_without_saving_caption");
+                Globals.exit_game_message = Globals.Configuration_file.Get("exit_game_message");
+                Globals.exit_game_caption = Globals.Configuration_file.Get("exit_game_caption");
+                Globals.saving_message = Globals.Configuration_file.Get("saving_message");
+                Globals.saving_caption = Globals.Configuration_file.Get("saving_caption");
+                Globals.finish_game_caption = Globals.Configuration_file.Get("finish_game_caption");
+                Globals.finish_game_message = Globals.Configuration_file.Get("finish_game_message").Replace("\\n",Environment.NewLine);
+            }
+            else
+            {
+                //Panel menu
+                title_label.Text = Globals.label_title_default;
+                button_exit.Text = Globals.button_text_exit_default;
+                button_start.Text = Globals.button_text_start_default;
+                button_options.Text = Globals.button_text_options_default;
+
+                //Panel options
+                title_options.Text = Globals.label_title_options_default;
+                language_label.Text = Globals.label_language_default;
+                weight_range_label.Text = Globals.label_weightrange_default;
+                range_from_label.Text = Globals.label_rangefrom_default;
+                range_to_label.Text = Globals.label_rangeto_default;
+                background_color_label.Text = Globals.label_background_color_default;
+                reset_settings_button.Text = Globals.button_text_resetsettings_default;
+
+                //Panel information
+                info_label.Text = Globals.label_information_default;
+
+                //Panel game
+                return_menu.Text = Globals.button_text_returnmenu_default;
+                new_weight.Text = Globals.button_text_newweight_default;
+                clear.Text = Globals.button_text_clear_default;
+                tutorial_button.Text = Globals.button_text_tutorial_default;
+                weight_text.Text = Globals.textbox_weight_default;
+
             }
         }
 

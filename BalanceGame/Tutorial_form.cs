@@ -18,6 +18,9 @@ namespace BalanceGame
 
         public Tutorial_form(Game main_form)
         {
+            set_language();
+
+
             this.main_form = main_form;
             InitializeComponent();
             this.FormClosing += Form1_FormClosing;
@@ -33,6 +36,18 @@ namespace BalanceGame
             panel_tutorial003.Hide();
             panel_tutorial004.Hide();
 
+        }
+
+        private void set_language()
+        {
+            if (Globals.language == "Italiano")
+            {
+                Globals.tutorial_text_intro_default = Globals.Configuration_file.Get("tutorial_text_intro_default").Replace("\\n", Environment.NewLine); ;
+                Globals.tutorial_text_page1 = Globals.Configuration_file.Get("tutorial_text_page1").Replace("\\n", Environment.NewLine); ;
+                Globals.tutorial_text_page2 = Globals.Configuration_file.Get("tutorial_text_page2").Replace("\\n", Environment.NewLine); ;
+                Globals.tutorial_text_page3 = Globals.Configuration_file.Get("tutorial_text_page3").Replace("\\n", Environment.NewLine); ;
+                Globals.tutorial_text_page4 = Globals.Configuration_file.Get("tutorial_text_page4").Replace("\\n", Environment.NewLine); ;
+            }
         }
 
         private void Form1_FormClosing(Object sender, FormClosingEventArgs e)

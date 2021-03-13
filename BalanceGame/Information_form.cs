@@ -39,13 +39,13 @@ namespace BalanceGame
             }
             else
             {
-                information_title.Text = Globals.Configuration_file.Get("label_information_title");
-                info_text_1.Text = Globals.Configuration_file.Get("info_text1");
-                info_text_2.Text = Globals.Configuration_file.Get("info_text2");
-                info_text_3.Text = Globals.Configuration_file.Get("info_text3");
-                contacts_label.Text = Globals.Configuration_file.Get("contacts_label");
-                contact_email.Text = Globals.Configuration_file.Get("label_email");
-                this.Text = Globals.Configuration_file.Get("caption_information");
+                information_title.Text = Globals.Configuration_file.Get("label_information_title").Replace("\\n", Environment.NewLine); ;
+                info_text_1.Text = Globals.Configuration_file.Get("info_text1").Replace("\\n", Environment.NewLine); ;
+                info_text_2.Text = Globals.Configuration_file.Get("info_text2").Replace("\\n", Environment.NewLine); ;
+                info_text_3.Text = Globals.Configuration_file.Get("info_text3").Replace("\\n", Environment.NewLine); ;
+                contacts_label.Text = Globals.Configuration_file.Get("contacts_label").Replace("\\n", Environment.NewLine); ;
+                contact_email.Text = Globals.Configuration_file.Get("label_email").Replace("\\n", Environment.NewLine); ;
+                this.Text = Globals.Configuration_file.Get("caption_information").Replace("\\n", Environment.NewLine); ;
             }
         }
     }
