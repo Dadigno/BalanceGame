@@ -20,7 +20,7 @@ namespace BalanceGame
         public static readonly int weight_from_default = 1;
         public static readonly int weight_to_default = 2000;
 
-        public static readonly int weight_from_to_maximum_default = 2000;
+        public static readonly int weight_from_to_maximum_default = 5000;
         public static readonly int weight_from_to_minimum_default = 1;
 
         //Panel menu 
