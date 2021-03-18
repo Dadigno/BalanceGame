@@ -150,6 +150,7 @@ namespace BalanceGame
                 button_exit.Text = Globals.Configuration_file.Get("button_text_exit");
                 button_start.Text = Globals.Configuration_file.Get("button_text_start");
                 button_options.Text = Globals.Configuration_file.Get("button_text_options");
+                
 
                 //Panel options
                 title_options.Text = Globals.Configuration_file.Get("label_title_options");
@@ -159,6 +160,7 @@ namespace BalanceGame
                 range_to_label.Text = Globals.Configuration_file.Get("label_rangeto");
                 background_color_label.Text = Globals.Configuration_file.Get("label_background_color");
                 reset_settings_button.Text = Globals.Configuration_file.Get("button_text_resetsettings");
+                return_menu_button.Text = Globals.Configuration_file.Get("button_text_returnmenu");
 
                 //Panel information
                 info_label.Text = Globals.Configuration_file.Get("label_information");
@@ -196,6 +198,7 @@ namespace BalanceGame
                 range_to_label.Text = Globals.label_rangeto_default;
                 background_color_label.Text = Globals.label_background_color_default;
                 reset_settings_button.Text = Globals.button_text_resetsettings_default;
+                return_menu_button.Text = Globals.button_text_returnmenu_default;
 
                 //Panel information
                 info_label.Text = Globals.label_information_default;
@@ -244,5 +247,6 @@ namespace BalanceGame
             weight_from_combobox.Value = Globals.weight_from;
             weight_to_combobox.Value = Globals.weight_to;
         }
+
     }
 }
