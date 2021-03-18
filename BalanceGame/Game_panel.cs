@@ -200,25 +200,33 @@ namespace BalanceGame
 
         private void add_weight(int weight)
         {
-            avaliable_moves -= 1;
-            weights_selected.Add(weight);
-            refresh_game();
+            if (avaliable_moves > 0)
+            {
+                avaliable_moves -= 1;
+                weights_selected.Add(weight);
+                refresh_game();
+            }
+            
         }
 
         private void remove_weight(int weight)
         {
-            avaliable_moves -= 1;
-            weights_selected.Remove(weight);
-            refresh_game();
+            if (avaliable_moves > 0)
+            {
+                avaliable_moves -= 1;
+                weights_selected.Remove(weight);
+                refresh_game();
+            }
+            
         }
 
         private void undo_Click(object sender, EventArgs e)
         {
             if (weights_selected.Count > 0)
             {
+                avaliable_moves += 1;
                 weights_selected.RemoveAt(weights_selected.Count - 1);
                 refresh_game();
-
             }
         }
 
