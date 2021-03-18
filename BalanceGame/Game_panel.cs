@@ -208,7 +208,7 @@ namespace BalanceGame
             }
             
         }
-
+         
         private void remove_weight(int weight)
         {
             if (avaliable_moves > 0)
