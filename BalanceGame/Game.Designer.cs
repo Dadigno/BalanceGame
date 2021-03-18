@@ -32,21 +32,9 @@ namespace BalanceGame
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.panel_main = new System.Windows.Forms.Panel();
-            this.panel_options = new System.Windows.Forms.Panel();
-            this.save_options_button = new System.Windows.Forms.Button();
-            this.title_options = new System.Windows.Forms.Label();
-            this.reset_settings_button = new System.Windows.Forms.Button();
-            this.color_combobox = new System.Windows.Forms.ComboBox();
-            this.return_menu_button = new System.Windows.Forms.Button();
-            this.background_color_label = new System.Windows.Forms.Label();
-            this.range_to_label = new System.Windows.Forms.Label();
-            this.range_from_label = new System.Windows.Forms.Label();
-            this.weight_to_combobox = new System.Windows.Forms.NumericUpDown();
-            this.weight_from_combobox = new System.Windows.Forms.NumericUpDown();
-            this.weight_range_label = new System.Windows.Forms.Label();
-            this.language_label = new System.Windows.Forms.Label();
-            this.language_combobox = new System.Windows.Forms.ComboBox();
             this.panel_game = new System.Windows.Forms.Panel();
+            this.moves_avaliable_value_label = new System.Windows.Forms.Label();
+            this.moves_avaliable_label = new System.Windows.Forms.Label();
             this.debug_label3 = new System.Windows.Forms.Label();
             this.debug_label2 = new System.Windows.Forms.Label();
             this.debug_label1 = new System.Windows.Forms.Label();
@@ -115,6 +103,22 @@ namespace BalanceGame
             this.clear = new System.Windows.Forms.Button();
             this.new_weight = new System.Windows.Forms.Button();
             this.return_menu = new System.Windows.Forms.Button();
+            this.panel_options = new System.Windows.Forms.Panel();
+            this.max_moves_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.maximum_moves_label = new System.Windows.Forms.Label();
+            this.save_options_button = new System.Windows.Forms.Button();
+            this.title_options = new System.Windows.Forms.Label();
+            this.reset_settings_button = new System.Windows.Forms.Button();
+            this.color_combobox = new System.Windows.Forms.ComboBox();
+            this.return_menu_button = new System.Windows.Forms.Button();
+            this.background_color_label = new System.Windows.Forms.Label();
+            this.range_to_label = new System.Windows.Forms.Label();
+            this.range_from_label = new System.Windows.Forms.Label();
+            this.weight_to_combobox = new System.Windows.Forms.NumericUpDown();
+            this.weight_from_combobox = new System.Windows.Forms.NumericUpDown();
+            this.weight_range_label = new System.Windows.Forms.Label();
+            this.language_label = new System.Windows.Forms.Label();
+            this.language_combobox = new System.Windows.Forms.ComboBox();
             this.panel_menu = new System.Windows.Forms.Panel();
             this.info_label = new System.Windows.Forms.Label();
             this.info_button = new System.Windows.Forms.Button();
@@ -123,9 +127,6 @@ namespace BalanceGame
             this.button_options = new System.Windows.Forms.Button();
             this.button_start = new System.Windows.Forms.Button();
             this.panel_main.SuspendLayout();
-            this.panel_options.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.weight_to_combobox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.weight_from_combobox)).BeginInit();
             this.panel_game.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.balance_indicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.balance_body)).BeginInit();
@@ -158,202 +159,30 @@ namespace BalanceGame
             this.panel_plate_left.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weight_inc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.balance_leftplate)).BeginInit();
+            this.panel_options.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.max_moves_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weight_to_combobox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weight_from_combobox)).BeginInit();
             this.panel_menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_main
             // 
             this.panel_main.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel_main.Controls.Add(this.panel_options);
             this.panel_main.Controls.Add(this.panel_game);
+            this.panel_main.Controls.Add(this.panel_options);
             this.panel_main.Controls.Add(this.panel_menu);
             this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_main.Location = new System.Drawing.Point(0, 0);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(1604, 881);
+            this.panel_main.Size = new System.Drawing.Size(1924, 881);
             this.panel_main.TabIndex = 1;
-            // 
-            // panel_options
-            // 
-            this.panel_options.Controls.Add(this.save_options_button);
-            this.panel_options.Controls.Add(this.title_options);
-            this.panel_options.Controls.Add(this.reset_settings_button);
-            this.panel_options.Controls.Add(this.color_combobox);
-            this.panel_options.Controls.Add(this.return_menu_button);
-            this.panel_options.Controls.Add(this.background_color_label);
-            this.panel_options.Controls.Add(this.range_to_label);
-            this.panel_options.Controls.Add(this.range_from_label);
-            this.panel_options.Controls.Add(this.weight_to_combobox);
-            this.panel_options.Controls.Add(this.weight_from_combobox);
-            this.panel_options.Controls.Add(this.weight_range_label);
-            this.panel_options.Controls.Add(this.language_label);
-            this.panel_options.Controls.Add(this.language_combobox);
-            this.panel_options.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_options.ForeColor = System.Drawing.Color.Black;
-            this.panel_options.Location = new System.Drawing.Point(0, 0);
-            this.panel_options.Name = "panel_options";
-            this.panel_options.Size = new System.Drawing.Size(1604, 881);
-            this.panel_options.TabIndex = 4;
-            // 
-            // save_options_button
-            // 
-            this.save_options_button.BackgroundImage = global::BalanceGame.Properties.Resources.save;
-            this.save_options_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.save_options_button.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.save_options_button.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.save_options_button.Location = new System.Drawing.Point(1184, 653);
-            this.save_options_button.Name = "save_options_button";
-            this.save_options_button.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.save_options_button.Size = new System.Drawing.Size(64, 62);
-            this.save_options_button.TabIndex = 12;
-            this.save_options_button.UseVisualStyleBackColor = true;
-            this.save_options_button.Click += new System.EventHandler(this.save_button_Click);
-            // 
-            // title_options
-            // 
-            this.title_options.AutoSize = true;
-            this.title_options.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title_options.Location = new System.Drawing.Point(853, 195);
-            this.title_options.Name = "title_options";
-            this.title_options.Size = new System.Drawing.Size(254, 73);
-            this.title_options.TabIndex = 11;
-            this.title_options.Text = "Options";
-            this.title_options.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // reset_settings_button
-            // 
-            this.reset_settings_button.BackgroundImage = global::BalanceGame.Properties.Resources.button_generic;
-            this.reset_settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.reset_settings_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reset_settings_button.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reset_settings_button.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.reset_settings_button.Location = new System.Drawing.Point(866, 653);
-            this.reset_settings_button.Name = "reset_settings_button";
-            this.reset_settings_button.Size = new System.Drawing.Size(224, 62);
-            this.reset_settings_button.TabIndex = 9;
-            this.reset_settings_button.Text = "Default Settings";
-            this.reset_settings_button.UseVisualStyleBackColor = true;
-            this.reset_settings_button.Click += new System.EventHandler(this.reset_settings_button_Click);
-            // 
-            // color_combobox
-            // 
-            this.color_combobox.BackColor = System.Drawing.SystemColors.Window;
-            this.color_combobox.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.color_combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.color_combobox.FormattingEnabled = true;
-            this.color_combobox.Items.AddRange(new object[] {
-            "MenuHighlight",
-            "Red",
-            "Blue",
-            "Lime",
-            "Yellow"});
-            this.color_combobox.Location = new System.Drawing.Point(1011, 487);
-            this.color_combobox.Name = "color_combobox";
-            this.color_combobox.Size = new System.Drawing.Size(262, 54);
-            this.color_combobox.TabIndex = 8;
-            // 
-            // return_menu_button
-            // 
-            this.return_menu_button.BackgroundImage = global::BalanceGame.Properties.Resources.button_generic;
-            this.return_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.return_menu_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.return_menu_button.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.return_menu_button.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.return_menu_button.Location = new System.Drawing.Point(604, 653);
-            this.return_menu_button.Name = "return_menu_button";
-            this.return_menu_button.Size = new System.Drawing.Size(170, 62);
-            this.return_menu_button.TabIndex = 10;
-            this.return_menu_button.Text = "MAIN MENU";
-            this.return_menu_button.UseVisualStyleBackColor = true;
-            this.return_menu_button.Click += new System.EventHandler(this.return_menu_button_Click);
-            // 
-            // background_color_label
-            // 
-            this.background_color_label.AutoSize = true;
-            this.background_color_label.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.background_color_label.Location = new System.Drawing.Point(618, 495);
-            this.background_color_label.Name = "background_color_label";
-            this.background_color_label.Size = new System.Drawing.Size(364, 46);
-            this.background_color_label.TabIndex = 7;
-            this.background_color_label.Text = "Background Color";
-            // 
-            // range_to_label
-            // 
-            this.range_to_label.AutoSize = true;
-            this.range_to_label.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.range_to_label.Location = new System.Drawing.Point(1153, 374);
-            this.range_to_label.Name = "range_to_label";
-            this.range_to_label.Size = new System.Drawing.Size(41, 29);
-            this.range_to_label.TabIndex = 6;
-            this.range_to_label.Text = "To";
-            // 
-            // range_from_label
-            // 
-            this.range_from_label.AutoSize = true;
-            this.range_from_label.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.range_from_label.Location = new System.Drawing.Point(1008, 374);
-            this.range_from_label.Name = "range_from_label";
-            this.range_from_label.Size = new System.Drawing.Size(73, 29);
-            this.range_from_label.TabIndex = 5;
-            this.range_from_label.Text = "From";
-            // 
-            // weight_to_combobox
-            // 
-            this.weight_to_combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weight_to_combobox.Location = new System.Drawing.Point(1156, 406);
-            this.weight_to_combobox.Maximum = new decimal(new int[] {
-            10001,
-            0,
-            0,
-            0});
-            this.weight_to_combobox.Name = "weight_to_combobox";
-            this.weight_to_combobox.Size = new System.Drawing.Size(117, 53);
-            this.weight_to_combobox.TabIndex = 4;
-            // 
-            // weight_from_combobox
-            // 
-            this.weight_from_combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weight_from_combobox.Location = new System.Drawing.Point(1011, 406);
-            this.weight_from_combobox.Name = "weight_from_combobox";
-            this.weight_from_combobox.Size = new System.Drawing.Size(120, 53);
-            this.weight_from_combobox.TabIndex = 3;
-            // 
-            // weight_range_label
-            // 
-            this.weight_range_label.AutoSize = true;
-            this.weight_range_label.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weight_range_label.Location = new System.Drawing.Point(627, 403);
-            this.weight_range_label.Name = "weight_range_label";
-            this.weight_range_label.Size = new System.Drawing.Size(352, 46);
-            this.weight_range_label.TabIndex = 2;
-            this.weight_range_label.Text = "Weights range (g)";
-            // 
-            // language_label
-            // 
-            this.language_label.AutoSize = true;
-            this.language_label.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.language_label.Location = new System.Drawing.Point(778, 324);
-            this.language_label.Name = "language_label";
-            this.language_label.Size = new System.Drawing.Size(204, 46);
-            this.language_label.TabIndex = 1;
-            this.language_label.Text = "Language";
-            // 
-            // language_combobox
-            // 
-            this.language_combobox.AllowDrop = true;
-            this.language_combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.language_combobox.FormattingEnabled = true;
-            this.language_combobox.Items.AddRange(new object[] {
-            "English",
-            "Italiano"});
-            this.language_combobox.Location = new System.Drawing.Point(1011, 313);
-            this.language_combobox.Name = "language_combobox";
-            this.language_combobox.Size = new System.Drawing.Size(210, 54);
-            this.language_combobox.TabIndex = 0;
             // 
             // panel_game
             // 
             this.panel_game.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel_game.Controls.Add(this.moves_avaliable_value_label);
+            this.panel_game.Controls.Add(this.moves_avaliable_label);
             this.panel_game.Controls.Add(this.debug_label3);
             this.panel_game.Controls.Add(this.debug_label2);
             this.panel_game.Controls.Add(this.debug_label1);
@@ -393,9 +222,29 @@ namespace BalanceGame
             this.panel_game.ForeColor = System.Drawing.Color.Transparent;
             this.panel_game.Location = new System.Drawing.Point(0, 0);
             this.panel_game.Name = "panel_game";
-            this.panel_game.Size = new System.Drawing.Size(1604, 881);
+            this.panel_game.Size = new System.Drawing.Size(1924, 881);
             this.panel_game.TabIndex = 1;
             this.panel_game.Visible = false;
+            // 
+            // moves_avaliable_value_label
+            // 
+            this.moves_avaliable_value_label.AutoSize = true;
+            this.moves_avaliable_value_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moves_avaliable_value_label.Location = new System.Drawing.Point(1635, 36);
+            this.moves_avaliable_value_label.Name = "moves_avaliable_value_label";
+            this.moves_avaliable_value_label.Size = new System.Drawing.Size(113, 55);
+            this.moves_avaliable_value_label.TabIndex = 47;
+            this.moves_avaliable_value_label.Text = "Nan";
+            // 
+            // moves_avaliable_label
+            // 
+            this.moves_avaliable_label.AutoSize = true;
+            this.moves_avaliable_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moves_avaliable_label.Location = new System.Drawing.Point(1375, 53);
+            this.moves_avaliable_label.Name = "moves_avaliable_label";
+            this.moves_avaliable_label.Size = new System.Drawing.Size(233, 33);
+            this.moves_avaliable_label.TabIndex = 46;
+            this.moves_avaliable_label.Text = "Moves avaliable:";
             // 
             // debug_label3
             // 
@@ -474,16 +323,16 @@ namespace BalanceGame
             this.panel_plate_right.Controls.Add(this.panel_plateweight_1000);
             this.panel_plate_right.Controls.Add(this.panel_plateweight_500);
             this.panel_plate_right.Controls.Add(this.balance_rightplate);
-            this.panel_plate_right.Location = new System.Drawing.Point(765, 131);
+            this.panel_plate_right.Location = new System.Drawing.Point(710, 270);
             this.panel_plate_right.Name = "panel_plate_right";
-            this.panel_plate_right.Size = new System.Drawing.Size(494, 454);
+            this.panel_plate_right.Size = new System.Drawing.Size(500, 300);
             this.panel_plate_right.TabIndex = 41;
             // 
             // panel_plateweight_1
             // 
             this.panel_plateweight_1.Controls.Add(this.weight_1_label);
             this.panel_plateweight_1.Controls.Add(this.weight_1);
-            this.panel_plateweight_1.Location = new System.Drawing.Point(34, 149);
+            this.panel_plateweight_1.Location = new System.Drawing.Point(36, 5);
             this.panel_plateweight_1.Name = "panel_plateweight_1";
             this.panel_plateweight_1.Size = new System.Drawing.Size(55, 179);
             this.panel_plateweight_1.TabIndex = 30;
@@ -517,7 +366,7 @@ namespace BalanceGame
             // 
             this.panel_plateweight_5.Controls.Add(this.weight_5_label);
             this.panel_plateweight_5.Controls.Add(this.weight_5);
-            this.panel_plateweight_5.Location = new System.Drawing.Point(101, 149);
+            this.panel_plateweight_5.Location = new System.Drawing.Point(103, 5);
             this.panel_plateweight_5.Name = "panel_plateweight_5";
             this.panel_plateweight_5.Size = new System.Drawing.Size(55, 179);
             this.panel_plateweight_5.TabIndex = 31;
@@ -551,7 +400,7 @@ namespace BalanceGame
             // 
             this.panel_plateweight_10.Controls.Add(this.weight_10_label);
             this.panel_plateweight_10.Controls.Add(this.weight_10);
-            this.panel_plateweight_10.Location = new System.Drawing.Point(162, 149);
+            this.panel_plateweight_10.Location = new System.Drawing.Point(164, 5);
             this.panel_plateweight_10.Name = "panel_plateweight_10";
             this.panel_plateweight_10.Size = new System.Drawing.Size(57, 179);
             this.panel_plateweight_10.TabIndex = 32;
@@ -585,7 +434,7 @@ namespace BalanceGame
             // 
             this.panel_plateweight_100.Controls.Add(this.weight_100_label);
             this.panel_plateweight_100.Controls.Add(this.weight_100);
-            this.panel_plateweight_100.Location = new System.Drawing.Point(225, 149);
+            this.panel_plateweight_100.Location = new System.Drawing.Point(227, 5);
             this.panel_plateweight_100.Name = "panel_plateweight_100";
             this.panel_plateweight_100.Size = new System.Drawing.Size(70, 179);
             this.panel_plateweight_100.TabIndex = 33;
@@ -619,7 +468,7 @@ namespace BalanceGame
             // 
             this.panel_plateweight_1000.Controls.Add(this.weight_1000_label);
             this.panel_plateweight_1000.Controls.Add(this.weight_1000);
-            this.panel_plateweight_1000.Location = new System.Drawing.Point(385, 149);
+            this.panel_plateweight_1000.Location = new System.Drawing.Point(387, 5);
             this.panel_plateweight_1000.Name = "panel_plateweight_1000";
             this.panel_plateweight_1000.Size = new System.Drawing.Size(81, 179);
             this.panel_plateweight_1000.TabIndex = 35;
@@ -653,7 +502,7 @@ namespace BalanceGame
             // 
             this.panel_plateweight_500.Controls.Add(this.weight_500_label);
             this.panel_plateweight_500.Controls.Add(this.weight_500);
-            this.panel_plateweight_500.Location = new System.Drawing.Point(301, 149);
+            this.panel_plateweight_500.Location = new System.Drawing.Point(303, 5);
             this.panel_plateweight_500.Name = "panel_plateweight_500";
             this.panel_plateweight_500.Size = new System.Drawing.Size(78, 179);
             this.panel_plateweight_500.TabIndex = 34;
@@ -690,7 +539,7 @@ namespace BalanceGame
             this.balance_rightplate.Image = ((System.Drawing.Image)(resources.GetObject("balance_rightplate.Image")));
             this.balance_rightplate.ImageLocation = "";
             this.balance_rightplate.InitialImage = null;
-            this.balance_rightplate.Location = new System.Drawing.Point(6, 202);
+            this.balance_rightplate.Location = new System.Drawing.Point(8, 58);
             this.balance_rightplate.Name = "balance_rightplate";
             this.balance_rightplate.Size = new System.Drawing.Size(488, 242);
             this.balance_rightplate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1160,9 +1009,9 @@ namespace BalanceGame
             // 
             this.panel_plate_left.Controls.Add(this.weight_inc);
             this.panel_plate_left.Controls.Add(this.balance_leftplate);
-            this.panel_plate_left.Location = new System.Drawing.Point(112, 330);
+            this.panel_plate_left.Location = new System.Drawing.Point(112, 270);
             this.panel_plate_left.Name = "panel_plate_left";
-            this.panel_plate_left.Size = new System.Drawing.Size(483, 255);
+            this.panel_plate_left.Size = new System.Drawing.Size(500, 300);
             this.panel_plate_left.TabIndex = 40;
             // 
             // weight_inc
@@ -1172,7 +1021,7 @@ namespace BalanceGame
             this.weight_inc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.weight_inc.ImageLocation = "";
             this.weight_inc.InitialImage = null;
-            this.weight_inc.Location = new System.Drawing.Point(129, 23);
+            this.weight_inc.Location = new System.Drawing.Point(130, 79);
             this.weight_inc.Name = "weight_inc";
             this.weight_inc.Size = new System.Drawing.Size(251, 110);
             this.weight_inc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1186,7 +1035,7 @@ namespace BalanceGame
             this.balance_leftplate.Image = ((System.Drawing.Image)(resources.GetObject("balance_leftplate.Image")));
             this.balance_leftplate.ImageLocation = "";
             this.balance_leftplate.InitialImage = null;
-            this.balance_leftplate.Location = new System.Drawing.Point(-1, 3);
+            this.balance_leftplate.Location = new System.Drawing.Point(13, 58);
             this.balance_leftplate.Name = "balance_leftplate";
             this.balance_leftplate.Size = new System.Drawing.Size(484, 250);
             this.balance_leftplate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1257,6 +1106,204 @@ namespace BalanceGame
             this.return_menu.UseVisualStyleBackColor = true;
             this.return_menu.Click += new System.EventHandler(this.return_menu_click);
             // 
+            // panel_options
+            // 
+            this.panel_options.Controls.Add(this.max_moves_numericUpDown);
+            this.panel_options.Controls.Add(this.maximum_moves_label);
+            this.panel_options.Controls.Add(this.save_options_button);
+            this.panel_options.Controls.Add(this.title_options);
+            this.panel_options.Controls.Add(this.reset_settings_button);
+            this.panel_options.Controls.Add(this.color_combobox);
+            this.panel_options.Controls.Add(this.return_menu_button);
+            this.panel_options.Controls.Add(this.background_color_label);
+            this.panel_options.Controls.Add(this.range_to_label);
+            this.panel_options.Controls.Add(this.range_from_label);
+            this.panel_options.Controls.Add(this.weight_to_combobox);
+            this.panel_options.Controls.Add(this.weight_from_combobox);
+            this.panel_options.Controls.Add(this.weight_range_label);
+            this.panel_options.Controls.Add(this.language_label);
+            this.panel_options.Controls.Add(this.language_combobox);
+            this.panel_options.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_options.ForeColor = System.Drawing.Color.Black;
+            this.panel_options.Location = new System.Drawing.Point(0, 0);
+            this.panel_options.Name = "panel_options";
+            this.panel_options.Size = new System.Drawing.Size(1924, 881);
+            this.panel_options.TabIndex = 4;
+            // 
+            // max_moves_numericUpDown
+            // 
+            this.max_moves_numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.max_moves_numericUpDown.Location = new System.Drawing.Point(1010, 571);
+            this.max_moves_numericUpDown.Name = "max_moves_numericUpDown";
+            this.max_moves_numericUpDown.Size = new System.Drawing.Size(121, 53);
+            this.max_moves_numericUpDown.TabIndex = 14;
+            // 
+            // maximum_moves_label
+            // 
+            this.maximum_moves_label.AutoSize = true;
+            this.maximum_moves_label.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold);
+            this.maximum_moves_label.Location = new System.Drawing.Point(654, 578);
+            this.maximum_moves_label.Name = "maximum_moves_label";
+            this.maximum_moves_label.Size = new System.Drawing.Size(338, 46);
+            this.maximum_moves_label.TabIndex = 13;
+            this.maximum_moves_label.Text = "Maximum moves";
+            // 
+            // save_options_button
+            // 
+            this.save_options_button.BackgroundImage = global::BalanceGame.Properties.Resources.save;
+            this.save_options_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.save_options_button.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_options_button.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.save_options_button.Location = new System.Drawing.Point(1230, 675);
+            this.save_options_button.Name = "save_options_button";
+            this.save_options_button.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.save_options_button.Size = new System.Drawing.Size(77, 80);
+            this.save_options_button.TabIndex = 12;
+            this.save_options_button.UseVisualStyleBackColor = true;
+            this.save_options_button.Click += new System.EventHandler(this.save_button_Click);
+            // 
+            // title_options
+            // 
+            this.title_options.AutoSize = true;
+            this.title_options.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title_options.Location = new System.Drawing.Point(819, 156);
+            this.title_options.Name = "title_options";
+            this.title_options.Size = new System.Drawing.Size(312, 91);
+            this.title_options.TabIndex = 11;
+            this.title_options.Text = "Options";
+            this.title_options.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // reset_settings_button
+            // 
+            this.reset_settings_button.BackgroundImage = global::BalanceGame.Properties.Resources.button_generic;
+            this.reset_settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.reset_settings_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reset_settings_button.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reset_settings_button.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.reset_settings_button.Location = new System.Drawing.Point(866, 675);
+            this.reset_settings_button.Name = "reset_settings_button";
+            this.reset_settings_button.Size = new System.Drawing.Size(241, 80);
+            this.reset_settings_button.TabIndex = 9;
+            this.reset_settings_button.Text = "Default Settings";
+            this.reset_settings_button.UseVisualStyleBackColor = true;
+            this.reset_settings_button.Click += new System.EventHandler(this.reset_settings_button_Click);
+            // 
+            // color_combobox
+            // 
+            this.color_combobox.BackColor = System.Drawing.SystemColors.Window;
+            this.color_combobox.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.color_combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.color_combobox.FormattingEnabled = true;
+            this.color_combobox.Items.AddRange(new object[] {
+            "MenuHighlight",
+            "Red",
+            "Blue",
+            "Lime",
+            "Yellow"});
+            this.color_combobox.Location = new System.Drawing.Point(1011, 487);
+            this.color_combobox.Name = "color_combobox";
+            this.color_combobox.Size = new System.Drawing.Size(262, 54);
+            this.color_combobox.TabIndex = 8;
+            // 
+            // return_menu_button
+            // 
+            this.return_menu_button.BackgroundImage = global::BalanceGame.Properties.Resources.button_generic;
+            this.return_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.return_menu_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.return_menu_button.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.return_menu_button.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.return_menu_button.Location = new System.Drawing.Point(604, 675);
+            this.return_menu_button.Name = "return_menu_button";
+            this.return_menu_button.Size = new System.Drawing.Size(190, 80);
+            this.return_menu_button.TabIndex = 10;
+            this.return_menu_button.Text = "MAIN MENU";
+            this.return_menu_button.UseVisualStyleBackColor = true;
+            this.return_menu_button.Click += new System.EventHandler(this.return_menu_button_Click);
+            // 
+            // background_color_label
+            // 
+            this.background_color_label.AutoSize = true;
+            this.background_color_label.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.background_color_label.Location = new System.Drawing.Point(618, 495);
+            this.background_color_label.Name = "background_color_label";
+            this.background_color_label.Size = new System.Drawing.Size(364, 46);
+            this.background_color_label.TabIndex = 7;
+            this.background_color_label.Text = "Background Color";
+            // 
+            // range_to_label
+            // 
+            this.range_to_label.AutoSize = true;
+            this.range_to_label.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.range_to_label.Location = new System.Drawing.Point(1153, 374);
+            this.range_to_label.Name = "range_to_label";
+            this.range_to_label.Size = new System.Drawing.Size(41, 29);
+            this.range_to_label.TabIndex = 6;
+            this.range_to_label.Text = "To";
+            // 
+            // range_from_label
+            // 
+            this.range_from_label.AutoSize = true;
+            this.range_from_label.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.range_from_label.Location = new System.Drawing.Point(1008, 374);
+            this.range_from_label.Name = "range_from_label";
+            this.range_from_label.Size = new System.Drawing.Size(73, 29);
+            this.range_from_label.TabIndex = 5;
+            this.range_from_label.Text = "From";
+            // 
+            // weight_to_combobox
+            // 
+            this.weight_to_combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_to_combobox.Location = new System.Drawing.Point(1156, 406);
+            this.weight_to_combobox.Maximum = new decimal(new int[] {
+            10001,
+            0,
+            0,
+            0});
+            this.weight_to_combobox.Name = "weight_to_combobox";
+            this.weight_to_combobox.Size = new System.Drawing.Size(117, 53);
+            this.weight_to_combobox.TabIndex = 4;
+            // 
+            // weight_from_combobox
+            // 
+            this.weight_from_combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_from_combobox.Location = new System.Drawing.Point(1011, 406);
+            this.weight_from_combobox.Name = "weight_from_combobox";
+            this.weight_from_combobox.Size = new System.Drawing.Size(120, 53);
+            this.weight_from_combobox.TabIndex = 3;
+            // 
+            // weight_range_label
+            // 
+            this.weight_range_label.AutoSize = true;
+            this.weight_range_label.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_range_label.Location = new System.Drawing.Point(627, 403);
+            this.weight_range_label.Name = "weight_range_label";
+            this.weight_range_label.Size = new System.Drawing.Size(352, 46);
+            this.weight_range_label.TabIndex = 2;
+            this.weight_range_label.Text = "Weights range (g)";
+            // 
+            // language_label
+            // 
+            this.language_label.AutoSize = true;
+            this.language_label.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.language_label.Location = new System.Drawing.Point(778, 324);
+            this.language_label.Name = "language_label";
+            this.language_label.Size = new System.Drawing.Size(204, 46);
+            this.language_label.TabIndex = 1;
+            this.language_label.Text = "Language";
+            // 
+            // language_combobox
+            // 
+            this.language_combobox.AllowDrop = true;
+            this.language_combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.language_combobox.FormattingEnabled = true;
+            this.language_combobox.Items.AddRange(new object[] {
+            "English",
+            "Italiano"});
+            this.language_combobox.Location = new System.Drawing.Point(1011, 313);
+            this.language_combobox.Name = "language_combobox";
+            this.language_combobox.Size = new System.Drawing.Size(210, 54);
+            this.language_combobox.TabIndex = 0;
+            // 
             // panel_menu
             // 
             this.panel_menu.BackColor = System.Drawing.SystemColors.Highlight;
@@ -1271,7 +1318,7 @@ namespace BalanceGame
             this.panel_menu.ForeColor = System.Drawing.Color.Black;
             this.panel_menu.Location = new System.Drawing.Point(0, 0);
             this.panel_menu.Name = "panel_menu";
-            this.panel_menu.Size = new System.Drawing.Size(1604, 881);
+            this.panel_menu.Size = new System.Drawing.Size(1924, 881);
             this.panel_menu.TabIndex = 10;
             // 
             // info_label
@@ -1306,10 +1353,9 @@ namespace BalanceGame
             this.title_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title_label.Location = new System.Drawing.Point(586, 202);
             this.title_label.Name = "title_label";
-            this.title_label.Size = new System.Drawing.Size(689, 108);
+            this.title_label.Size = new System.Drawing.Size(707, 108);
             this.title_label.TabIndex = 5;
-            this.title_label.Text = "Balance Game";
-            this.title_label.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.title_label.Text = "Find the weight";
             // 
             // button_exit
             // 
@@ -1346,7 +1392,7 @@ namespace BalanceGame
             this.button_start.Name = "button_start";
             this.button_start.Size = new System.Drawing.Size(443, 111);
             this.button_start.TabIndex = 11;
-            this.button_start.Text = "Start Game";
+            this.button_start.Text = "Start";
             this.button_start.UseVisualStyleBackColor = true;
             this.button_start.Click += new System.EventHandler(this.button_start_Click);
             // 
@@ -1354,7 +1400,7 @@ namespace BalanceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1604, 881);
+            this.ClientSize = new System.Drawing.Size(1924, 881);
             this.Controls.Add(this.panel_main);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -1362,10 +1408,6 @@ namespace BalanceGame
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Game_Load);
             this.panel_main.ResumeLayout(false);
-            this.panel_options.ResumeLayout(false);
-            this.panel_options.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.weight_to_combobox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.weight_from_combobox)).EndInit();
             this.panel_game.ResumeLayout(false);
             this.panel_game.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.balance_indicator)).EndInit();
@@ -1405,6 +1447,11 @@ namespace BalanceGame
             this.panel_plate_left.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.weight_inc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.balance_leftplate)).EndInit();
+            this.panel_options.ResumeLayout(false);
+            this.panel_options.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.max_moves_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weight_to_combobox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weight_from_combobox)).EndInit();
             this.panel_menu.ResumeLayout(false);
             this.panel_menu.PerformLayout();
             this.ResumeLayout(false);
@@ -1505,6 +1552,10 @@ namespace BalanceGame
         private Label debug_label1;
         private Label debug_label0;
         private Label debug_target;
+        private NumericUpDown max_moves_numericUpDown;
+        private Label maximum_moves_label;
+        private Label moves_avaliable_value_label;
+        private Label moves_avaliable_label;
     }
 }
 

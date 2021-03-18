@@ -107,7 +107,7 @@ namespace BalanceGame
                 Globals.weight_from_to_maximum = Globals.weight_from_to_maximum_default;
                 Globals.weight_from_to_minimum = Globals.weight_from_to_minimum_default;
                 Globals.backColor = Globals.backColor_default;
-
+                Globals.maximum_moves = Globals.maximum_moves_default;
                 set_aspect();
 
                 //Set language default TODO
@@ -134,6 +134,7 @@ namespace BalanceGame
                 Globals.weight_from_to_maximum = Convert.ToInt32(Globals.Configuration_file.Get("Weight_from_to_maximum"));
                 Globals.weight_from_to_minimum = Convert.ToInt32(Globals.Configuration_file.Get("Weight_from_to_minimum"));
                 Globals.backColor = System.Drawing.Color.FromName(Globals.Configuration_file.Get("BackColor"));
+                Globals.maximum_moves = Convert.ToInt32(Globals.Configuration_file.Get("maximum_moves"));
 
                 set_aspect();
 
@@ -171,6 +172,7 @@ namespace BalanceGame
                 clear.Text = Globals.Configuration_file.Get("button_text_clear");
                 tutorial_button.Text = Globals.Configuration_file.Get("button_text_tutorial");
                 weight_text.Text = Globals.Configuration_file.Get("textbox_weight");
+                moves_avaliable_label.Text = Globals.Configuration_file.Get("label_moves_avaliable");
 
                 //Messages
                 Globals.exiting_without_saving_message = Globals.Configuration_file.Get("exitinh_without_saving_message");
@@ -209,7 +211,7 @@ namespace BalanceGame
                 clear.Text = Globals.button_text_clear_default;
                 tutorial_button.Text = Globals.button_text_tutorial_default;
                 weight_text.Text = Globals.textbox_weight_default;
-
+                moves_avaliable_label.Text = Globals.label_moves_avaliable;
             }
         }
 
@@ -246,6 +248,8 @@ namespace BalanceGame
             weight_to_combobox.Minimum = Globals.weight_from_to_minimum;
             weight_from_combobox.Value = Globals.weight_from;
             weight_to_combobox.Value = Globals.weight_to;
+
+            max_moves_numericUpDown.Value = Globals.maximum_moves;
         }
 
     }

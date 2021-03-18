@@ -25,7 +25,7 @@ namespace BalanceGame
             weight_to_combobox.ValueChanged += new System.EventHandler(weight_to_ValueChange);
             color_combobox.SelectedIndexChanged += new System.EventHandler(color_combobox_SelectedIndexChanged);
             language_combobox.SelectedIndexChanged += new System.EventHandler(language_combobox_SelectedIndexChanged);
-
+            max_moves_numericUpDown.ValueChanged += new System.EventHandler(max_moves_Changed);
         }
 
         private void weight_from_ValueChange(object sender, System.EventArgs e)
@@ -63,6 +63,10 @@ namespace BalanceGame
             this.Enabled = false;
         }
 
+        private void max_moves_Changed(object sender, System.EventArgs e)
+        {
+            save_options_button.Enabled = true;
+        }
 
         private void button_start_Click(object sender, EventArgs e)
         {
@@ -154,6 +158,7 @@ namespace BalanceGame
             SetSetting("BackColor", (string)color_combobox.SelectedItem);
             SetSetting("Weight_from", Convert.ToString(weight_from_combobox.Value));
             SetSetting("Weight_to", Convert.ToString(weight_to_combobox.Value));
+            SetSetting("maximum_moves", Convert.ToString(max_moves_numericUpDown.Value));
 
             save_options_button.Enabled = false;
 

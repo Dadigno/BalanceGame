@@ -97,9 +97,9 @@
             this.information_title.Font = new System.Drawing.Font("Microsoft Tai Le", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.information_title.Location = new System.Drawing.Point(229, 21);
             this.information_title.Name = "information_title";
-            this.information_title.Size = new System.Drawing.Size(351, 45);
+            this.information_title.Size = new System.Drawing.Size(373, 45);
             this.information_title.TabIndex = 7;
-            this.information_title.Text = "Balance Game, V1.1.0";
+            this.information_title.Text = "Find the weight, V1.1.0";
             // 
             // contact_email
             // 
@@ -107,7 +107,7 @@
             this.contact_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contact_email.Location = new System.Drawing.Point(29, 347);
             this.contact_email.Name = "contact_email";
-            this.contact_email.Size = new System.Drawing.Size(260, 24);
+            this.contact_email.Size = new System.Drawing.Size(132, 24);
             this.contact_email.TabIndex = 8;
             this.contact_email.Text = "email@email.it";
             // 

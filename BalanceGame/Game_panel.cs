@@ -13,10 +13,13 @@ namespace BalanceGame
         List<int> weights_selected = new List<int>();
         int value_reached = 0;
         int target = 0;
+        int avaliable_moves = 0;
+
         int arrow_offset;
         int arrow_max_pos;
         int plate_zero_pos;
         int plate_offset;
+        
 
         private void InitializeGame()
         {
@@ -33,6 +36,7 @@ namespace BalanceGame
             Random r = new Random();
             target = r.Next(Globals.weight_from, Globals.weight_to);
             debug_target.Text = target.ToString();
+            avaliable_moves = Globals.maximum_moves;
 
             //Initialice indicator
             arrow_offset = balance_indicator.Left;
@@ -196,12 +200,14 @@ namespace BalanceGame
 
         private void add_weight(int weight)
         {
+            avaliable_moves -= 1;
             weights_selected.Add(weight);
             refresh_game();
         }
 
         private void remove_weight(int weight)
         {
+            avaliable_moves -= 1;
             weights_selected.Remove(weight);
             refresh_game();
         }
@@ -263,7 +269,8 @@ namespace BalanceGame
 
             value_reached = 0;
             debug_reached.Text = value_reached.ToString();
-
+            moves_avaliable_value_label.Text = avaliable_moves.ToString();
+            
             //Count the number of weights
             if (weights_selected.Count > 0) { 
                 var q = from x in weights_selected
