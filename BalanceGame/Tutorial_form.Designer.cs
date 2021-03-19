@@ -160,18 +160,18 @@
             // panel_tutorial004
             // 
             this.panel_tutorial004.Controls.Add(this.tutorial_image004);
-            this.panel_tutorial004.Location = new System.Drawing.Point(23, 341);
+            this.panel_tutorial004.Location = new System.Drawing.Point(24, 400);
             this.panel_tutorial004.Name = "panel_tutorial004";
-            this.panel_tutorial004.Size = new System.Drawing.Size(565, 116);
+            this.panel_tutorial004.Size = new System.Drawing.Size(565, 51);
             this.panel_tutorial004.TabIndex = 8;
             // 
             // tutorial_image004
             // 
             this.tutorial_image004.BackgroundImage = global::BalanceGame.Properties.Resources._004;
-            this.tutorial_image004.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.tutorial_image004.Location = new System.Drawing.Point(-3, 6);
+            this.tutorial_image004.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tutorial_image004.Location = new System.Drawing.Point(-3, 3);
             this.tutorial_image004.Name = "tutorial_image004";
-            this.tutorial_image004.Size = new System.Drawing.Size(565, 158);
+            this.tutorial_image004.Size = new System.Drawing.Size(565, 50);
             this.tutorial_image004.TabIndex = 0;
             this.tutorial_image004.TabStop = false;
             // 

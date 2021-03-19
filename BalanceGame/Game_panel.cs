@@ -50,17 +50,25 @@ namespace BalanceGame
         private void new_weight_click(object sender, EventArgs e)
         {
             clear_click(this, new EventArgs());
-            avaliable_moves = Globals.maximum_moves;
-            moves_avaliable_value_label.Text = avaliable_moves.ToString();
-            panel_win_lost.Hide();
-            weight_result_label.Text = " ?  ?";
 
             Random r = new Random();
             target = r.Next(Globals.weight_from, Globals.weight_to);
             move_arrow();
             
             debug_target.Text = target.ToString();
+        }
 
+        private void clear_click(object sender, EventArgs e)
+        {
+            weights_selected.Clear();
+            value_reached = 0;
+
+            avaliable_moves = Globals.maximum_moves;
+            moves_avaliable_value_label.Text = avaliable_moves.ToString();
+            panel_win_lost.Hide();
+            weight_result_label.Text = " ?  ?";
+
+            refresh_game();
         }
 
         private void tutorial_button_Click(object sender, EventArgs e)
@@ -196,12 +204,7 @@ namespace BalanceGame
             remove_weight(1000);
         }
 
-        private void clear_click(object sender, EventArgs e)
-        {
-            weights_selected.Clear();
-            value_reached = 0;
-            refresh_game();
-        }
+        
 
         private void add_weight(int weight)
         {
@@ -404,16 +407,19 @@ namespace BalanceGame
                 }*/
                 message_win_lost.Text = String.Format (Globals.finish_game_message, value_reached);
 
-                weight_result_label.Text = String.Format(value_reached.ToString());
-
+                weight_result_label.Text = String.Format(value_reached.ToString()) + "g";
+                smile_sad.Hide();
+                smile_happy.Show();
                 panel_win_lost.Show();
+
 
             }
 
-            if (avaliable_moves == 0)
+            if (avaliable_moves == 0 && value_reached != target)
             {
                 message_win_lost.Text = String.Format(Globals.finish_game_nomoves);
-
+                smile_sad.Show();
+                smile_happy.Hide();
                 panel_win_lost.Show();
             }
         }

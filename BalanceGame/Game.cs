@@ -38,7 +38,7 @@ namespace BalanceGame
                 weight_text, balance_indicator, weight_inc, balance_rightplate, balance_leftplate, undo, clear, new_weight, balance_body, return_menu, weight_result_label,
                 tutorial_button, 
                 debug_arrowX, debug_reached, debug_target, debug_label0, debug_label1, debug_label2, debug_label3,
-                panel_plate_left, panel_plate_right, panel_win_lost, message_win_lost
+                panel_plate_left, panel_plate_right, panel_win_lost, message_win_lost, smile_happy, smile_sad
             };
            
             InitializeMenu();
@@ -254,9 +254,6 @@ namespace BalanceGame
             max_moves_numericUpDown.Value = Globals.maximum_moves;
         }
 
-        private void weight_result_label_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

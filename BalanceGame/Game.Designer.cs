@@ -34,6 +34,8 @@ namespace BalanceGame
             this.panel_main = new System.Windows.Forms.Panel();
             this.panel_game = new System.Windows.Forms.Panel();
             this.panel_win_lost = new System.Windows.Forms.Panel();
+            this.smile_sad = new System.Windows.Forms.PictureBox();
+            this.smile_happy = new System.Windows.Forms.PictureBox();
             this.message_win_lost = new System.Windows.Forms.Label();
             this.moves_avaliable_value_label = new System.Windows.Forms.Label();
             this.moves_avaliable_label = new System.Windows.Forms.Label();
@@ -126,6 +128,8 @@ namespace BalanceGame
             this.panel_main.SuspendLayout();
             this.panel_game.SuspendLayout();
             this.panel_win_lost.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.smile_sad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smile_happy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.balance_indicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.balance_body)).BeginInit();
             this.panel_plate_right.SuspendLayout();
@@ -215,19 +219,41 @@ namespace BalanceGame
             // 
             // panel_win_lost
             // 
+            this.panel_win_lost.Controls.Add(this.smile_sad);
+            this.panel_win_lost.Controls.Add(this.smile_happy);
             this.panel_win_lost.Controls.Add(this.message_win_lost);
             this.panel_win_lost.Location = new System.Drawing.Point(112, 76);
             this.panel_win_lost.Name = "panel_win_lost";
-            this.panel_win_lost.Size = new System.Drawing.Size(1098, 171);
+            this.panel_win_lost.Size = new System.Drawing.Size(1082, 188);
             this.panel_win_lost.TabIndex = 48;
+            // 
+            // smile_sad
+            // 
+            this.smile_sad.BackgroundImage = global::BalanceGame.Properties.Resources.sad;
+            this.smile_sad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.smile_sad.Location = new System.Drawing.Point(901, 3);
+            this.smile_sad.Name = "smile_sad";
+            this.smile_sad.Size = new System.Drawing.Size(177, 169);
+            this.smile_sad.TabIndex = 2;
+            this.smile_sad.TabStop = false;
+            // 
+            // smile_happy
+            // 
+            this.smile_happy.BackgroundImage = global::BalanceGame.Properties.Resources.happy;
+            this.smile_happy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.smile_happy.Location = new System.Drawing.Point(901, 3);
+            this.smile_happy.Name = "smile_happy";
+            this.smile_happy.Size = new System.Drawing.Size(178, 171);
+            this.smile_happy.TabIndex = 1;
+            this.smile_happy.TabStop = false;
             // 
             // message_win_lost
             // 
             this.message_win_lost.AutoSize = true;
-            this.message_win_lost.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.message_win_lost.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.message_win_lost.Location = new System.Drawing.Point(7, 17);
             this.message_win_lost.Name = "message_win_lost";
-            this.message_win_lost.Size = new System.Drawing.Size(153, 37);
+            this.message_win_lost.Size = new System.Drawing.Size(304, 75);
             this.message_win_lost.TabIndex = 0;
             this.message_win_lost.Text = "Message";
             // 
@@ -235,7 +261,7 @@ namespace BalanceGame
             // 
             this.moves_avaliable_value_label.AutoSize = true;
             this.moves_avaliable_value_label.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moves_avaliable_value_label.Location = new System.Drawing.Point(1635, 36);
+            this.moves_avaliable_value_label.Location = new System.Drawing.Point(1719, 36);
             this.moves_avaliable_value_label.Name = "moves_avaliable_value_label";
             this.moves_avaliable_value_label.Size = new System.Drawing.Size(115, 56);
             this.moves_avaliable_value_label.TabIndex = 47;
@@ -245,7 +271,7 @@ namespace BalanceGame
             // 
             this.moves_avaliable_label.AutoSize = true;
             this.moves_avaliable_label.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moves_avaliable_label.Location = new System.Drawing.Point(1375, 53);
+            this.moves_avaliable_label.Location = new System.Drawing.Point(1459, 53);
             this.moves_avaliable_label.Name = "moves_avaliable_label";
             this.moves_avaliable_label.Size = new System.Drawing.Size(248, 34);
             this.moves_avaliable_label.TabIndex = 46;
@@ -954,12 +980,11 @@ namespace BalanceGame
             this.weight_result_label.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.weight_result_label.Font = new System.Drawing.Font("Arial", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_result_label.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.weight_result_label.Location = new System.Drawing.Point(143, 91);
+            this.weight_result_label.Location = new System.Drawing.Point(155, 83);
             this.weight_result_label.Name = "weight_result_label";
-            this.weight_result_label.Size = new System.Drawing.Size(204, 93);
+            this.weight_result_label.Size = new System.Drawing.Size(182, 93);
             this.weight_result_label.TabIndex = 10;
-            this.weight_result_label.Text = " ?  ?";
-            this.weight_result_label.Click += new System.EventHandler(this.weight_result_label_Click);
+            this.weight_result_label.Text = "?  ?";
             // 
             // weight_inc
             // 
@@ -968,9 +993,9 @@ namespace BalanceGame
             this.weight_inc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.weight_inc.ImageLocation = "";
             this.weight_inc.InitialImage = null;
-            this.weight_inc.Location = new System.Drawing.Point(130, 79);
+            this.weight_inc.Location = new System.Drawing.Point(90, 61);
             this.weight_inc.Name = "weight_inc";
-            this.weight_inc.Size = new System.Drawing.Size(251, 110);
+            this.weight_inc.Size = new System.Drawing.Size(333, 128);
             this.weight_inc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.weight_inc.TabIndex = 9;
             this.weight_inc.TabStop = false;
@@ -1359,6 +1384,8 @@ namespace BalanceGame
             this.panel_game.PerformLayout();
             this.panel_win_lost.ResumeLayout(false);
             this.panel_win_lost.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.smile_sad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smile_happy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.balance_indicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.balance_body)).EndInit();
             this.panel_plate_right.ResumeLayout(false);
@@ -1497,6 +1524,8 @@ namespace BalanceGame
         private Label weight_result_label;
         private Panel panel_win_lost;
         private Label message_win_lost;
+        private PictureBox smile_happy;
+        private PictureBox smile_sad;
     }
 }
 
