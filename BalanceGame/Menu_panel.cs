@@ -75,6 +75,7 @@ namespace BalanceGame
 
             clear_click(this, new EventArgs());
             new_weight_click(this, new EventArgs());
+            //avaliable_moves = Globals.maximum_moves;
 
             panel_onplate_1.Hide();
             panel_onplate_5.Hide();

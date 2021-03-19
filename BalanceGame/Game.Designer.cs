@@ -83,12 +83,6 @@ namespace BalanceGame
             this.panel_onplate_1 = new System.Windows.Forms.Panel();
             this.outplate_1 = new System.Windows.Forms.Button();
             this.onplate_1 = new System.Windows.Forms.Button();
-            this.weight_1000_sprite = new System.Windows.Forms.PictureBox();
-            this.weight_500_sprite = new System.Windows.Forms.PictureBox();
-            this.weight_100_sprite = new System.Windows.Forms.PictureBox();
-            this.weight_10_sprite = new System.Windows.Forms.PictureBox();
-            this.weight_5_sprite = new System.Windows.Forms.PictureBox();
-            this.weight_1_sprite = new System.Windows.Forms.PictureBox();
             this.weight_text = new System.Windows.Forms.TextBox();
             this.weight_1000_button = new System.Windows.Forms.Button();
             this.weight_500_button = new System.Windows.Forms.Button();
@@ -150,12 +144,6 @@ namespace BalanceGame
             this.panel_onplate_10.SuspendLayout();
             this.panel_onplate_5.SuspendLayout();
             this.panel_onplate_1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.weight_1000_sprite)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.weight_500_sprite)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.weight_100_sprite)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.weight_10_sprite)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.weight_5_sprite)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.weight_1_sprite)).BeginInit();
             this.panel_plate_left.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weight_inc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.balance_leftplate)).BeginInit();
@@ -200,12 +188,6 @@ namespace BalanceGame
             this.panel_game.Controls.Add(this.panel_onplate_10);
             this.panel_game.Controls.Add(this.panel_onplate_5);
             this.panel_game.Controls.Add(this.panel_onplate_1);
-            this.panel_game.Controls.Add(this.weight_1000_sprite);
-            this.panel_game.Controls.Add(this.weight_500_sprite);
-            this.panel_game.Controls.Add(this.weight_100_sprite);
-            this.panel_game.Controls.Add(this.weight_10_sprite);
-            this.panel_game.Controls.Add(this.weight_5_sprite);
-            this.panel_game.Controls.Add(this.weight_1_sprite);
             this.panel_game.Controls.Add(this.weight_text);
             this.panel_game.Controls.Add(this.weight_1000_button);
             this.panel_game.Controls.Add(this.weight_500_button);
@@ -229,20 +211,20 @@ namespace BalanceGame
             // moves_avaliable_value_label
             // 
             this.moves_avaliable_value_label.AutoSize = true;
-            this.moves_avaliable_value_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moves_avaliable_value_label.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moves_avaliable_value_label.Location = new System.Drawing.Point(1635, 36);
             this.moves_avaliable_value_label.Name = "moves_avaliable_value_label";
-            this.moves_avaliable_value_label.Size = new System.Drawing.Size(113, 55);
+            this.moves_avaliable_value_label.Size = new System.Drawing.Size(115, 56);
             this.moves_avaliable_value_label.TabIndex = 47;
             this.moves_avaliable_value_label.Text = "Nan";
             // 
             // moves_avaliable_label
             // 
             this.moves_avaliable_label.AutoSize = true;
-            this.moves_avaliable_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moves_avaliable_label.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moves_avaliable_label.Location = new System.Drawing.Point(1375, 53);
             this.moves_avaliable_label.Name = "moves_avaliable_label";
-            this.moves_avaliable_label.Size = new System.Drawing.Size(233, 33);
+            this.moves_avaliable_label.Size = new System.Drawing.Size(248, 34);
             this.moves_avaliable_label.TabIndex = 46;
             this.moves_avaliable_label.Text = "Moves avaliable:";
             // 
@@ -340,11 +322,11 @@ namespace BalanceGame
             // weight_1_label
             // 
             this.weight_1_label.AutoSize = true;
-            this.weight_1_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_1_label.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_1_label.ForeColor = System.Drawing.Color.White;
-            this.weight_1_label.Location = new System.Drawing.Point(-5, 20);
+            this.weight_1_label.Location = new System.Drawing.Point(-3, 20);
             this.weight_1_label.Name = "weight_1_label";
-            this.weight_1_label.Size = new System.Drawing.Size(76, 25);
+            this.weight_1_label.Size = new System.Drawing.Size(97, 34);
             this.weight_1_label.TabIndex = 37;
             this.weight_1_label.Text = "label1";
             // 
@@ -355,9 +337,9 @@ namespace BalanceGame
             this.weight_1.Image = global::BalanceGame.Properties.Resources.weight_1;
             this.weight_1.ImageLocation = "";
             this.weight_1.InitialImage = null;
-            this.weight_1.Location = new System.Drawing.Point(3, 123);
+            this.weight_1.Location = new System.Drawing.Point(12, 123);
             this.weight_1.Name = "weight_1";
-            this.weight_1.Size = new System.Drawing.Size(49, 56);
+            this.weight_1.Size = new System.Drawing.Size(36, 56);
             this.weight_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.weight_1.TabIndex = 36;
             this.weight_1.TabStop = false;
@@ -374,11 +356,11 @@ namespace BalanceGame
             // weight_5_label
             // 
             this.weight_5_label.AutoSize = true;
-            this.weight_5_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_5_label.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_5_label.ForeColor = System.Drawing.Color.White;
-            this.weight_5_label.Location = new System.Drawing.Point(4, 20);
+            this.weight_5_label.Location = new System.Drawing.Point(-6, 20);
             this.weight_5_label.Name = "weight_5_label";
-            this.weight_5_label.Size = new System.Drawing.Size(76, 25);
+            this.weight_5_label.Size = new System.Drawing.Size(97, 34);
             this.weight_5_label.TabIndex = 37;
             this.weight_5_label.Text = "label2";
             // 
@@ -389,9 +371,9 @@ namespace BalanceGame
             this.weight_5.Image = global::BalanceGame.Properties.Resources.weight_5;
             this.weight_5.ImageLocation = "";
             this.weight_5.InitialImage = null;
-            this.weight_5.Location = new System.Drawing.Point(0, 109);
+            this.weight_5.Location = new System.Drawing.Point(3, 109);
             this.weight_5.Name = "weight_5";
-            this.weight_5.Size = new System.Drawing.Size(52, 70);
+            this.weight_5.Size = new System.Drawing.Size(49, 70);
             this.weight_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.weight_5.TabIndex = 36;
             this.weight_5.TabStop = false;
@@ -408,11 +390,11 @@ namespace BalanceGame
             // weight_10_label
             // 
             this.weight_10_label.AutoSize = true;
-            this.weight_10_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_10_label.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_10_label.ForeColor = System.Drawing.Color.White;
-            this.weight_10_label.Location = new System.Drawing.Point(5, 20);
+            this.weight_10_label.Location = new System.Drawing.Point(0, 20);
             this.weight_10_label.Name = "weight_10_label";
-            this.weight_10_label.Size = new System.Drawing.Size(76, 25);
+            this.weight_10_label.Size = new System.Drawing.Size(97, 34);
             this.weight_10_label.TabIndex = 37;
             this.weight_10_label.Text = "label3";
             // 
@@ -425,7 +407,7 @@ namespace BalanceGame
             this.weight_10.InitialImage = null;
             this.weight_10.Location = new System.Drawing.Point(0, 96);
             this.weight_10.Name = "weight_10";
-            this.weight_10.Size = new System.Drawing.Size(60, 83);
+            this.weight_10.Size = new System.Drawing.Size(54, 83);
             this.weight_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.weight_10.TabIndex = 36;
             this.weight_10.TabStop = false;
@@ -442,11 +424,11 @@ namespace BalanceGame
             // weight_100_label
             // 
             this.weight_100_label.AutoSize = true;
-            this.weight_100_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_100_label.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_100_label.ForeColor = System.Drawing.Color.White;
             this.weight_100_label.Location = new System.Drawing.Point(10, 20);
             this.weight_100_label.Name = "weight_100_label";
-            this.weight_100_label.Size = new System.Drawing.Size(76, 25);
+            this.weight_100_label.Size = new System.Drawing.Size(97, 34);
             this.weight_100_label.TabIndex = 37;
             this.weight_100_label.Text = "label4";
             // 
@@ -476,11 +458,11 @@ namespace BalanceGame
             // weight_1000_label
             // 
             this.weight_1000_label.AutoSize = true;
-            this.weight_1000_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_1000_label.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_1000_label.ForeColor = System.Drawing.Color.White;
-            this.weight_1000_label.Location = new System.Drawing.Point(2, 19);
+            this.weight_1000_label.Location = new System.Drawing.Point(12, 20);
             this.weight_1000_label.Name = "weight_1000_label";
-            this.weight_1000_label.Size = new System.Drawing.Size(76, 25);
+            this.weight_1000_label.Size = new System.Drawing.Size(97, 34);
             this.weight_1000_label.TabIndex = 37;
             this.weight_1000_label.Text = "label6";
             // 
@@ -510,11 +492,11 @@ namespace BalanceGame
             // weight_500_label
             // 
             this.weight_500_label.AutoSize = true;
-            this.weight_500_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_500_label.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_500_label.ForeColor = System.Drawing.Color.White;
             this.weight_500_label.Location = new System.Drawing.Point(10, 19);
             this.weight_500_label.Name = "weight_500_label";
-            this.weight_500_label.Size = new System.Drawing.Size(76, 25);
+            this.weight_500_label.Size = new System.Drawing.Size(97, 34);
             this.weight_500_label.TabIndex = 37;
             this.weight_500_label.Text = "label5";
             // 
@@ -818,90 +800,6 @@ namespace BalanceGame
             this.onplate_1.UseVisualStyleBackColor = false;
             this.onplate_1.Click += new System.EventHandler(this.onplate_1_click);
             // 
-            // weight_1000_sprite
-            // 
-            this.weight_1000_sprite.BackColor = System.Drawing.Color.Transparent;
-            this.weight_1000_sprite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.weight_1000_sprite.Image = global::BalanceGame.Properties.Resources.weight_1000;
-            this.weight_1000_sprite.ImageLocation = "";
-            this.weight_1000_sprite.InitialImage = null;
-            this.weight_1000_sprite.Location = new System.Drawing.Point(1604, 761);
-            this.weight_1000_sprite.Name = "weight_1000_sprite";
-            this.weight_1000_sprite.Size = new System.Drawing.Size(60, 103);
-            this.weight_1000_sprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.weight_1000_sprite.TabIndex = 23;
-            this.weight_1000_sprite.TabStop = false;
-            // 
-            // weight_500_sprite
-            // 
-            this.weight_500_sprite.BackColor = System.Drawing.Color.Transparent;
-            this.weight_500_sprite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.weight_500_sprite.Image = global::BalanceGame.Properties.Resources.weight_500;
-            this.weight_500_sprite.ImageLocation = "";
-            this.weight_500_sprite.InitialImage = null;
-            this.weight_500_sprite.Location = new System.Drawing.Point(1604, 645);
-            this.weight_500_sprite.Name = "weight_500_sprite";
-            this.weight_500_sprite.Size = new System.Drawing.Size(52, 89);
-            this.weight_500_sprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.weight_500_sprite.TabIndex = 22;
-            this.weight_500_sprite.TabStop = false;
-            // 
-            // weight_100_sprite
-            // 
-            this.weight_100_sprite.BackColor = System.Drawing.Color.Transparent;
-            this.weight_100_sprite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.weight_100_sprite.Image = global::BalanceGame.Properties.Resources.weight_100;
-            this.weight_100_sprite.ImageLocation = "";
-            this.weight_100_sprite.InitialImage = null;
-            this.weight_100_sprite.Location = new System.Drawing.Point(1604, 541);
-            this.weight_100_sprite.Name = "weight_100_sprite";
-            this.weight_100_sprite.Size = new System.Drawing.Size(43, 74);
-            this.weight_100_sprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.weight_100_sprite.TabIndex = 21;
-            this.weight_100_sprite.TabStop = false;
-            // 
-            // weight_10_sprite
-            // 
-            this.weight_10_sprite.BackColor = System.Drawing.Color.Transparent;
-            this.weight_10_sprite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.weight_10_sprite.Image = global::BalanceGame.Properties.Resources.weight_10;
-            this.weight_10_sprite.ImageLocation = "";
-            this.weight_10_sprite.InitialImage = null;
-            this.weight_10_sprite.Location = new System.Drawing.Point(1604, 435);
-            this.weight_10_sprite.Name = "weight_10_sprite";
-            this.weight_10_sprite.Size = new System.Drawing.Size(36, 60);
-            this.weight_10_sprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.weight_10_sprite.TabIndex = 20;
-            this.weight_10_sprite.TabStop = false;
-            // 
-            // weight_5_sprite
-            // 
-            this.weight_5_sprite.BackColor = System.Drawing.Color.Transparent;
-            this.weight_5_sprite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.weight_5_sprite.Image = global::BalanceGame.Properties.Resources.weight_5;
-            this.weight_5_sprite.ImageLocation = "";
-            this.weight_5_sprite.InitialImage = null;
-            this.weight_5_sprite.Location = new System.Drawing.Point(1604, 325);
-            this.weight_5_sprite.Name = "weight_5_sprite";
-            this.weight_5_sprite.Size = new System.Drawing.Size(33, 56);
-            this.weight_5_sprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.weight_5_sprite.TabIndex = 19;
-            this.weight_5_sprite.TabStop = false;
-            // 
-            // weight_1_sprite
-            // 
-            this.weight_1_sprite.BackColor = System.Drawing.Color.Transparent;
-            this.weight_1_sprite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.weight_1_sprite.Image = global::BalanceGame.Properties.Resources.weight_1;
-            this.weight_1_sprite.ImageLocation = "";
-            this.weight_1_sprite.InitialImage = null;
-            this.weight_1_sprite.Location = new System.Drawing.Point(1604, 223);
-            this.weight_1_sprite.Name = "weight_1_sprite";
-            this.weight_1_sprite.Size = new System.Drawing.Size(27, 45);
-            this.weight_1_sprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.weight_1_sprite.TabIndex = 18;
-            this.weight_1_sprite.TabStop = false;
-            // 
             // weight_text
             // 
             this.weight_text.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -920,6 +818,7 @@ namespace BalanceGame
             this.weight_1000_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.weight_1000_button.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_1000_button.ForeColor = System.Drawing.SystemColors.Window;
+            this.weight_1000_button.Image = global::BalanceGame.Properties.Resources.weight_1000;
             this.weight_1000_button.Location = new System.Drawing.Point(1472, 753);
             this.weight_1000_button.Name = "weight_1000_button";
             this.weight_1000_button.Size = new System.Drawing.Size(349, 120);
@@ -936,6 +835,7 @@ namespace BalanceGame
             this.weight_500_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.weight_500_button.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_500_button.ForeColor = System.Drawing.SystemColors.Window;
+            this.weight_500_button.Image = global::BalanceGame.Properties.Resources.weight_500;
             this.weight_500_button.Location = new System.Drawing.Point(1472, 635);
             this.weight_500_button.Name = "weight_500_button";
             this.weight_500_button.Size = new System.Drawing.Size(349, 120);
@@ -951,6 +851,7 @@ namespace BalanceGame
             this.weight_100_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.weight_100_button.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_100_button.ForeColor = System.Drawing.SystemColors.Window;
+            this.weight_100_button.Image = global::BalanceGame.Properties.Resources.weight_100;
             this.weight_100_button.Location = new System.Drawing.Point(1472, 519);
             this.weight_100_button.Name = "weight_100_button";
             this.weight_100_button.Size = new System.Drawing.Size(349, 120);
@@ -966,6 +867,7 @@ namespace BalanceGame
             this.weight_10_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.weight_10_button.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_10_button.ForeColor = System.Drawing.SystemColors.Window;
+            this.weight_10_button.Image = global::BalanceGame.Properties.Resources.weight_10;
             this.weight_10_button.Location = new System.Drawing.Point(1472, 406);
             this.weight_10_button.Name = "weight_10_button";
             this.weight_10_button.Size = new System.Drawing.Size(349, 120);
@@ -981,6 +883,7 @@ namespace BalanceGame
             this.weight_5_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.weight_5_button.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_5_button.ForeColor = System.Drawing.SystemColors.Window;
+            this.weight_5_button.Image = global::BalanceGame.Properties.Resources.weight_5;
             this.weight_5_button.Location = new System.Drawing.Point(1472, 299);
             this.weight_5_button.Name = "weight_5_button";
             this.weight_5_button.Size = new System.Drawing.Size(349, 120);
@@ -996,6 +899,7 @@ namespace BalanceGame
             this.weight_1_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.weight_1_button.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weight_1_button.ForeColor = System.Drawing.SystemColors.Window;
+            this.weight_1_button.Image = global::BalanceGame.Properties.Resources.weight_1;
             this.weight_1_button.Location = new System.Drawing.Point(1472, 185);
             this.weight_1_button.Name = "weight_1_button";
             this.weight_1_button.Size = new System.Drawing.Size(349, 120);
@@ -1438,12 +1342,6 @@ namespace BalanceGame
             this.panel_onplate_10.ResumeLayout(false);
             this.panel_onplate_5.ResumeLayout(false);
             this.panel_onplate_1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.weight_1000_sprite)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.weight_500_sprite)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.weight_100_sprite)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.weight_10_sprite)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.weight_5_sprite)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.weight_1_sprite)).EndInit();
             this.panel_plate_left.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.weight_inc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.balance_leftplate)).EndInit();
@@ -1499,12 +1397,6 @@ namespace BalanceGame
         private Button weight_10_button;
         private Button weight_5_button;
         private Button weight_1_button;
-        private PictureBox weight_1_sprite;
-        private PictureBox weight_5_sprite;
-        private PictureBox weight_10_sprite;
-        private PictureBox weight_100_sprite;
-        private PictureBox weight_500_sprite;
-        private PictureBox weight_1000_sprite;
         private Panel panel_onplate_1;
         private Button onplate_1;
         private Panel panel_onplate_1000;

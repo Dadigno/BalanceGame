@@ -50,10 +50,12 @@ namespace BalanceGame
         private void new_weight_click(object sender, EventArgs e)
         {
             clear_click(this, new EventArgs());
-
+            avaliable_moves = Globals.maximum_moves;
+            moves_avaliable_value_label.Text = avaliable_moves.ToString();
             Random r = new Random();
             target = r.Next(Globals.weight_from, Globals.weight_to);
             move_arrow();
+            
             debug_target.Text = target.ToString();
 
         }

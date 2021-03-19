@@ -28,12 +28,12 @@ namespace BalanceGame
             };
 
             game_controls = new List<Control>() {
-                outplate_1000, onplate_1000, weight_1000, weight_1000_sprite, weight_1000_button, weight_1000_label, panel_onplate_1000, panel_plateweight_1000,
-                outplate_500, onplate_500, weight_500, weight_500_sprite, weight_500_button, weight_500_label, panel_onplate_500, panel_plateweight_500,
-                outplate_100, onplate_100, weight_100, weight_100_sprite, weight_100_button, weight_100_label, panel_onplate_100, panel_plateweight_100,
-                outplate_10, onplate_10, weight_10, weight_10_sprite, weight_10_button, weight_10_label, panel_onplate_10, panel_plateweight_10,
-                outplate_5, onplate_5, weight_5, weight_5_sprite, weight_5_button, weight_5_label, panel_onplate_5, panel_plateweight_5,
-                outplate_1, onplate_1, weight_1, weight_1_sprite, weight_1_button, weight_1_label, panel_onplate_1, panel_plateweight_1,
+                outplate_1000, onplate_1000, weight_1000, weight_1000_button, weight_1000_label, panel_onplate_1000, panel_plateweight_1000,
+                outplate_500, onplate_500, weight_500, weight_500_button, weight_500_label, panel_onplate_500, panel_plateweight_500,
+                outplate_100, onplate_100, weight_100, weight_100_button, weight_100_label, panel_onplate_100, panel_plateweight_100,
+                outplate_10, onplate_10, weight_10, weight_10_button, weight_10_label, panel_onplate_10, panel_plateweight_10,
+                outplate_5, onplate_5, weight_5, weight_5_button, weight_5_label, panel_onplate_5, panel_plateweight_5,
+                outplate_1, onplate_1, weight_1, weight_1_button, weight_1_label, panel_onplate_1, panel_plateweight_1,
                 weight_text, balance_indicator, weight_inc, balance_rightplate, balance_leftplate, undo, clear, new_weight, balance_body, return_menu,
                 tutorial_button, 
                 debug_arrowX, debug_reached, debug_target, debug_label0, debug_label1, debug_label2, debug_label3,
