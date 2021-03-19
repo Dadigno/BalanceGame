@@ -91,6 +91,7 @@ namespace BalanceGame
             this.weight_5_button = new System.Windows.Forms.Button();
             this.weight_1_button = new System.Windows.Forms.Button();
             this.panel_plate_left = new System.Windows.Forms.Panel();
+            this.weight_result_label = new System.Windows.Forms.Label();
             this.weight_inc = new System.Windows.Forms.PictureBox();
             this.balance_leftplate = new System.Windows.Forms.PictureBox();
             this.undo = new System.Windows.Forms.Button();
@@ -201,7 +202,7 @@ namespace BalanceGame
             this.panel_game.Controls.Add(this.new_weight);
             this.panel_game.Controls.Add(this.return_menu);
             this.panel_game.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_game.ForeColor = System.Drawing.Color.Transparent;
+            this.panel_game.ForeColor = System.Drawing.Color.White;
             this.panel_game.Location = new System.Drawing.Point(0, 0);
             this.panel_game.Name = "panel_game";
             this.panel_game.Size = new System.Drawing.Size(1924, 881);
@@ -911,12 +912,25 @@ namespace BalanceGame
             // 
             // panel_plate_left
             // 
+            this.panel_plate_left.Controls.Add(this.weight_result_label);
             this.panel_plate_left.Controls.Add(this.weight_inc);
             this.panel_plate_left.Controls.Add(this.balance_leftplate);
             this.panel_plate_left.Location = new System.Drawing.Point(112, 270);
             this.panel_plate_left.Name = "panel_plate_left";
             this.panel_plate_left.Size = new System.Drawing.Size(500, 300);
             this.panel_plate_left.TabIndex = 40;
+            // 
+            // weight_result_label
+            // 
+            this.weight_result_label.AutoSize = true;
+            this.weight_result_label.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.weight_result_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 69.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_result_label.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.weight_result_label.Location = new System.Drawing.Point(205, 82);
+            this.weight_result_label.Name = "weight_result_label";
+            this.weight_result_label.Size = new System.Drawing.Size(97, 105);
+            this.weight_result_label.TabIndex = 10;
+            this.weight_result_label.Text = "?";
             // 
             // weight_inc
             // 
@@ -1343,6 +1357,7 @@ namespace BalanceGame
             this.panel_onplate_5.ResumeLayout(false);
             this.panel_onplate_1.ResumeLayout(false);
             this.panel_plate_left.ResumeLayout(false);
+            this.panel_plate_left.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weight_inc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.balance_leftplate)).EndInit();
             this.panel_options.ResumeLayout(false);
@@ -1448,6 +1463,7 @@ namespace BalanceGame
         private Label maximum_moves_label;
         private Label moves_avaliable_value_label;
         private Label moves_avaliable_label;
+        private Label weight_result_label;
     }
 }
 
