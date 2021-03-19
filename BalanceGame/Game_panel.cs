@@ -52,6 +52,9 @@ namespace BalanceGame
             clear_click(this, new EventArgs());
             avaliable_moves = Globals.maximum_moves;
             moves_avaliable_value_label.Text = avaliable_moves.ToString();
+            panel_win_lost.Hide();
+            weight_result_label.Text = " ?  ?";
+
             Random r = new Random();
             target = r.Next(Globals.weight_from, Globals.weight_to);
             move_arrow();
@@ -227,6 +230,7 @@ namespace BalanceGame
             if (weights_selected.Count > 0)
             {
                 avaliable_moves += 1;
+                panel_win_lost.Hide();
                 weights_selected.RemoveAt(weights_selected.Count - 1);
                 refresh_game();
             }
@@ -383,7 +387,7 @@ namespace BalanceGame
 
             if (value_reached == target)
             {
-                var result = MessageBox.Show(String.Format(Globals.finish_game_message, value_reached), Globals.finish_game_caption,
+                /*var result = MessageBox.Show(String.Format(Globals.finish_game_message, value_reached), Globals.finish_game_caption,
                                              MessageBoxButtons.YesNo,
                                              MessageBoxIcon.None);
 
@@ -397,8 +401,20 @@ namespace BalanceGame
                     clear_click(this, new EventArgs());
                     new_weight_click(this, new EventArgs());
                     return_menu_click(this, new EventArgs());
-                }
+                }*/
+                message_win_lost.Text = String.Format (Globals.finish_game_message, value_reached);
 
+                weight_result_label.Text = String.Format(value_reached.ToString());
+
+                panel_win_lost.Show();
+
+            }
+
+            if (avaliable_moves == 0)
+            {
+                message_win_lost.Text = String.Format(Globals.finish_game_nomoves);
+
+                panel_win_lost.Show();
             }
         }
     }

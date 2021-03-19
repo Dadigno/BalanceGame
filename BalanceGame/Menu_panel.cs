@@ -72,6 +72,10 @@ namespace BalanceGame
         {
             panel_menu.Hide();
             panel_game.Show();
+            panel_win_lost.Hide();
+            weight_result_label.Text = " ?  ?";
+            weight_result_label.ForeColor = Globals.backColor;
+            weight_text.BackColor = Globals.backColor;
 
             clear_click(this, new EventArgs());
             new_weight_click(this, new EventArgs());

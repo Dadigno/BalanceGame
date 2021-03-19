@@ -24,7 +24,7 @@ namespace BalanceGame
             InitializeComponent();
 
             menu_controls = new List<Control>() { panel_menu, button_exit, button_options, button_start, info_button, title_label, info_label,
-                                                  save_options_button, title_options, reset_settings_button, color_combobox, return_menu_button, background_color_label, range_to_label, range_from_label, weight_to_combobox, weight_from_combobox, weight_range_label, language_label, language_combobox
+                                                  save_options_button, title_options, reset_settings_button, color_combobox, return_menu_button, background_color_label, range_to_label, range_from_label, weight_to_combobox, weight_from_combobox, weight_range_label, language_label, language_combobox, maximum_moves_label, max_moves_numericUpDown,
             };
 
             game_controls = new List<Control>() {
@@ -33,11 +33,12 @@ namespace BalanceGame
                 outplate_100, onplate_100, weight_100, weight_100_button, weight_100_label, panel_onplate_100, panel_plateweight_100,
                 outplate_10, onplate_10, weight_10, weight_10_button, weight_10_label, panel_onplate_10, panel_plateweight_10,
                 outplate_5, onplate_5, weight_5, weight_5_button, weight_5_label, panel_onplate_5, panel_plateweight_5,
-                outplate_1, onplate_1, weight_1, weight_1_button, weight_1_label, panel_onplate_1, panel_plateweight_1,
+                outplate_1, onplate_1, weight_1, weight_1_button, weight_1_label, panel_onplate_1, panel_plateweight_1, 
+                moves_avaliable_label, moves_avaliable_value_label,
                 weight_text, balance_indicator, weight_inc, balance_rightplate, balance_leftplate, undo, clear, new_weight, balance_body, return_menu, weight_result_label,
                 tutorial_button, 
                 debug_arrowX, debug_reached, debug_target, debug_label0, debug_label1, debug_label2, debug_label3,
-                panel_plate_left, panel_plate_right,
+                panel_plate_left, panel_plate_right, panel_win_lost, message_win_lost
             };
            
             InitializeMenu();
@@ -183,6 +184,7 @@ namespace BalanceGame
                 Globals.saving_caption = Globals.Configuration_file.Get("saving_caption");
                 Globals.finish_game_caption = Globals.Configuration_file.Get("finish_game_caption");
                 Globals.finish_game_message = Globals.Configuration_file.Get("finish_game_message").Replace("\\n",Environment.NewLine);
+                Globals.finish_game_nomoves = Globals.Configuration_file.Get("finish_game_nomoves").Replace("\\n", Environment.NewLine);
             }
             else
             {
@@ -252,5 +254,9 @@ namespace BalanceGame
             max_moves_numericUpDown.Value = Globals.maximum_moves;
         }
 
+        private void weight_result_label_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

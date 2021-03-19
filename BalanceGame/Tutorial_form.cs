@@ -14,7 +14,7 @@ namespace BalanceGame
     {
         Game main_form;
         int page;
-        int MAX_PAGE = 5;
+        int MAX_PAGE = 6;
 
         public Tutorial_form(Game main_form)
         {
@@ -35,6 +35,7 @@ namespace BalanceGame
             panel_tutorial002.Hide();
             panel_tutorial003.Hide();
             panel_tutorial004.Hide();
+            panel_tutorial005.Hide();
 
         }
 
@@ -47,6 +48,7 @@ namespace BalanceGame
                 Globals.tutorial_text_page2 = Globals.Configuration_file.Get("tutorial_text_page2").Replace("\\n", Environment.NewLine); ;
                 Globals.tutorial_text_page3 = Globals.Configuration_file.Get("tutorial_text_page3").Replace("\\n", Environment.NewLine); ;
                 Globals.tutorial_text_page4 = Globals.Configuration_file.Get("tutorial_text_page4").Replace("\\n", Environment.NewLine); ;
+                Globals.tutorial_text_page5 = Globals.Configuration_file.Get("tutorial_text_page5").Replace("\\n", Environment.NewLine); ;
             }
         }
 
@@ -95,55 +97,78 @@ namespace BalanceGame
                     panel_tutorial002.Hide();
                     panel_tutorial003.Hide();
                     panel_tutorial004.Hide();
+                    panel_tutorial005.Hide();
                     tutorial_textbox.Text = Globals.tutorial_text_intro_default;
                     panel_tutorial001.Show();
                     panel_tutorial002.Hide();
                     panel_tutorial003.Hide();
                     panel_tutorial004.Hide();
+                    panel_tutorial005.Hide();
                     break;
                 case 2:
                     panel_tutorial001.Hide();
                     panel_tutorial002.Hide();
                     panel_tutorial003.Hide();
                     panel_tutorial004.Hide();
+                    panel_tutorial005.Hide();
                     tutorial_textbox.Text = Globals.tutorial_text_page1;
                     panel_tutorial001.Hide();
                     panel_tutorial002.Show();
                     panel_tutorial003.Hide();
                     panel_tutorial004.Hide();
+                    panel_tutorial005.Hide();
                     break;
                 case 3:
                     panel_tutorial001.Hide();
                     panel_tutorial002.Hide();
                     panel_tutorial003.Hide();
                     panel_tutorial004.Hide();
+                    panel_tutorial005.Hide();
                     tutorial_textbox.Text = Globals.tutorial_text_page2;
                     panel_tutorial001.Hide();
                     panel_tutorial002.Hide();
                     panel_tutorial003.Show();
                     panel_tutorial004.Hide();
+                    panel_tutorial005.Hide();
                     break;
                 case 4:
                     panel_tutorial001.Hide();
                     panel_tutorial002.Hide();
                     panel_tutorial003.Hide();
                     panel_tutorial004.Hide();
-                    tutorial_textbox.Text = Globals.tutorial_text_page3;
+                    panel_tutorial005.Hide();
+                    tutorial_textbox.Text = Globals.tutorial_text_page5;
                     panel_tutorial001.Hide();
                     panel_tutorial002.Hide();
                     panel_tutorial003.Hide();
-                    panel_tutorial004.Show();
+                    panel_tutorial004.Hide();
+                    panel_tutorial005.Show();
                     break;
                 case 5:
                     panel_tutorial001.Hide();
                     panel_tutorial002.Hide();
                     panel_tutorial003.Hide();
                     panel_tutorial004.Hide();
+                    panel_tutorial005.Hide();
+                    tutorial_textbox.Text = Globals.tutorial_text_page3;
+                    panel_tutorial001.Hide();
+                    panel_tutorial002.Hide();
+                    panel_tutorial003.Hide();
+                    panel_tutorial004.Show();
+                    panel_tutorial005.Hide();
+                    break;
+                case 6:
+                    panel_tutorial001.Hide();
+                    panel_tutorial002.Hide();
+                    panel_tutorial003.Hide();
+                    panel_tutorial004.Hide();
+                    panel_tutorial005.Hide();
                     tutorial_textbox.Text = Globals.tutorial_text_page4;
                     panel_tutorial001.Hide();
                     panel_tutorial002.Hide();
                     panel_tutorial003.Hide();
                     panel_tutorial004.Hide();
+                    panel_tutorial005.Hide();
                     break;
             }
         }

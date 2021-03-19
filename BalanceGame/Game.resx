@@ -432,7 +432,7 @@
         uf8PCESXPZMzuAEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="balance_leftplate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="balance_rightplate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAcsAAAEYCAYAAAAzqN3GAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKM+VkT1I
         w0AcxV9TpaIVBzuIOGSoTlbELxwlikWwUNoKrTqYXPoFTRqSFBdHwbXg4Mdi1cHFWVcHV0EQ/ABxc3NS
@@ -499,7 +499,7 @@
         WAK0JV/XvXRkpYklQFvaiGXf/RxTgEHuZjTZdQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="balance_rightplate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="balance_leftplate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAcsAAAEYCAYAAAAzqN3GAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKM+VkT1I
         w0AcxV9TpaIVBzuIOGSoTlbELxwlikWwUNoKrTqYXPoFTRqSFBdHwbXg4Mdi1cHFWVcHV0EQ/ABxc3NS
